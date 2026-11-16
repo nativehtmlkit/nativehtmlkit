@@ -1,11 +1,11 @@
 {
   "baseline_date": "2026-11-16",
   "releases": {
-    "py": "0.1.1",
-    "ps": "0.1.1",
+    "py": "0.1.2",
+    "ps": "0.1.2",
     "cli": "0.1.2",
-    "pyui": "0.1.0 prerelease",
-    "psui": "0.1.0 prerelease"
+    "pyui": "0.1.1 (early release)",
+    "psui": "0.1.1 (early release)"
   },
   "columns": [
     {

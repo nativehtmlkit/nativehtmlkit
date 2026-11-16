@@ -656,7 +656,8 @@ def build(out: Path) -> str:
     site.finalize()
     old_site_redirects(site)
     nav = [
-        {"Home": ["index.md", {"Install and first steps": "getting-started/index.md"},
+        {"Home": ["index.md", {"Try the demo": "getting-started/demo.md"},
+                  {"Install and first steps": "getting-started/index.md"},
                   {"Choose an entry point": "getting-started/choose.md"},
                   {"Platform requirements": "getting-started/requirements.md"},
                   {"Linux and Windows": "getting-started/platforms.md"}]},

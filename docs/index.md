@@ -37,13 +37,36 @@ hide:
 
 The UI library and the SDK work the same on Linux and Windows (the few differences are on [Linux and Windows](getting-started/platforms.md)); each has a Python and a PowerShell section with the same shape: **getting started**, step-by-step **tutorials**, task **guides**, complete **examples** with screenshots and source, and the full **API reference**. Python and PowerShell mirror each other one to one. The CLI has separate Linux and Windows sections because shell scripts differ per system.
 
-**Start here:** [Install and first steps](getting-started/index.md) · [Choose an entry point](getting-started/choose.md) · [Platform requirements](getting-started/requirements.md) · [Linux and Windows](getting-started/platforms.md)
+**Start here:** [Try the demo](getting-started/demo.md) · [Install and first steps](getting-started/index.md) · [Choose an entry point](getting-started/choose.md) · [Platform requirements](getting-started/requirements.md) · [Linux and Windows](getting-started/platforms.md)
 
 ## What it looks like
 
 ![The Python UI component gallery running on KDE Plasma 6.6 Wayland](assets/python-ui-linux.png)
 
 *Real capture: the Python UI gallery on KDE Plasma 6.6 Wayland (Core 1.0.3, Python SDK 0.1.2, UI 0.1.1).*
+
+## Try it in one minute
+
+Install the demo and click through every example: it shows each one's Python, PowerShell, HTML and
+CSS source, and **Run Python** / **Run PowerShell** start it as its own window.
+
+=== "Python"
+
+    ```bash
+    python -m pip install nativehtmlkit-demo
+    nativehtmlkit-demo
+    ```
+
+=== "PowerShell"
+
+    ```powershell
+    Install-Module NativeHTMLKit.Demo -Scope CurrentUser
+    Start-NativeHTMLKitDemo
+    ```
+
+![The NativeHTMLKit Demo with the Counter example started from it](assets/demo-counter-linux.png)
+
+More on the window, and how to check an installation: [Try the demo](getting-started/demo.md).
 
 ## A complete app in a few lines
 
@@ -170,6 +193,7 @@ The UI tabs are the [Hello UI example](ui/python/examples/hello.md) ([PowerShell
 | Python UI | [`nativehtmlkit_ui`](https://pypi.org/project/nativehtmlkit_ui/) 0.1.1 | Reactive state and compact components on the Python SDK |
 | PowerShell SDK | [`NativeHTMLKit`](https://www.powershellgallery.com/packages/NativeHTMLKit) 0.1.2 | The same features as cmdlets, plus background tasks |
 | PowerShell UI | [`NativeHTMLKit.UI`](https://www.powershellgallery.com/packages/NativeHTMLKit.UI) 0.1.1 | Reactive components on the PowerShell SDK |
+| Demo | [`nativehtmlkit-demo`](https://pypi.org/project/nativehtmlkit-demo/) / [`NativeHTMLKit.Demo`](https://www.powershellgallery.com/packages/NativeHTMLKit.Demo) 0.1.0 | Browse and run every example ([Try the demo](getting-started/demo.md)) |
 
 All of them bundle the native host, Core 1.0.3 (wire protocol v1, stable). Target desktops are KDE Plasma on Wayland (Linux) and Windows; see the [capability matrix](capabilities/matrix.md) and [limitations](capabilities/limitations.md). Every example on this site is run against the released packages before it is published.
 

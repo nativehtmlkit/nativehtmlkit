@@ -28,6 +28,7 @@ Python and PowerShell mirror each other one to one (same tutorials, guides and e
 | PowerShell SDK | `Install-Module NativeHTMLKit` ([Gallery](https://www.powershellgallery.com/packages/NativeHTMLKit)) | 0.1.2 |
 | PowerShell UI | `Install-Module NativeHTMLKit.UI` ([Gallery](https://www.powershellgallery.com/packages/NativeHTMLKit.UI)) | 0.1.1 (early release) |
 | CLI | archive from [GitHub releases](https://github.com/nativehtmlkit/nativehtmlkit-cli/releases) | 0.1.2 |
+| Demo (every example, one window) | `pip install nativehtmlkit-demo` ([PyPI](https://pypi.org/project/nativehtmlkit-demo/)) or `Install-Module NativeHTMLKit.Demo` ([Gallery](https://www.powershellgallery.com/packages/NativeHTMLKit.Demo)), then `nativehtmlkit-demo` / `Start-NativeHTMLKitDemo` | 0.1.0 |
 
 All of them bundle the native host, Core 1.0.3 (wire protocol v1, stable).
 

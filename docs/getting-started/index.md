@@ -2,6 +2,10 @@
 
 NativeHTMLKit shows native desktop windows whose content is plain HTML and CSS. Your program, written in Python or PowerShell (or a shell script using the CLI), owns the logic; a small native host process draws the window and sends you the user's events. There is no browser, no JavaScript and no local web server.
 
+!!! tip "Just looking?"
+    Install the demo to click through every example and read its source first:
+    `pip install nativehtmlkit-demo` or `Install-Module NativeHTMLKit.Demo`. See [Try the demo](demo.md).
+
 ## Pick your path and install
 
 Choose the layer you want to work with, then the language (or, for the CLI, your system). Each tab

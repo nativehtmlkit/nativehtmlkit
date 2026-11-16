@@ -13,7 +13,7 @@ Usage (released packages installed by you):
   python3 scripts/test-examples.py --python VENV/bin/python --pwsh pwsh \
       --psmodulepath DIR_WITH_NativeHTMLKit_AND_NativeHTMLKit.UI --cli DIR_WITH_nativehtmlkit
 Options: --only SUBSTRING (repeatable), --list, --json REPORT.json, --keep (keep temp dirs).
-Linux only (orphan detection reads /proc). Uses the Python standard library only.
+Linux and Windows (Windows orphan detection compares host processes with a pre-case baseline). Uses the Python standard library only.
 """
 from __future__ import annotations
 
@@ -44,7 +44,7 @@ def seed(name, content):
     """Setup helper: write a file into the case's temporary directory and pass its path as argument."""
     def setup(tmp: Path):
         path = tmp / name
-        path.write_text(content, encoding="utf-8")
+        path.write_bytes(content.encode("utf-8"))  # exact bytes: no CRLF translation on Windows
         return [str(path)]
     return setup
 
@@ -279,7 +279,29 @@ def load_cases():
     return list(CASES)
 
 
+def _windows_session() -> int:
+    import ctypes
+    session = ctypes.c_ulong()
+    ctypes.windll.kernel32.ProcessIdToSessionId(os.getpid(), ctypes.byref(session))
+    return session.value
+
+
+def _windows_hosts() -> list[str]:
+    # Only hosts in this process's logon session: runs in other sessions (e.g. a desktop) are not ours.
+    out = subprocess.run(["tasklist", "/FI", "IMAGENAME eq nativehtmlkit-host.exe", "/FI", f"SESSION eq {_windows_session()}",
+                          "/FO", "CSV", "/NH"],
+                         capture_output=True, text=True).stdout
+    return [line for line in out.splitlines() if "nativehtmlkit-host" in line]
+
+
+WINDOWS_BASELINE: list[str] = []
+
+
 def marker_processes(marker: str) -> list[str]:
+    # Windows: other processes' environments are not readable; require that no host process
+    # beyond those present before the case (WINDOWS_BASELINE) survives.
+    if os.name == "nt":
+        return [line for line in _windows_hosts() if line not in WINDOWS_BASELINE]
     found = []
     needle = f"NHK_EXAMPLE_MARKER={marker}".encode()
     for proc in Path("/proc").iterdir():
@@ -294,6 +316,8 @@ def marker_processes(marker: str) -> list[str]:
 
 
 def run_app_case(case, args, tmp: Path):
+    if os.name == "nt":
+        WINDOWS_BASELINE[:] = _windows_hosts()
     marker = uuid.uuid4().hex
     spec = tmp / "spec.json"
     spec.write_text(json.dumps({"steps": case.get("steps", []), "settle_ms": case.get("settle_ms", 800),
@@ -449,8 +473,8 @@ def main():
             print(f"{c['id']:40} {c['kind']:10} examples/{c['path']}")
         return 0
     covered = {c["path"] for c in load_cases() if c["kind"] != "pwsh-check"}
-    uncovered = [str(p.relative_to(EX)) for p in sorted(EX.rglob("*")) if p.suffix in (".py", ".ps1", ".sh")
-                 and str(p.relative_to(EX)) not in covered]
+    uncovered = [p.relative_to(EX).as_posix() for p in sorted(EX.rglob("*")) if p.suffix in (".py", ".ps1", ".sh")
+                 and p.relative_to(EX).as_posix() not in covered]
     results = []
     for case in cases:
         tmp = Path(tempfile.mkdtemp(prefix="nhk-example-"))

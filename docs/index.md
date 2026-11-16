@@ -2,10 +2,6 @@
 
 **Native desktop windows from HTML and CSS, driven by a shell script, Python or PowerShell.** No browser engine, no JavaScript, no local web server: a small Rust host renders your page and sends your program the user's events over a private local connection.
 
-![The Python UI component gallery running on KDE Plasma 6.6 Wayland](assets/python-ui-linux.png)
-
-*Real capture: the Python UI gallery on KDE Plasma 6.6 Wayland (Core 1.0.3, Python SDK 0.1.2, UI 0.1.1).*
-
 ## Choose what you build with
 
 <div class="grid cards" markdown>
@@ -34,6 +30,12 @@
 Each section has the same shape: **getting started**, step-by-step **tutorials**, task **guides**, complete **examples** with screenshots and source, and the full **API reference**. Python and PowerShell mirror each other one to one, so you can switch languages without relearning the structure.
 
 Not sure which to pick? [Choose an entry point](getting-started/choose.md) · [Platform requirements](getting-started/requirements.md)
+
+## What it looks like
+
+![The Python UI component gallery running on KDE Plasma 6.6 Wayland](assets/python-ui-linux.png)
+
+*Real capture: the Python UI gallery on KDE Plasma 6.6 Wayland (Core 1.0.3, Python SDK 0.1.2, UI 0.1.1).*
 
 ## A complete app in a few lines
 

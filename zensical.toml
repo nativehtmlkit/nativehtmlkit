@@ -429,3 +429,6 @@ alternate_style = true
 [project.markdown_extensions.tables]
 [project.markdown_extensions.toc]
 permalink = true
+
+[project.extra]
+generator = false

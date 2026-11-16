@@ -18,8 +18,8 @@ In headless test mode (`NATIVEHTMLKIT_TEST_MODE=1`) there is no native event loo
 **Can I simulate clicks in headless tests?**
 There is no synthetic input. You can drive documented document operations — for example `request_submit` fires the form's `submit` event and `replace_control_range` fires `input` — and read the DOM back with `get_text`, `get_value` or `get_html`. Real input needs an interactive desktop.
 
-**`pip install nativehtmlkit` fails or installs a package without the host on Linux.**
-The released Linux wheel is `manylinux_2_39_x86_64`: it needs glibc 2.39 or newer. On older systems pip may fall back to the source package, which has no native host. Run `nativehtmlkit-python doctor` to check.
+**`uv add nativehtmlkit` fails or installs a package without the host on Linux.**
+The released Linux wheel is `manylinux_2_39_x86_64`: it needs glibc 2.39 or newer. On older systems the installer can only fall back to the source package, which has no native host. Run `uv run nativehtmlkit-python doctor` to check.
 
 **Does it work with Windows PowerShell 5.1?**
 Yes, on Windows, for both the SDK and the UI module. Linux needs PowerShell 7.2 or newer.

@@ -14,7 +14,10 @@ Every component in a chosen theme and density, with an optional custom accent co
 ## Run it
 
 ```bash
-python theme_preview.py [cobalt|graphite|daylight] [compact|regular|comfortable] [#RRGGBB]
+uv init --app myapp && cd myapp    # once: a uv project for your app
+uv add nativehtmlkit_ui
+# save the example file(s) in the project folder, then:
+uv run theme_preview.py [cobalt|graphite|daylight] [compact|regular|comfortable] [#RRGGBB]
 ```
 
 Related guide: [theming and custom css](../guides/theming-and-custom-css.md)
@@ -29,7 +32,7 @@ Related guide: [theming and custom css](../guides/theming-and-custom-css.md)
 Teaches: UI(theme=..., density=..., extra_css=...), overriding the library's CSS custom properties
 (--nhk-accent and friends) for one theme, and the main components side by side.
 instance="multiple" lets you start several previews at once and compare them.
-Run:     python theme_preview.py [cobalt|graphite|daylight] [compact|regular|comfortable] [#RRGGBB]
+Run:     uv run theme_preview.py [cobalt|graphite|daylight] [compact|regular|comfortable] [#RRGGBB]
 Guide:   docs/python/guides/theming-and-custom-css.md
 """
 import re

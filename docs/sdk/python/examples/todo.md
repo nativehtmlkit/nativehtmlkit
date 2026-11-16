@@ -14,7 +14,10 @@ Add, edit, complete, filter and delete tasks, saved to a JSON file.
 ## Run it
 
 ```bash
-python todo.py
+uv init --app myapp && cd myapp    # once: a uv project for your app
+uv add nativehtmlkit
+# save the example file(s) in the project folder, then:
+uv run todo.py
 ```
 
 Related guide: [events and callbacks](../guides/events-and-callbacks.md)
@@ -35,7 +38,7 @@ What it teaches
 
 This is the finished app of the tutorial in docs/tutorials/todo-app.md.
 
-Run:  python examples/todo.py      (or: uv run examples/todo.py)
+Run:  uv run todo.py
 Data: <per-user data directory>/todos.json (printed at start-up).
 """
 from __future__ import annotations

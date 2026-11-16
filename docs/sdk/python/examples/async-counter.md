@@ -15,7 +15,10 @@ A counter whose callback is an async function (asyncio basics).
 ## Run it
 
 ```bash
-python async_counter.py
+uv init --app myapp && cd myapp    # once: a uv project for your app
+uv add nativehtmlkit
+# save the example file(s) in the project folder, then:
+uv run async_counter.py
 ```
 
 Related guide: [asyncio](../guides/asyncio.md)
@@ -33,7 +36,7 @@ What it teaches (Python-specific: asyncio basics)
   * awaitable RPC (``await adapter.rpc.call(...)``) that keeps the loop responsive
   * ``await adapter.run()``, which returns when the window is closed or the app quits
 
-Run:  python examples/async_counter.py   (or: cd examples && python -m nativehtmlkit run async_counter:amain)
+Run:  uv run async_counter.py   (or: uv run -m nativehtmlkit run async_counter:amain)
 """
 from __future__ import annotations
 

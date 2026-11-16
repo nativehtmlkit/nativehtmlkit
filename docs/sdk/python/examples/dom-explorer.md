@@ -14,7 +14,10 @@ Tree view of a live DOM with selecting, editing, moving and deleting nodes.
 ## Run it
 
 ```bash
-python dom_explorer.py
+uv init --app myapp && cd myapp    # once: a uv project for your app
+uv add nativehtmlkit
+# save the example file(s) in the project folder, then:
+uv run dom_explorer.py
 ```
 
 Related guide: [updating the page](../guides/updating-the-page.md)
@@ -32,7 +35,7 @@ What it teaches
   * ``Node`` mutations: ``add_class``, ``set_text``, ``move_to`` and ``remove``
   * node references belong to ONE document generation: after a reload they are stale
 
-Run:  python examples/dom_explorer.py
+Run:  uv run dom_explorer.py
 Click a node in the tree on the left; the matching element in the sample is highlighted.
 """
 from __future__ import annotations

@@ -14,7 +14,10 @@ An About/Support window: capabilities, preferences, counters and a support bundl
 ## Run it
 
 ```bash
-python diagnostics.py
+uv init --app myapp && cd myapp    # once: a uv project for your app
+uv add nativehtmlkit
+# save the example file(s) in the project folder, then:
+uv run diagnostics.py
 ```
 
 Related guide: [diagnostics and troubleshooting](../guides/diagnostics-and-troubleshooting.md)
@@ -35,8 +38,8 @@ What it teaches
   * ``Document.diagnostics()`` (CSS/resource notes for one document)
   * ``export_support_bundle`` (a local, redacted ZIP; nothing is uploaded)
 
-Run:  python examples/diagnostics.py [OUTPUT_FOLDER]      (default: the temporary folder)
-Tip:  set NATIVEHTMLKIT_DIAGNOSTICS=trace (or run ``nativehtmlkit-python --diagnostics trace ...``)
+Run:  uv run diagnostics.py [OUTPUT_FOLDER]      (default: the temporary folder)
+Tip:  set NATIVEHTMLKIT_DIAGNOSTICS=trace (or run ``uv run nativehtmlkit-python --diagnostics trace ...``)
       to record callback and request timing in the bundle.
 """
 from __future__ import annotations

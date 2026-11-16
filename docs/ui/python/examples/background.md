@@ -14,7 +14,10 @@ Run a slow calculation off the UI thread and report the result; cancel it.
 ## Run it
 
 ```bash
-python background.py
+uv init --app myapp && cd myapp    # once: a uv project for your app
+uv add nativehtmlkit_ui
+# save the example file(s) in the project folder, then:
+uv run background.py
 ```
 
 Related guide: [background work](../guides/background-work.md)
@@ -31,7 +34,7 @@ result (or the error) back to the UI owner with ui.post(); a busy flag that disa
 a Cancel button that sets a threading.Event the worker checks; shutting the executor down from
 app.on_shutdown().
 
-Run:  python background.py      (pip install nativehtmlkit_ui)
+Run:  uv run background.py      (uv add nativehtmlkit_ui)
 """
 import threading
 from concurrent.futures import ThreadPoolExecutor

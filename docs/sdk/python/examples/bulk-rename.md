@@ -14,7 +14,10 @@ Rename many files with find/replace, a live preview, a confirmation dialog and u
 ## Run it
 
 ```bash
-python bulk_rename/app.py
+uv init --app myapp && cd myapp    # once: a uv project for your app
+uv add nativehtmlkit
+# save the example file(s) in the project folder, then:
+uv run bulk_rename/app.py
 ```
 
 Related guide: [project scaffolding](../guides/project-scaffolding.md)
@@ -35,7 +38,7 @@ What it teaches
   * the native folder picker with a capability check and an ``RpcError`` fallback
   * a confirmation ``<dialog>``, per-file error handling, and undo
 
-Run:  python examples/bulk_rename/app.py [FOLDER]
+Run:  uv run bulk_rename/app.py [FOLDER]
 In regular-expression mode the replacement uses Python syntax: ``\\1`` or ``\\g<1>`` for groups.
 """
 from __future__ import annotations

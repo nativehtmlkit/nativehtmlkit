@@ -14,7 +14,10 @@ Several windows bound to the same state; open, track and close inspector windows
 ## Run it
 
 ```bash
-python multi_window.py
+uv init --app myapp && cd myapp    # once: a uv project for your app
+uv add nativehtmlkit_ui
+# save the example file(s) in the project folder, then:
+uv run multi_window.py
 ```
 
 Related guide: [multiple windows](../guides/multiple-windows.md)
@@ -32,7 +35,7 @@ closes with app.on_window_event (marshalled to the UI owner with ui.post); closi
 from code. Each inspector is a new UI; mounting one registers an SDK shutdown callback, so this
 example caps the number of inspectors (see the B-0003 limitation).
 
-Run:  python multi_window.py      (pip install nativehtmlkit_ui)
+Run:  uv run multi_window.py      (uv add nativehtmlkit_ui)
 """
 from nativehtmlkit_ui import UI, computed, state
 

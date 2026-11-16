@@ -14,7 +14,10 @@ Transform text and copy or paste it with the SDK clipboard, handling unavailabil
 ## Run it
 
 ```bash
-python clipboard_tool.py
+uv init --app myapp && cd myapp    # once: a uv project for your app
+uv add nativehtmlkit_ui
+# save the example file(s) in the project folder, then:
+uv run clipboard_tool.py
 ```
 
 Related guide: [mixing ui and sdk calls](../guides/mixing-ui-and-sdk-calls.md)
@@ -30,7 +33,7 @@ Teaches: calling public SDK services (app.set_clipboard_text / app.clipboard_tex
 event handler, reporting SDK errors in the UI instead of crashing (the clipboard is
 unavailable in headless test mode, error -32001), and a computed live preview.
 
-Run:  python clipboard_tool.py      (pip install nativehtmlkit_ui)
+Run:  uv run clipboard_tool.py      (uv add nativehtmlkit_ui)
 """
 import re
 

@@ -14,7 +14,10 @@ Sortable, filterable table of running processes.
 ## Run it
 
 ```bash
-python process_viewer.py
+uv init --app myapp && cd myapp    # once: a uv project for your app
+uv add nativehtmlkit
+# save the example file(s) in the project folder, then:
+uv run process_viewer.py
 ```
 
 Related guide: [updating the page](../guides/updating-the-page.md)
@@ -35,7 +38,7 @@ What it teaches
 The process list uses only the standard library: ``/proc`` on Linux and the Win32 API (through
 ``ctypes``) on Windows. In your own code, ``psutil`` is a good alternative.
 
-Run:  python examples/process_viewer.py
+Run:  uv run process_viewer.py
 """
 from __future__ import annotations
 

@@ -14,7 +14,10 @@ A snippet editor with keyboard shortcuts, Tab indentation and a help popover.
 ## Run it
 
 ```bash
-python keyboard_shortcuts.py
+uv init --app myapp && cd myapp    # once: a uv project for your app
+uv add nativehtmlkit
+# save the example file(s) in the project folder, then:
+uv run keyboard_shortcuts.py
 ```
 
 Related guide: [keyboard and focus](../guides/keyboard-and-focus.md)
@@ -38,7 +41,7 @@ What it teaches
 Shortcuts: Tab indent, Ctrl+S save, Ctrl+L insert timestamp, Ctrl+Shift+U upper-case the
 selection, F1 show/hide help, Escape hide help.
 
-Run:  python examples/keyboard_shortcuts.py [FILE]
+Run:  uv run keyboard_shortcuts.py [FILE]
 Default file: ~/Documents/nativehtmlkit-snippet.txt (or ~/nativehtmlkit-snippet.txt without a Documents folder).
 """
 from __future__ import annotations

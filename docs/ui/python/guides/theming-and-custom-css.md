@@ -26,8 +26,8 @@ can run side by side:
 *Real capture on KDE Plasma 6.6 Wayland with the released packages.*
 
 ```text
-python theme_preview.py cobalt compact
-python theme_preview.py daylight comfortable "#0f7b6c"
+uv run theme_preview.py cobalt compact
+uv run theme_preview.py daylight comfortable "#0f7b6c"
 ```
 
 ## Override design tokens

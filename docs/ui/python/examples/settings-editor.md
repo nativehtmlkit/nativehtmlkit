@@ -14,7 +14,10 @@ Edit, validate and save a JSON settings file; the saved theme applies on the nex
 ## Run it
 
 ```bash
-python settings_editor.py [PATH]
+uv init --app myapp && cd myapp    # once: a uv project for your app
+uv add nativehtmlkit_ui
+# save the example file(s) in the project folder, then:
+uv run settings_editor.py [PATH]
 ```
 
 Related guide: [forms and inputs](../guides/forms-and-inputs.md)
@@ -29,7 +32,7 @@ Related guide: [forms and inputs](../guides/forms-and-inputs.md)
 Teaches: loading initial state from a file, a computed validation message and an "unsaved
 changes" badge, buttons that save (atomically) and revert, a status alert, and starting the UI
 in the theme the user saved.
-Run:     python settings_editor.py [PATH]
+Run:     uv run settings_editor.py [PATH]
          (default file: nativehtmlkit-settings.json in your application-data folder:
          %APPDATA% on Windows, $XDG_CONFIG_HOME or ~/.config on Linux)
 Guide:   docs/python/tutorials/settings-editor.md (step 2 of 2)

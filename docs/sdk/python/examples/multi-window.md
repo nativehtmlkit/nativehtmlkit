@@ -14,7 +14,10 @@ Note windows managed from a main window, with a close veto for unsaved notes.
 ## Run it
 
 ```bash
-python window_manager.py
+uv init --app myapp && cd myapp    # once: a uv project for your app
+uv add nativehtmlkit
+# save the example file(s) in the project folder, then:
+uv run window_manager.py
 ```
 
 Related guide: [windows](../guides/windows.md)
@@ -33,7 +36,7 @@ What it teaches
   * ``Window.on_before_close``: veto closing a note with unsaved changes
   * "closing the main window quits the app" even while other windows are open
 
-Run:  python examples/window_manager.py
+Run:  uv run window_manager.py
 Platform note: Wayland compositors own window placement and focus, so position/focus requests
 are refused there (RpcError -32001); size, title, maximize and close work everywhere.
 """

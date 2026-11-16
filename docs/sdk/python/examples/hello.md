@@ -14,7 +14,10 @@ The smallest complete app: a greeting form that writes untrusted text safely.
 ## Run it
 
 ```bash
-python hello.py
+uv init --app myapp && cd myapp    # once: a uv project for your app
+uv add nativehtmlkit
+# save the example file(s) in the project folder, then:
+uv run hello.py
 ```
 
 Related guide: [lifecycle](../guides/lifecycle.md)
@@ -32,7 +35,7 @@ What it teaches
   * reading an input value with ``get_value``
   * writing untrusted text safely with ``set_text`` (it never parses HTML)
 
-Run:  python examples/hello.py      (or: uv run examples/hello.py)
+Run:  uv run hello.py
 """
 from __future__ import annotations
 

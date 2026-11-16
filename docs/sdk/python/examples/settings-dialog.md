@@ -14,7 +14,10 @@ Settings in a modal HTML dialog, saved to JSON: colour scheme, text size and red
 ## Run it
 
 ```bash
-python settings_dialog.py [SETTINGS_FILE]
+uv init --app myapp && cd myapp    # once: a uv project for your app
+uv add nativehtmlkit
+# save the example file(s) in the project folder, then:
+uv run settings_dialog.py [SETTINGS_FILE]
 ```
 
 Related guide: [dialogs and popovers](../guides/dialogs-and-popovers.md)
@@ -36,7 +39,7 @@ What it teaches
   * replacing one stylesheet in place (``add_stylesheet`` once, then ``replace_stylesheet``)
   * saving settings as JSON
 
-Run:  python examples/settings_dialog.py [SETTINGS_FILE]
+Run:  uv run settings_dialog.py [SETTINGS_FILE]
 Default settings file: <config folder>/NativeHTMLKit-Examples/settings.json
 (%APPDATA% on Windows, $XDG_CONFIG_HOME or ~/.config on Linux).
 """

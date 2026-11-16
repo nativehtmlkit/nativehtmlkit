@@ -4,21 +4,22 @@ NativeHTMLKit shows native desktop windows whose content is plain HTML and CSS. 
 
 !!! tip "Just looking?"
     Install the demo to click through every example and read its source first:
-    `pip install nativehtmlkit-demo` or `Install-Module NativeHTMLKit.Demo`. See [Try the demo](demo.md).
+    `uvx nativehtmlkit-demo` or `Install-Module NativeHTMLKit.Demo`. See [Try the demo](demo.md).
 
 ## Pick your path and install
 
 Choose the layer you want to work with, then the language (or, for the CLI, your system). Each tab
-has the complete install command and a quick check that it worked.
+has the complete install command and a quick check that it worked. Python uses [uv](https://docs.astral.sh/uv/getting-started/installation/): each app is a
+uv project, and you run its files with `uv run app.py` (uv provides Python 3.10 or later if needed).
 
 ### UI library: reactive components (start here)
 
 === "Python"
 
     ```bash
-    python -m pip install nativehtmlkit_ui        # also installs the nativehtmlkit SDK
-    # or: uv add nativehtmlkit_ui
-    python -m pip show nativehtmlkit nativehtmlkit_ui    # both installed, with versions
+    uv init --app myapp && cd myapp      # a project for your app
+    uv add nativehtmlkit_ui              # also installs the nativehtmlkit SDK
+    uv tree                              # both installed, with versions
     ```
 
     Next: [Python UI library: getting started](../ui/python/getting-started.md)
@@ -37,9 +38,9 @@ has the complete install command and a quick check that it worked.
 === "Python"
 
     ```bash
-    python -m pip install nativehtmlkit
-    # or: uv add nativehtmlkit
-    nativehtmlkit-python version        # SDK, protocol and bundled host versions
+    uv init --app myapp && cd myapp      # a project for your app
+    uv add nativehtmlkit
+    uv run nativehtmlkit-python version  # SDK, protocol and bundled host versions
     ```
 
     Next: [Python SDK: getting started](../sdk/python/getting-started.md)
@@ -82,7 +83,7 @@ Not sure which to pick? Read [Choose an entry point](choose.md). Before installi
 
 ## What happens when you run an app
 
-1. You run your script normally (`python app.py`, `pwsh -File app.ps1`).
+1. You run your script normally (`uv run app.py`, `pwsh -File app.ps1`).
 2. The SDK starts the bundled native host, and the host starts **your script a second time** as its *backend*, connected over a private local channel. That is why every example keeps its work *after* `Application.start()` / `Start-NativeHTMLKitScript`. See [Process and lifecycle](../concepts/lifecycle.md).
 3. Your code opens windows, loads HTML, subscribes to events and announces that it is *ready*.
 4. Events (clicks, typing, form submits) arrive in your callbacks; you change the page with document commands such as "set this element's text".

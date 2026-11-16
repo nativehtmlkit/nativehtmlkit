@@ -14,7 +14,10 @@ A live line chart of memory use drawn into an RGBA bitmap.
 ## Run it
 
 ```bash
-python live_chart.py
+uv init --app myapp && cd myapp    # once: a uv project for your app
+uv add nativehtmlkit
+# save the example file(s) in the project folder, then:
+uv run live_chart.py
 ```
 
 Related guide: [live bitmaps](../guides/live-bitmaps.md)
@@ -35,7 +38,7 @@ What it teaches
 
 The chart shows this Python process's working set (resident memory), sampled twice per second.
 
-Run:  python examples/live_chart.py
+Run:  uv run live_chart.py
 """
 from __future__ import annotations
 

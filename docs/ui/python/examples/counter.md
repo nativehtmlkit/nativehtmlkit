@@ -14,7 +14,10 @@ The smallest tour of state, computed text, buttons, an input, a checkbox and a l
 ## Run it
 
 ```bash
-python counter.py
+uv init --app myapp && cd myapp    # once: a uv project for your app
+uv add nativehtmlkit_ui
+# save the example file(s) in the project folder, then:
+uv run counter.py
 ```
 
 Related guide: [reactive state](../guides/reactive-state.md)
@@ -29,8 +32,8 @@ Related guide: [reactive state](../guides/reactive-state.md)
 Teaches: state() and computed(), text bound to a lambda, a two-way input and checkbox, a reactive
 text list shown or hidden with ui.when(), and a responsive card grid.
 
-Run:  python counter.py      (pip install nativehtmlkit_ui)
-  or: python -m nativehtmlkit run counter:main --name Counter   (from this directory)
+Run:  uv run counter.py      (uv add nativehtmlkit_ui)
+  or: uv run -m nativehtmlkit run counter:main --name Counter   (from this directory)
 """
 from nativehtmlkit_ui import UI, state, computed
 

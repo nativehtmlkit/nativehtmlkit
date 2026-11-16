@@ -14,7 +14,10 @@ Live process monitor that refreshes in the background, with filter, sort, pause 
 ## Run it
 
 ```bash
-python process_dashboard/dashboard.py
+uv init --app myapp && cd myapp    # once: a uv project for your app
+uv add nativehtmlkit
+# save the example file(s) in the project folder, then:
+uv run process_dashboard/dashboard.py
 ```
 
 Related guide: [background work](../guides/background-work.md)
@@ -35,7 +38,7 @@ What it teaches
   * copying the table to the clipboard with ``set_clipboard_text`` (and a fallback without one)
   * stopping the thread from ``app.on_shutdown``
 
-Run:    python examples/process_dashboard/dashboard.py [--refresh-seconds 3]
+Run:    uv run process_dashboard/dashboard.py [--refresh-seconds 3]
 Guide:  docs/tutorials/process-dashboard.md (step 3 of 3)
 """
 from __future__ import annotations

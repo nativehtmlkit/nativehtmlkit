@@ -14,7 +14,10 @@ Live validation, a guarded submit button, a confirmation screen and reset.
 ## Run it
 
 ```bash
-python signup_form.py
+uv init --app myapp && cd myapp    # once: a uv project for your app
+uv add nativehtmlkit_ui
+# save the example file(s) in the project folder, then:
+uv run signup_form.py
 ```
 
 Related guide: [forms and inputs](../guides/forms-and-inputs.md)
@@ -30,7 +33,7 @@ Teaches: validation as a computed list of messages (no DOM reads), showing error
 fields the user has typed in, a submit button disabled until the form is valid, swapping the
 form and a confirmation with ui.when(), and resetting every control by setting its state.
 
-Run:  python signup_form.py      (pip install nativehtmlkit_ui)
+Run:  uv run signup_form.py      (uv add nativehtmlkit_ui)
 """
 import re
 

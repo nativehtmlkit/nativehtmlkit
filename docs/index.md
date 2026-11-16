@@ -53,8 +53,7 @@ CSS source, and **Run Python** / **Run PowerShell** start it as its own window.
 === "Python"
 
     ```bash
-    python -m pip install nativehtmlkit-demo
-    nativehtmlkit-demo
+    uvx nativehtmlkit-demo        # with uv: runs it without installing
     ```
 
 === "PowerShell"
@@ -189,8 +188,8 @@ The UI tabs are the [Hello UI example](ui/python/examples/hello.md) ([PowerShell
 | Entry point | Package | For |
 |---|---|---|
 | CLI | [`nativehtmlkit` / `nhk`](https://github.com/nativehtmlkit/nativehtmlkit-cli/releases) 0.1.2 | Select rows, view text or fill a form from any shell |
-| Python SDK | [`nativehtmlkit`](https://pypi.org/project/nativehtmlkit/) 0.1.2 | Windows, documents, events, dialogs, clipboard and live bitmaps |
-| Python UI | [`nativehtmlkit_ui`](https://pypi.org/project/nativehtmlkit_ui/) 0.1.1 | Reactive state and compact components on the Python SDK |
+| Python SDK | [`nativehtmlkit`](https://pypi.org/project/nativehtmlkit/) 0.1.2 (`uv add nativehtmlkit`) | Windows, documents, events, dialogs, clipboard and live bitmaps |
+| Python UI | [`nativehtmlkit_ui`](https://pypi.org/project/nativehtmlkit_ui/) 0.1.1 (`uv add nativehtmlkit_ui`) | Reactive state and compact components on the Python SDK |
 | PowerShell SDK | [`NativeHTMLKit`](https://www.powershellgallery.com/packages/NativeHTMLKit) 0.1.2 | The same features as cmdlets, plus background tasks |
 | PowerShell UI | [`NativeHTMLKit.UI`](https://www.powershellgallery.com/packages/NativeHTMLKit.UI) 0.1.1 | Reactive components on the PowerShell SDK |
 | Demo | [`nativehtmlkit-demo`](https://pypi.org/project/nativehtmlkit-demo/) / [`NativeHTMLKit.Demo`](https://www.powershellgallery.com/packages/NativeHTMLKit.Demo) 0.1.0 | Browse and run every example ([Try the demo](getting-started/demo.md)) |

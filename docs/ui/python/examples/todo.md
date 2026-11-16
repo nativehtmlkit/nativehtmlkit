@@ -14,7 +14,10 @@ Tasks with Done/Remove buttons per row and an All/Open/Done filter.
 ## Run it
 
 ```bash
-python todo.py
+uv init --app myapp && cd myapp    # once: a uv project for your app
+uv add nativehtmlkit_ui
+# save the example file(s) in the project folder, then:
+uv run todo.py
 ```
 
 Related guide: [lists and conditional content](../guides/lists-and-conditional-content.md)
@@ -30,7 +33,7 @@ Teaches: the "slot pool" pattern. The UI tree is fixed once mounted, so the app 
 MAX_TASKS rows up front and shows, hides and relabels them from state (ui.when + bound text +
 bound button labels). Also: computed counts, a disabled Add button and "Clear done".
 
-Run:  python todo.py      (pip install nativehtmlkit_ui)
+Run:  uv run todo.py      (uv add nativehtmlkit_ui)
 """
 from itertools import count
 

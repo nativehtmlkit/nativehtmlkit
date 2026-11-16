@@ -5,7 +5,7 @@ NativeHTMLKit targets local tools and small desktop applications where you want 
 ## What you gain
 
 - **One language for the logic.** Event handlers are ordinary Python functions or PowerShell scriptblocks. There is no front-end/back-end split, no bundler and no IPC layer for you to design.
-- **Small, self-contained installs.** The SDK wheel or module bundles the native host; `pip install nativehtmlkit` or `Install-Module NativeHTMLKit` is the whole runtime. The CLI is a single archive.
+- **Small, self-contained installs.** The SDK wheel or module bundles the native host; `uv add nativehtmlkit` or `Install-Module NativeHTMLKit` is the whole runtime. The CLI is a single archive.
 - **No network surface.** There is no HTTP server and the renderer never fetches remote resources (see the [security model](security.md)).
 - **Real native windows and services.** Native file and folder dialogs, clipboard, multiple windows, window state, desktop preferences, accessibility integration and live RGBA bitmaps are host features, not browser emulations.
 - **Scripts become apps.** A PowerShell admin script or a shell pipeline can ask the user a question in a proper window (`nativehtmlkit select`, `form`) and continue with the answer.

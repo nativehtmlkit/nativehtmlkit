@@ -14,7 +14,10 @@ Add expenses, remove the last one, filter by category and see totals (expense-tr
 ## Run it
 
 ```bash
-python expenses.py
+uv init --app myapp && cd myapp    # once: a uv project for your app
+uv add nativehtmlkit_ui
+# save the example file(s) in the project folder, then:
+uv run expenses.py
 ```
 
 Related guide: [forms and inputs](../guides/forms-and-inputs.md)
@@ -30,7 +33,7 @@ Teaches: state + computed values, two-way input/select binding, a disabled butto
 computed value, a filtered text list, an empty-state region with ui.when(), and Decimal input
 validation. This is the finished app of docs/python/tutorials/expense-tracker.md.
 
-Run:  python expenses.py      (pip install nativehtmlkit_ui)
+Run:  uv run expenses.py      (uv add nativehtmlkit_ui)
 """
 from decimal import Decimal, InvalidOperation
 

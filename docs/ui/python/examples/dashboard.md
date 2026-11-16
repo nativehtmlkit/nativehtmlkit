@@ -14,7 +14,10 @@ A responsive card grid with a live clock and disk usage, themed with extra CSS.
 ## Run it
 
 ```bash
-python dashboard.py [cobalt|graphite|daylight]
+uv init --app myapp && cd myapp    # once: a uv project for your app
+uv add nativehtmlkit_ui
+# save the example file(s) in the project folder, then:
+uv run dashboard.py [cobalt|graphite|daylight]
 ```
 
 Related guide: [layouts](../guides/layouts.md)
@@ -30,7 +33,7 @@ Teaches: ui.grid() (3 columns, 2 below 1000 px, 1 below 620 px), theme and densi
 extra_css with your own classes and token overrides, ui.element() for a custom-styled tag, and
 a periodic timer thread that updates state through ui.post().
 
-Run:  python dashboard.py [cobalt|graphite|daylight]      (pip install nativehtmlkit_ui)
+Run:  uv run dashboard.py [cobalt|graphite|daylight]      (uv add nativehtmlkit_ui)
 """
 import os
 import platform

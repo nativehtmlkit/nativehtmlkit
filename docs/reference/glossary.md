@@ -34,7 +34,7 @@
 : The native Core executable `nativehtmlkit-host`, bundled with each SDK and the CLI. It owns windows, rendering, input and desktop services.
 
 **Launcher**
-: The first run of your script (`python app.py`, `pwsh -File app.ps1`). It starts the host, waits, and exits with the host's status; the host then runs the script again as the backend.
+: The first run of your script (`uv run app.py`, `pwsh -File app.ps1`). It starts the host, waits, and exits with the host's status; the host then runs the script again as the backend.
 
 **Live bitmap**
 : A bounded RGBA8 image surface that your code fills with pixels and presents to an `<img src="ui4me-bitmap://ID">`. Released with its document.

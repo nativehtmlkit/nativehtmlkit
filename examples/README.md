@@ -6,8 +6,8 @@ exploration.
 
 | Gallery | Run |
 |---|---|
-| [Python SDK](python-sdk/gallery.py) | `python examples/python-sdk/gallery.py` |
-| [Python UI](python-ui/gallery.py) | `python examples/python-ui/gallery.py` |
+| [Python SDK](python-sdk/gallery.py) | `uv run --with nativehtmlkit examples/python-sdk/gallery.py` |
+| [Python UI](python-ui/gallery.py) | `uv run --with nativehtmlkit_ui examples/python-ui/gallery.py` |
 | [PowerShell SDK](powershell-sdk/gallery.ps1) | `pwsh -File examples/powershell-sdk/gallery.ps1` |
 | [PowerShell UI](powershell-ui/gallery.ps1) | `pwsh -File examples/powershell-ui/gallery.ps1` |
 

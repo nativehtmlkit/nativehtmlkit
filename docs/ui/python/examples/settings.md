@@ -14,7 +14,10 @@ Save, Revert and Restore defaults with an unsaved-changes indicator.
 ## Run it
 
 ```bash
-python settings.py
+uv init --app myapp && cd myapp    # once: a uv project for your app
+uv add nativehtmlkit_ui
+# save the example file(s) in the project folder, then:
+uv run settings.py
 ```
 
 Related guide: [reactive state](../guides/reactive-state.md)
@@ -30,7 +33,7 @@ Teaches: one computed snapshot of many controls, dirty tracking by comparing it 
 saved snapshot, writing state back into inputs/selects/checkboxes (Revert, Defaults) and
 enabling buttons only when they would do something. Replace save() with your own persistence.
 
-Run:  python settings.py      (pip install nativehtmlkit_ui)
+Run:  uv run settings.py      (uv add nativehtmlkit_ui)
 """
 from datetime import datetime
 

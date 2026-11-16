@@ -14,7 +14,10 @@ SHA-256 of every file in a folder, computed in the background with progress, can
 ## Run it
 
 ```bash
-python checksum.py [FOLDER]
+uv init --app myapp && cd myapp    # once: a uv project for your app
+uv add nativehtmlkit
+# save the example file(s) in the project folder, then:
+uv run checksum.py [FOLDER]
 ```
 
 Related guide: [background work](../guides/background-work.md)
@@ -35,7 +38,7 @@ What it teaches
   * ``on_before_quit``: ask before quitting while a job is running
   * file names are untrusted text: escaped with ``html.escape``
 
-Run:  python examples/checksum.py [FOLDER]      (default: the current directory)
+Run:  uv run checksum.py [FOLDER]      (default: the current directory)
 Type or browse to a folder, then press Start.
 """
 from __future__ import annotations

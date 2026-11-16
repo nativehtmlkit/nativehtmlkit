@@ -1,6 +1,6 @@
 """NativeHTMLKit Python SDK gallery: a real local native host (interactive desktop required).
 
-Run: python examples/python-sdk/gallery.py
+Run: uv run --with nativehtmlkit examples/python-sdk/gallery.py
 This does not use the UI library. For release qualification, exercise every button.
 """
 from nativehtmlkit import Application

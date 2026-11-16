@@ -14,7 +14,10 @@ Untrusted typed text is always escaped; only fixed help markup is inserted as HT
 ## Run it
 
 ```bash
-python message_preview.py
+uv init --app myapp && cd myapp    # once: a uv project for your app
+uv add nativehtmlkit_ui
+# save the example file(s) in the project folder, then:
+uv run message_preview.py
 ```
 
 Related guide: [trusted and untrusted content](../guides/trusted-and-untrusted-content.md)
@@ -31,7 +34,7 @@ Teaches: the trust boundary. Everything a user types reaches the window through 
 ui.raw_html() is used only for a fixed, developer-written snippet. Also: a length limit with a
 computed counter and a sent-messages list.
 
-Run:  python message_preview.py      (pip install nativehtmlkit_ui)
+Run:  uv run message_preview.py      (uv add nativehtmlkit_ui)
 """
 from nativehtmlkit_ui import UI, computed, state
 

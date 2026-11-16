@@ -14,7 +14,10 @@ The first window: a greeting that follows a text field, and a Reset button.
 ## Run it
 
 ```bash
-python hello.py
+uv init --app myapp && cd myapp    # once: a uv project for your app
+uv add nativehtmlkit_ui
+# save the example file(s) in the project folder, then:
+uv run hello.py
 ```
 
 Related guide: [reactive state](../guides/reactive-state.md)
@@ -28,7 +31,7 @@ Related guide: [reactive state](../guides/reactive-state.md)
 
 Teaches: Application.start(), state() and computed(), a heading bound to a computed value, a
 two-way input, a button that sets state, mount/run/dispose behind the script entry point.
-Run:     python hello.py      (pip install nativehtmlkit_ui)
+Run:     uv run hello.py      (uv add nativehtmlkit_ui)
 Guide:   docs/python/getting-started.md
 """
 from nativehtmlkit import Application

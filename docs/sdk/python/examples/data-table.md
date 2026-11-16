@@ -14,7 +14,10 @@ Searchable, sortable, paged table rendered from data, with a details pane.
 ## Run it
 
 ```bash
-python data_table.py
+uv init --app myapp && cd myapp    # once: a uv project for your app
+uv add nativehtmlkit
+# save the example file(s) in the project folder, then:
+uv run data_table.py
 ```
 
 Related guide: [updating the page](../guides/updating-the-page.md)
@@ -33,7 +36,7 @@ What it teaches
   * a details pane updated with ``set_text`` (always plain text)
   * splitting state (Python) from presentation (HTML/CSS)
 
-Run:  python examples/data_table.py
+Run:  uv run data_table.py
 """
 from __future__ import annotations
 

@@ -14,7 +14,10 @@ A background producer streams log lines; filter by level and text, pause and cle
 ## Run it
 
 ```bash
-python log_viewer.py
+uv init --app myapp && cd myapp    # once: a uv project for your app
+uv add nativehtmlkit_ui
+# save the example file(s) in the project folder, then:
+uv run log_viewer.py
 ```
 
 Related guide: [background work](../guides/background-work.md)
@@ -30,7 +33,7 @@ Teaches: a worker thread that hands every result to the UI owner with ui.post(),
 history, a computed filtered view rendered with text_list (all text is escaped), counters,
 pausing without losing lines, and stopping the worker from app.on_shutdown().
 
-Run:  python log_viewer.py      (pip install nativehtmlkit_ui)
+Run:  uv run log_viewer.py      (uv add nativehtmlkit_ui)
 """
 import threading
 from datetime import datetime

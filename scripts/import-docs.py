@@ -278,7 +278,13 @@ def example_page(site: Site, repo: str, ex: dict, lang: str, file_key: str, run_
         lines += ["**What it teaches:** " + "; ".join(ex["teaches"]) + ".", ""]
     run = ex.get(run_key) or ex.get("run")
     if run:
-        lines += ["## Run it", "", f"```{fence if lang in ('linux', 'windows') else ('bash' if lang == 'python' else 'powershell')}", run, "```", ""]
+        setup = []
+        if lang == "python":  # in a uv project that has the package (see getting started)
+            package = "nativehtmlkit_ui" if repo == "nativehtmlkit_ui" else "nativehtmlkit"
+            setup = [f"uv init --app myapp && cd myapp    # once: a uv project for your app",
+                     f"uv add {package}", "# save the example file(s) in the project folder, then:"]
+        lines += ["## Run it", "", f"```{fence if lang in ('linux', 'windows') else ('bash' if lang == 'python' else 'powershell')}",
+                  *setup, run, "```", ""]
     guide = ex.get("guide")
     if guide:
         target = Path(dest).parent.parent / "guides" / f"{guide}.md"
@@ -551,7 +557,7 @@ def layer_index(site: Site, part: str) -> None:
     title, blurb, api = LAYER[part]
     cards = []
     for lang in ("python", "powershell"):
-        run = ("Python 3.10+" if lang == "python"
+        run = ("Python 3.10+ with uv" if lang == "python"
                else "PowerShell 7.2+, or Windows PowerShell 5.1 on Windows")
         cards += [f"-   **[{NAMES[lang]}]({lang}/index.md)**", "",
                   f"    {run}. Same API on Linux (KDE Plasma Wayland) and Windows.", "",

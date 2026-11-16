@@ -4,7 +4,7 @@ A NativeHTMLKit application is **two cooperating processes**: the native host, w
 
 ```mermaid
 sequenceDiagram
-  participant L as Launcher run (python app.py / pwsh -File app.ps1)
+  participant L as Launcher run (uv run app.py / pwsh -File app.ps1)
   participant H as Native host
   participant B as Backend run (same script, second time)
   L->>H: start host with a private manifest
@@ -19,7 +19,7 @@ sequenceDiagram
 
 ## Your script runs twice
 
-When you run `python app.py`, `Application.start()` notices that it was not started by a host. It writes a private temporary manifest, starts the bundled host and waits; it **never returns** in that first run — the process ends with the host's exit status. The host then runs the *same command again* as its supervised backend. In that second run `Application.start()` connects to the host and returns the `Application`.
+When you run `uv run app.py`, `Application.start()` notices that it was not started by a host. It writes a private temporary manifest, starts the bundled host and waits; it **never returns** in that first run — the process ends with the host's exit status. The host then runs the *same Python command again* (the project's interpreter with the same script and arguments) as its supervised backend. In that second run `Application.start()` connects to the host and returns the `Application`.
 
 PowerShell works the same way: `Start-NativeHTMLKitScript` in a script run with `pwsh -File app.ps1` (or `powershell.exe -File app.ps1` on Windows) starts the host, which re-runs the script with the same PowerShell edition and arguments; the call returns the connected application only in the backend run. Script arguments are forwarded to the backend run.
 
@@ -27,8 +27,8 @@ Consequences:
 
 - **Everything above `Application.start()` / `Start-NativeHTMLKitScript` runs twice.** Keep imports, constants and function definitions there; put side effects (reading files, creating folders, network calls) below the call or inside `main()`.
 - Python examples use `if __name__ == "__main__": main()` and keep work inside `main()`.
-- `Application.start()` must run from a script file or `python -m package.module`; it refuses an interactive interpreter, `python -c` and standard input, because it could not re-run them. Command-line arguments are passed to the backend run unchanged.
-- A Python backend started with `python -m nativehtmlkit run module:main` (or by a host manifest) only connects; it is not relaunched.
+- `Application.start()` must run from a script file or a module (`uv run app.py`, `uv run -m package.module`); it refuses an interactive interpreter, `python -c` and standard input, because it could not re-run them. Command-line arguments are passed to the backend run unchanged.
+- A Python backend started with `uv run -m nativehtmlkit run module:main` (or by a host manifest) only connects; it is not relaunched.
 
 ## Starting up: `ready`
 

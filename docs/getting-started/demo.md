@@ -14,13 +14,14 @@ example was started with **Run Python** and clicked three times.*
 === "Python"
 
     ```bash
-    python -m pip install nativehtmlkit-demo
+    uvx nativehtmlkit-demo                    # run it without installing
+    uv tool install nativehtmlkit-demo        # or install the command, then:
     nativehtmlkit-demo
     ```
 
-    Needs Python 3.10 or later. This installs the [`nativehtmlkit`](https://pypi.org/project/nativehtmlkit/)
-    SDK and [`nativehtmlkit_ui`](https://pypi.org/project/nativehtmlkit_ui/) too.
-    `python -m nativehtmlkit_demo` works as well.
+    Needs [uv](https://docs.astral.sh/uv/getting-started/installation/) (it provides Python 3.10 or later if needed). The demo comes with the
+    [`nativehtmlkit`](https://pypi.org/project/nativehtmlkit/) SDK and
+    [`nativehtmlkit_ui`](https://pypi.org/project/nativehtmlkit_ui/), which its Python examples use.
 
 === "PowerShell"
 
@@ -65,7 +66,7 @@ viewer gets a sample log file that keeps growing while it runs.
 ## Check an installation
 
 ```bash
-nativehtmlkit-demo --self-test
+uvx nativehtmlkit-demo --self-test
 ```
 
 ```powershell

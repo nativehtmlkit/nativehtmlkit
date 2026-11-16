@@ -14,7 +14,10 @@ A counter with a step selector, limits and a bounded change history.
 ## Run it
 
 ```bash
-python counter.py
+uv init --app myapp && cd myapp    # once: a uv project for your app
+uv add nativehtmlkit
+# save the example file(s) in the project folder, then:
+uv run counter.py
 ```
 
 Related guide: [updating the page](../guides/updating-the-page.md)
@@ -34,7 +37,7 @@ What it teaches
   * atomic multi-element updates with ``Document.batch`` (one host transaction)
   * a bounded list: ``insert_html`` at the top plus ``trim_children``
 
-Run:  python examples/counter.py
+Run:  uv run counter.py
 """
 from __future__ import annotations
 

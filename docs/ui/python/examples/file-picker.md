@@ -14,7 +14,10 @@ Pick files with the native open dialog and list their sizes and a total.
 ## Run it
 
 ```bash
-python file_picker.py
+uv init --app myapp && cd myapp    # once: a uv project for your app
+uv add nativehtmlkit_ui
+# save the example file(s) in the project folder, then:
+uv run file_picker.py
 ```
 
 Related guide: [mixing ui and sdk calls](../guides/mixing-ui-and-sdk-calls.md)
@@ -30,7 +33,7 @@ Teaches: an SDK dialog started without blocking the UI (window.open_files(wait=F
 future), handing its result back with ui.post(), a busy flag that disables the button while the
 dialog is open, cancel and error handling (dialogs are unavailable in headless test mode).
 
-Run:  python file_picker.py      (pip install nativehtmlkit_ui)
+Run:  uv run file_picker.py      (uv add nativehtmlkit_ui)
 """
 from pathlib import Path
 

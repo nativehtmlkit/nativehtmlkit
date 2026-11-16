@@ -14,7 +14,10 @@ Sign-up form with native constraint validation, a password-match rule, an error 
 ## Run it
 
 ```bash
-python signup_form.py
+uv init --app myapp && cd myapp    # once: a uv project for your app
+uv add nativehtmlkit
+# save the example file(s) in the project folder, then:
+uv run signup_form.py
 ```
 
 Related guide: [forms and validation](../guides/forms-and-validation.md)
@@ -33,7 +36,7 @@ What it teaches
   * reading the submitted values with ``form_data`` (ordered entries, repeated names kept)
   * showing an error summary and a result with escaped user text
 
-Run:  python examples/signup_form.py
+Run:  uv run signup_form.py
 """
 from __future__ import annotations
 

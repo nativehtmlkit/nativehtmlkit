@@ -14,7 +14,10 @@ Text transforms, copy and paste, a documentation link and the desktop colour sch
 ## Run it
 
 ```bash
-python text_toolbox.py
+uv init --app myapp && cd myapp    # once: a uv project for your app
+uv add nativehtmlkit
+# save the example file(s) in the project folder, then:
+uv run text_toolbox.py
 ```
 
 Related guide: [clipboard and desktop](../guides/clipboard-and-desktop.md)
@@ -34,7 +37,7 @@ What it teaches
   * one delegated click handler for a toolbar of buttons
   * ``get_value`` / ``set_value`` and the UTF-16 based ``control_selection`` offsets
 
-Run:  python examples/text_toolbox.py
+Run:  uv run text_toolbox.py
 """
 from __future__ import annotations
 

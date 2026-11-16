@@ -1,4 +1,4 @@
-"""NativeHTMLKit Python UI gallery. Run: python examples/python-ui/gallery.py.
+"""NativeHTMLKit Python UI gallery. Run: uv run --with nativehtmlkit_ui examples/python-ui/gallery.py
 
 UI gallery includes only actual public components; SDK HTML dialogs are separate.
 """

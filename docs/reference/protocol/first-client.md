@@ -23,7 +23,7 @@ The code lives in [`examples/wire-v1/`](https://github.com/nativehtmlkit/nativeh
 
 ```bash
 export NATIVEHTMLKIT_HOST_BINARY=/path/to/nativehtmlkit-host
-python3 examples/wire-v1/notes_app.py --headless --self-test --transcript session.jsonl
+uv run examples/wire-v1/notes_app.py --headless --self-test --transcript session.jsonl
 ```
 
 Expected output (Core 1.0.3, Linux):

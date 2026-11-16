@@ -9,7 +9,7 @@ It works the same on Linux and Windows; the few real differences are listed in [
 
 -   **[Python](python/index.md)**
 
-    Python 3.10+. Same API on Linux (KDE Plasma Wayland) and Windows.
+    Python 3.10+ with uv. Same API on Linux (KDE Plasma Wayland) and Windows.
 
     [Getting started](python/getting-started.md) · [Tutorials](python/tutorials/index.md) · [Guides](python/guides/index.md) · [Examples](python/examples/index.md) · [API](python/reference.md)
 

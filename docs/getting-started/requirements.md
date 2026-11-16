@@ -27,8 +27,8 @@ If `pip` cannot find a compatible wheel on Linux, your distribution's glibc is p
 ## Check an installation
 
 ```bash
-nativehtmlkit-python doctor      # Python: the host's environment report
-nativehtmlkit-python version     # Python: SDK, protocol and bundled host versions as JSON
+uv run nativehtmlkit-python doctor      # Python (in your uv project): the host's environment report
+uv run nativehtmlkit-python version     # Python: SDK, protocol and bundled host versions as JSON
 nativehtmlkit doctor             # CLI: which host it found and its version
 ```
 

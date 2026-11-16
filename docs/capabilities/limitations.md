@@ -19,7 +19,7 @@ This page lists what the released packages (Core 1.0.3, CLI 0.1.2, Python SDK 0.
 ## Accessibility
 
 - Core 1.0.3 has a reported Linux Orca collapsed-select announcement issue (NHK-CROSS-0010).
-- UI-specific screen-reader coverage remains incomplete. See [accessibility basics](../how-to/accessibility.md).
+- UI-specific screen-reader coverage remains incomplete. See [accessibility basics](../concepts/accessibility.md).
 
 ## Headless test mode
 

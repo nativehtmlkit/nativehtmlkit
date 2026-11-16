@@ -1,46 +1,25 @@
-# NativeHTMLKit examples
+# NativeHTMLKit capability galleries
 
-Runnable source examples for every entry point, used by the documentation at https://nativehtmlkit.github.io/ . Each file starts with a comment that says what it teaches and how to run it.
+This repository builds the documentation site https://nativehtmlkit.github.io/ . It keeps only four
+**capability galleries**: one window per entry point with a button for each feature, for manual
+exploration.
 
-| Folder | What is inside |
+| Gallery | Run |
 |---|---|
-| [`getting-started/`](getting-started/) | The first window of each entry point (`hello.py`, `hello_ui.py`, `hello.ps1`, `hello-ui.ps1`, `hello-cli.sh`) |
-| [`tutorials/python-notes/`](tutorials/python-notes/) | Python SDK tutorial: notes app with persistence, in four steps |
-| [`tutorials/python-ui-expenses/`](tutorials/python-ui-expenses/) | Python UI tutorial: expense tracker with computed totals, in three steps |
-| [`tutorials/powershell-process-dashboard/`](tutorials/powershell-process-dashboard/) | PowerShell SDK tutorial: live process dashboard, in three steps |
-| [`tutorials/powershell-ui-settings/`](tutorials/powershell-ui-settings/) | PowerShell UI tutorial: settings editor, in two steps |
-| [`tutorials/cli-branch-picker/`](tutorials/cli-branch-picker/) | CLI tutorial: Git branch picker in Bash, in two steps |
-| [`howto/python/`](howto/python/) | Python SDK recipes: events, page updates, forms, windows, dialogs, clipboard, background work, live chart, styling |
-| [`howto/python-ui/`](howto/python-ui/) | Python UI recipes: theming, background progress |
-| [`howto/powershell/`](howto/powershell/) | PowerShell recipes: forms, CSV viewer with a file dialog, background task, live chart |
-| [`python-sdk/gallery.py`](python-sdk/gallery.py), [`python-ui/gallery.py`](python-ui/gallery.py), [`powershell-sdk/gallery.ps1`](powershell-sdk/gallery.ps1), [`powershell-ui/gallery.ps1`](powershell-ui/gallery.ps1) | Capability galleries: one window with a button for each SDK or UI feature, for manual exploration |
+| [Python SDK](python-sdk/gallery.py) | `python examples/python-sdk/gallery.py` |
+| [Python UI](python-ui/gallery.py) | `python examples/python-ui/gallery.py` |
+| [PowerShell SDK](powershell-sdk/gallery.ps1) | `pwsh -File examples/powershell-sdk/gallery.ps1` |
+| [PowerShell UI](powershell-ui/gallery.ps1) | `pwsh -File examples/powershell-ui/gallery.ps1` |
 
-## Run an example
+All other examples, tutorials and guides live in the repository that owns the API, each with an
+`examples/catalog.toml`, and are published on the site with a screenshot and full source:
 
-```bash
-python -m pip install nativehtmlkit nativehtmlkit_ui      # Python SDK 0.1.2 and UI 0.1.1
-python examples/tutorials/python-notes/notes.py
-```
+| Entry point | Examples |
+|---|---|
+| CLI (Linux and Windows) | https://github.com/nativehtmlkit/nativehtmlkit-cli/tree/main/examples |
+| Python SDK | https://github.com/nativehtmlkit/nativehtmlkit-python/tree/main/examples |
+| PowerShell SDK | https://github.com/nativehtmlkit/nativehtmlkit-powershell/tree/main/examples |
+| Python and PowerShell UI | https://github.com/nativehtmlkit/nativehtmlkit_ui/tree/main/examples |
 
-```powershell
-Install-Module NativeHTMLKit, NativeHTMLKit.UI -Scope CurrentUser
-pwsh -File examples/tutorials/powershell-process-dashboard/dashboard.ps1
-```
-
-```bash
-# CLI 0.1.2 from https://github.com/nativehtmlkit/nativehtmlkit-cli/releases on PATH
-bash examples/tutorials/cli-branch-picker/git-pick.sh
-```
-
-Examples open real windows, so run them in an interactive desktop session (KDE Plasma on Wayland, or Windows). PowerShell examples also run on Windows PowerShell 5.1 (`powershell.exe -File ...`).
-
-## How the examples are verified
-
-[`scripts/test-examples.py`](../scripts/test-examples.py) runs every example against the released packages with the host in headless test mode: it waits for the app to be ready, types into fields and submits forms through public document commands, reads the page back, requests a clean quit, and checks the exit status, stderr and leftover processes. CLI scripts are run with the headless CLI and `--timeout`. Click-only actions, the clipboard and native file dialogs need a real desktop and are checked interactively. Details: [Examples and verification](../docs/reference/examples.md).
-
-## What to try in the galleries
-
-- Buttons update status and state; text fields, selections and checkboxes change bound text.
-- Closing a dialog or a second window leaves the main window running.
-- The file picker returns to the app without freezing it; cancelling is reported.
-- The live bitmap changes with each frame.
+`scripts/test-examples.py` runs the galleries against the released packages in the host's headless
+test mode; each owning repository runs its own examples the same way.

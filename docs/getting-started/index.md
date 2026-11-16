@@ -6,11 +6,12 @@ NativeHTMLKit shows native desktop windows whose content is plain HTML and CSS. 
 
 | You write... | Start with | Install |
 |---|---|---|
-| Python, full control of the page | [Python SDK in five minutes](python.md) | `pip install nativehtmlkit` |
-| Python, compact reactive controls | [Python UI in five minutes](python-ui.md) | `pip install nativehtmlkit_ui` |
-| PowerShell, full control of the page | [PowerShell SDK in five minutes](powershell.md) | `Install-Module NativeHTMLKit` |
-| PowerShell, compact reactive controls | [PowerShell UI in five minutes](powershell-ui.md) | `Install-Module NativeHTMLKit.UI` |
-| Bash or another shell, one question to the user | [CLI in five minutes](cli.md) | download a release archive |
+| Bash or another Linux shell | [CLI on Linux](../cli/linux/index.md) | download the release archive |
+| PowerShell or cmd on Windows, one question to the user | [CLI on Windows](../cli/windows/index.md) | download the release archive |
+| Python, full control of the page | [Python SDK](../python/sdk/getting-started.md) | `pip install nativehtmlkit` |
+| Python, reactive components | [Python UI library](../python/ui/getting-started.md) | `pip install nativehtmlkit_ui` |
+| PowerShell, full control of the page | [PowerShell SDK](../powershell/sdk/getting-started.md) | `Install-Module NativeHTMLKit` |
+| PowerShell, reactive components | [PowerShell UI library](../powershell/ui/getting-started.md) | `Install-Module NativeHTMLKit.UI` |
 
 Not sure? Read [Choose an entry point](choose.md). Before installing, check the [platform requirements](requirements.md).
 
@@ -24,9 +25,8 @@ Not sure? Read [Choose an entry point](choose.md). Before installing, check the 
 
 ## After the first window
 
-- Build a complete app: [Tutorials](../tutorials/index.md).
-- Solve a specific task: [How-to guides](../how-to/index.md).
+- Build a complete app: the tutorials in your section ([CLI](../cli/index.md), [Python](../python/index.md), [PowerShell](../powershell/index.md)).
 - Understand the model: [Concepts](../concepts/index.md).
 - Look up exact APIs: [Reference](../reference/index.md) (each package documents its own API).
 
-Every code sample on this site is a file under [`examples/`](https://github.com/nativehtmlkit/nativehtmlkit/blob/main/examples/README.md) that is run automatically against the released packages; see [Examples and verification](../reference/examples.md).
+Every example on this site is a program in the repository that owns its API, run automatically against the released packages; see [Examples and verification](../reference/examples.md).

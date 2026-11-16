@@ -4,11 +4,11 @@ All entry points use the same native host and the same HTML/CSS renderer. They d
 
 | Your job | Best entry point | Why |
 |---|---|---|
-| A Python program needs a window, and you are happy to write HTML | [Python SDK](python.md) | Full control: windows, documents, events, dialogs, clipboard, live bitmaps |
-| A Python tool needs a form-like window quickly | [Python UI](python-ui.md) | Reactive `state()`/`computed()`, inputs, lists and layout without writing HTML |
-| A PowerShell admin script needs a dashboard or a dialog | [PowerShell SDK](powershell.md) | The same features as cmdlets, plus background tasks in isolated runspaces |
-| A PowerShell script needs a settings form or a small reactive UI | [PowerShell UI](powershell-ui.md) | `Add-NHKUi*` components bound to `New-NHKUiState` values |
-| A shell pipeline needs the user to pick rows or fill a form | [CLI](cli.md) | One command, stdin in, stdout out, exit status tells what happened |
+| A Python program needs a window, and you are happy to write HTML | [Python SDK](../python/sdk/getting-started.md) | Full control: windows, documents, events, dialogs, clipboard, live bitmaps |
+| A Python tool needs a form-like window quickly | [Python UI](../python/ui/getting-started.md) | Reactive `state()`/`computed()`, inputs, lists and layout without writing HTML |
+| A PowerShell admin script needs a dashboard or a dialog | [PowerShell SDK](../powershell/sdk/getting-started.md) | The same features as cmdlets, plus background tasks in isolated runspaces |
+| A PowerShell script needs a settings form or a small reactive UI | [PowerShell UI](../powershell/ui/getting-started.md) | `Add-NHKUi*` components bound to `New-NHKUiState` values |
+| A shell pipeline needs the user to pick rows or fill a form | [CLI](../cli/index.md) | One command, stdin in, stdout out, exit status tells what happened |
 
 ## How they relate
 

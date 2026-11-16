@@ -8,17 +8,16 @@
 
 ## Documentation
 
-**Read it online: <https://nativehtmlkit.github.io/>** — the documentation site is built from [`docs/`](docs/index.md) and follows four kinds of pages:
+**Read it online: <https://nativehtmlkit.github.io/>** — organised by what you build with, each section with getting started, tutorials, how-to guides, examples (screenshot + full source) and the complete API reference:
 
-| | Start here |
+| Section | Parts |
 |---|---|
-| **Getting started** — install and open a first window | [Python SDK](docs/getting-started/python.md) · [Python UI](docs/getting-started/python-ui.md) · [PowerShell SDK](docs/getting-started/powershell.md) · [PowerShell UI](docs/getting-started/powershell-ui.md) · [CLI](docs/getting-started/cli.md) · [Which one?](docs/getting-started/choose.md) · [Requirements](docs/getting-started/requirements.md) |
-| **Tutorials** — build a complete app step by step | [Notes (Python)](docs/tutorials/python-notes.md) · [Expenses (Python UI)](docs/tutorials/python-ui-expenses.md) · [Process dashboard (PowerShell)](docs/tutorials/powershell-process-dashboard.md) · [Settings editor (PowerShell UI)](docs/tutorials/powershell-ui-settings.md) · [Git branch picker (CLI)](docs/tutorials/cli-branch-picker.md) |
-| **How-to guides** — solve one task | [Events](docs/how-to/handle-events.md) · [Update the page](docs/how-to/update-the-page.md) · [Forms](docs/how-to/forms.md) · [Windows](docs/how-to/multiple-windows.md) · [File dialogs](docs/how-to/file-dialogs.md) · [HTML dialogs](docs/how-to/html-dialogs.md) · [Clipboard](docs/how-to/clipboard.md) · [Background work](docs/how-to/background-work.md) · [Live charts](docs/how-to/live-bitmap-charts.md) · [CSS](docs/how-to/styling.md) · [UI themes](docs/how-to/theming-ui.md) · [Distribute](docs/how-to/distribute.md) · [Troubleshoot](docs/how-to/troubleshooting.md) · [Accessibility](docs/how-to/accessibility.md) |
-| **Concepts** — understand the design | [Architecture](docs/concepts/architecture.md) · [Lifecycle](docs/concepts/lifecycle.md) · [Threading](docs/concepts/threading.md) · [Documents and handles](docs/concepts/documents-and-handles.md) · [Security](docs/concepts/security.md) · [Why native?](docs/concepts/why-native.md) |
-| **Reference** — look things up | [API references by repository](docs/reference/index.md) · [Capability matrix](docs/capabilities/matrix.md) · [Limitations](docs/capabilities/limitations.md) · [Glossary](docs/reference/glossary.md) · [FAQ](docs/reference/faq.md) |
+| [**CLI**](https://nativehtmlkit.github.io/cli/) | [Linux](https://nativehtmlkit.github.io/cli/linux/) · [Windows](https://nativehtmlkit.github.io/cli/windows/) · [Reference](https://nativehtmlkit.github.io/cli/reference/) |
+| [**Python**](https://nativehtmlkit.github.io/python/) | [SDK (HTML/CSS + Python)](https://nativehtmlkit.github.io/python/sdk/) · [UI library](https://nativehtmlkit.github.io/python/ui/) |
+| [**PowerShell**](https://nativehtmlkit.github.io/powershell/) | [SDK (HTML/CSS + PowerShell)](https://nativehtmlkit.github.io/powershell/sdk/) · [UI library](https://nativehtmlkit.github.io/powershell/ui/) |
+| Shared | [Getting started](docs/getting-started/index.md) · [Concepts](docs/concepts/index.md) · [Reference](docs/reference/index.md) · [Capability matrix](docs/capabilities/matrix.md) · [Limitations](docs/capabilities/limitations.md) |
 
-Every code sample is a file in [`examples/`](examples/README.md) that [`scripts/test-examples.py`](scripts/test-examples.py) runs against the released packages; see [Examples and verification](docs/reference/examples.md).
+Python and PowerShell mirror each other one to one (same tutorials, guides and examples). The product pages are written in the repository that owns each API and imported into [`docs/`](docs/index.md) by [`scripts/import-docs.py`](scripts/import-docs.py); every example is run against the released packages by its owning repository's harness ([Examples and verification](docs/reference/examples.md)).
 
 ## Install
 

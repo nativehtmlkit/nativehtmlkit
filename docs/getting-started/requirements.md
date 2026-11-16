@@ -10,7 +10,7 @@ The released packages documented here are **Core 1.0.3**, **CLI 0.1.2**, **Pytho
 | Windows (x64), interactive desktop session | Target desktop for all entry points |
 | Other Linux desktops, macOS | Not targeted by these releases |
 
-A window needs an interactive desktop session. A plain SSH session, a service account or a CI runner can still run apps in the host's **headless test mode** (`NATIVEHTMLKIT_TEST_MODE=1` for the SDKs, `NATIVEHTMLKIT_CLI_TEST_HEADLESS=1` for the CLI): the whole protocol runs without a window, but there is no user input, no clipboard and no native file dialog. See [Troubleshooting](../how-to/troubleshooting.md).
+A window needs an interactive desktop session. A plain SSH session, a service account or a CI runner can still run apps in the host's **headless test mode** (`NATIVEHTMLKIT_TEST_MODE=1` for the SDKs, `NATIVEHTMLKIT_CLI_TEST_HEADLESS=1` for the CLI): the whole protocol runs without a window, but there is no user input, no clipboard and no native file dialog. See [Troubleshooting](../python/sdk/guides/diagnostics-and-troubleshooting.md) ([PowerShell](../powershell/sdk/guides/diagnostics-and-troubleshooting.md)).
 
 ## Runtimes
 

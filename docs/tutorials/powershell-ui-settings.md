@@ -79,7 +79,7 @@ $ErrorActionPreference = 'Stop'
 Import-Module NativeHTMLKit.UI -ErrorAction Stop
 $app = Start-NativeHTMLKitScript -Name 'Settings'
 
-if (-not $Path) { $Path = Join-Path ([Environment]::GetFolderPath('ApplicationData')) 'nativehtmlkit-settings.json' }
+if (-not $Path) { $Path = Join-Path ([Environment]::GetFolderPath([Environment+SpecialFolder]::ApplicationData, [Environment+SpecialFolderOption]::Create)) 'nativehtmlkit-settings.json' }
 $Path = [IO.Path]::GetFullPath($Path)
 $defaults = [ordered]@{ DisplayName = ''; Email = ''; Theme = 'cobalt'; RefreshSeconds = 60; Notifications = $false }
 $themes = @('cobalt', 'graphite', 'daylight')
@@ -188,7 +188,7 @@ try {
 ```
 <!-- /include -->
 
-- `param([string]$Path)`: `pwsh -File settings.ps1 -Path ./my-settings.json`. Without it, the file is `nativehtmlkit-settings.json` in your application-data folder (`[Environment]::GetFolderPath('ApplicationData')`: `%APPDATA%` on Windows, `~/.config` on Linux).
+- `param([string]$Path)`: `pwsh -File settings.ps1 -Path ./my-settings.json`. Without it, the file is `nativehtmlkit-settings.json` in your application-data folder (`[Environment]::GetFolderPath(...ApplicationData, Create)`, which creates the folder if it is missing: `%APPDATA%` on Windows, `~/.config` on Linux).
 - `Read-Settings` starts from defaults and copies known keys from the file, so a partial or older file still works.
 - `Get-Snapshot` returns the values as they would be saved. Two computed values use it: `$problem` (a validation message or `''`) and `$changes`, which compares the snapshot with `$saved`, the JSON of the last saved state.
 - `$hasProblem` is computed from `$problem` and drives `Add-NHKUiWhen`, which shows the message only when there is one.

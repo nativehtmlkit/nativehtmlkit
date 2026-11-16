@@ -12,7 +12,7 @@ $ErrorActionPreference = 'Stop'
 Import-Module NativeHTMLKit.UI -ErrorAction Stop
 $app = Start-NativeHTMLKitScript -Name 'Settings'
 
-if (-not $Path) { $Path = Join-Path ([Environment]::GetFolderPath('ApplicationData')) 'nativehtmlkit-settings.json' }
+if (-not $Path) { $Path = Join-Path ([Environment]::GetFolderPath([Environment+SpecialFolder]::ApplicationData, [Environment+SpecialFolderOption]::Create)) 'nativehtmlkit-settings.json' }
 $Path = [IO.Path]::GetFullPath($Path)
 $defaults = [ordered]@{ DisplayName = ''; Email = ''; Theme = 'cobalt'; RefreshSeconds = 60; Notifications = $false }
 $themes = @('cobalt', 'graphite', 'daylight')

@@ -1,7 +1,7 @@
 [project]
 site_name = "NativeHTMLKit"
 site_description = "Native desktop HTML/CSS apps from Python, PowerShell and the CLI"
-site_url = "https://nativehtmlkit.github.io/nativehtmlkit/"
+site_url = "https://nativehtmlkit.github.io/"
 docs_dir = "docs"
 site_dir = "site"
 strict = true

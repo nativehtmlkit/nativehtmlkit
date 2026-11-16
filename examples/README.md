@@ -1,6 +1,6 @@
 # NativeHTMLKit examples
 
-Runnable source examples for every entry point, used by the documentation at https://nativehtmlkit.github.io/nativehtmlkit/ . Each file starts with a comment that says what it teaches and how to run it.
+Runnable source examples for every entry point, used by the documentation at https://nativehtmlkit.github.io/ . Each file starts with a comment that says what it teaches and how to run it.
 
 | Folder | What is inside |
 |---|---|

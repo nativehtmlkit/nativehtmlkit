@@ -8,7 +8,7 @@
 
 ## Documentation
 
-The documentation site is built from [`docs/`](docs/index.md) and follows four kinds of pages:
+**Read it online: <https://nativehtmlkit.github.io/>** — the documentation site is built from [`docs/`](docs/index.md) and follows four kinds of pages:
 
 | | Start here |
 |---|---|

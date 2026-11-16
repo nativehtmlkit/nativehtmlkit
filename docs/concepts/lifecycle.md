@@ -76,4 +76,4 @@ Set `NATIVEHTMLKIT_TEST_MODE=1` before running a Python or PowerShell app, and t
 
 Headless mode is meant for continuous integration and automated checks that an app starts, renders, reaches ready and shuts down cleanly. It never proves real input, focus or accessibility behaviour; those need an interactive desktop.
 
-**Related:** [Threading and callbacks](threading.md) · [Documents and stale handles](documents-and-handles.md) · [Troubleshooting](../python/sdk/guides/diagnostics-and-troubleshooting.md) ([PowerShell](../powershell/sdk/guides/diagnostics-and-troubleshooting.md))
+**Related:** [Threading and callbacks](threading.md) · [Documents and stale handles](documents-and-handles.md) · [Troubleshooting](../sdk/python/guides/diagnostics-and-troubleshooting.md) ([PowerShell](../sdk/powershell/guides/diagnostics-and-troubleshooting.md))

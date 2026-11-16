@@ -8,9 +8,9 @@ page links to its PowerShell twin and back.
 | Section | Examples | Verified by |
 |---|---|---|
 | [CLI on Linux](../cli/linux/examples/index.md) and [Windows](../cli/windows/examples/index.md) | bash and PowerShell scripts for every command and option | `scripts/test-examples.sh` (bash) and `scripts/test-examples.ps1` (PowerShell 7 and Windows PowerShell 5.1) in nativehtmlkit-cli |
-| [Python SDK](../python/sdk/examples/index.md) | 21 apps | `tests/integration` (start-up and behaviour checks for every catalogue entry) in nativehtmlkit-python, Linux and Windows |
-| [PowerShell SDK](../powershell/sdk/examples/index.md) | 20 apps | `tests/Examples.Tests.ps1` in nativehtmlkit-powershell, PowerShell 7 (Linux, Windows) and Windows PowerShell 5.1 |
-| [Python UI](../python/ui/examples/index.md) and [PowerShell UI](../powershell/ui/examples/index.md) | 16 apps in each language | `qualification/examples/run_examples.py` in nativehtmlkit_ui, Linux and Windows PowerShell 5.1 |
+| [Python SDK](../sdk/python/examples/index.md) | 21 apps | `tests/integration` (start-up and behaviour checks for every catalogue entry) in nativehtmlkit-python, Linux and Windows |
+| [PowerShell SDK](../sdk/powershell/examples/index.md) | 20 apps | `tests/Examples.Tests.ps1` in nativehtmlkit-powershell, PowerShell 7 (Linux, Windows) and Windows PowerShell 5.1 |
+| [Python UI](../ui/python/examples/index.md) and [PowerShell UI](../ui/powershell/examples/index.md) | 16 apps in each language | `qualification/examples/run_examples.py` in nativehtmlkit_ui, Linux and Windows PowerShell 5.1 |
 
 ## How examples are tested
 

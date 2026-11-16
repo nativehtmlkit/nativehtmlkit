@@ -9,12 +9,12 @@ NativeHTMLKit builds a native accessibility tree from your HTML (AccessKit, expo
 - **Announce status changes.** Put status text in an element with `role="status"` (polite) or `role="alert"` (important), and update it with `set_text`. The UI libraries' `alert` component uses `role="status"`.
 - **Keep keyboard paths.** Everything must work with Tab, Shift+Tab, Enter and Space. Forms submit with Enter; modal `<dialog>`s close with Escape. Move focus deliberately after actions (`document.focus(id)`, `Set-NativeHTMLKitFocus`), as the todo tutorial does after adding an item.
 - **Do not rely on colour alone.** Pair colour with text or icons (for example, show a service state as text inside a coloured pill).
-- **Respect preferences.** Style for `prefers-color-scheme` and `prefers-reduced-motion`; [Style with the supported CSS](../python/sdk/guides/styling-and-layout.md) shows how.
-- **Give images text.** Every `<img>`, including live bitmaps, needs a meaningful `alt`; keep values you draw in a chart available as HTML text too ([Live bitmap charts](../python/sdk/guides/live-bitmaps.md)).
+- **Respect preferences.** Style for `prefers-color-scheme` and `prefers-reduced-motion`; [Style with the supported CSS](../sdk/python/guides/styling-and-layout.md) shows how.
+- **Give images text.** Every `<img>`, including live bitmaps, needs a meaningful `alt`; keep values you draw in a chart available as HTML text too ([Live bitmap charts](../sdk/python/guides/live-bitmaps.md)).
 
 ## Check what assistive technology sees
 
-The `get_accessibility_tree` document operation returns the tree the host exposes (roles, names, states, relations, bounds). Read it to confirm, for example, that the fields of a [sign-up form](../python/sdk/guides/forms-and-validation.md) are named "E-mail" and "Repeat password":
+The `get_accessibility_tree` document operation returns the tree the host exposes (roles, names, states, relations, bounds). Read it to confirm, for example, that the fields of a [sign-up form](../sdk/python/guides/forms-and-validation.md) are named "E-mail" and "Repeat password":
 
 ```python
 tree = doc.command("get_accessibility_tree")["tree"]

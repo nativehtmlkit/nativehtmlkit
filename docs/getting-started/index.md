@@ -6,12 +6,12 @@ NativeHTMLKit shows native desktop windows whose content is plain HTML and CSS. 
 
 | You write... | Start with | Install |
 |---|---|---|
+| Python, reactive components | [Python UI library](../ui/python/getting-started.md) | `pip install nativehtmlkit_ui` |
+| PowerShell, reactive components | [PowerShell UI library](../ui/powershell/getting-started.md) | `Install-Module NativeHTMLKit.UI` |
+| Python, full control of the page | [Python SDK](../sdk/python/getting-started.md) | `pip install nativehtmlkit` |
+| PowerShell, full control of the page | [PowerShell SDK](../sdk/powershell/getting-started.md) | `Install-Module NativeHTMLKit` |
 | Bash or another Linux shell | [CLI on Linux](../cli/linux/index.md) | download the release archive |
 | PowerShell or cmd on Windows, one question to the user | [CLI on Windows](../cli/windows/index.md) | download the release archive |
-| Python, full control of the page | [Python SDK](../python/sdk/getting-started.md) | `pip install nativehtmlkit` |
-| Python, reactive components | [Python UI library](../python/ui/getting-started.md) | `pip install nativehtmlkit_ui` |
-| PowerShell, full control of the page | [PowerShell SDK](../powershell/sdk/getting-started.md) | `Install-Module NativeHTMLKit` |
-| PowerShell, reactive components | [PowerShell UI library](../powershell/ui/getting-started.md) | `Install-Module NativeHTMLKit.UI` |
 
 Not sure? Read [Choose an entry point](choose.md). Before installing, check the [platform requirements](requirements.md).
 
@@ -25,7 +25,7 @@ Not sure? Read [Choose an entry point](choose.md). Before installing, check the 
 
 ## After the first window
 
-- Build a complete app: the tutorials in your section ([CLI](../cli/index.md), [Python](../python/index.md), [PowerShell](../powershell/index.md)).
+- Build a complete app: the tutorials in your section ([UI](../ui/index.md), [SDK](../sdk/index.md), [CLI](../cli/index.md)).
 - Understand the model: [Concepts](../concepts/index.md).
 - Look up exact APIs: [Reference](../reference/index.md) (each package documents its own API).
 

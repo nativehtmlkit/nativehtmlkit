@@ -280,6 +280,10 @@ bitmaps and 64 MiB per document, 256 MiB per host. Files live in the private run
 Linux and in `%TEMP%\nativehtmlkit-bitmaps\` on Windows; use the returned path, never a guessed one.
 Worked example: [`examples/wire-v1/live_bitmap.py`](https://github.com/nativehtmlkit/nativehtmlkit-core/blob/main/examples/wire-v1/live_bitmap.py).
 
+![Screenshot: prog-wire-v1__live_bitmap](../../_media/nativehtmlkit-core/docs/images/examples/prog-wire-v1__live_bitmap.png)
+
+*Real capture on KDE Plasma 6.6 Wayland with the released packages.*
+
 ### Desktop services
 
 | Method | Purpose |

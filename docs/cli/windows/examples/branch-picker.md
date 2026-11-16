@@ -5,6 +5,10 @@ Switch to a branch from a table, or delete merged branches ticked in a list.
 
 *Same example in Linux: [git-pick: switch and delete branches (tutorial)](../../linux/examples/branch-picker.md)*
 
+![git-pick: switch and delete branches (tutorial)](img/windows-branch-picker.png)
+
+*Real capture on Windows Server 2022 with the released packages.*
+
 **What it teaches:** TSV or JSON tables; lines output; --multi; every exit status.
 
 ## Run it

@@ -5,6 +5,10 @@ Pick processes in a table and stop or signal exactly those.
 
 *Same example in Windows: [Choose processes to stop](../../windows/examples/processes.md)*
 
+![Choose processes to stop](img/linux-processes.png)
+
+*Real capture on KDE Plasma 6.6 Wayland with the released packages.*
+
 **What it teaches:** process lists as CSV or JSON; CSV/JSON in, JSON out; a second choice for the action.
 
 ## Run it

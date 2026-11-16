@@ -13,6 +13,10 @@ JSON, reading the result back, `$LASTEXITCODE` and timeouts. It works in Windows
 bash: [Linux](../linux/tutorial-branch-picker.md). The bash version sends TSV; PowerShell
 builds objects, so this version sends JSON, which needs no clean-up of commit subjects.
 
+![Screenshot: windows-branch-picker](../../_media/nativehtmlkit-cli/docs/images/examples/windows-branch-picker.png)
+
+*Real capture on Windows Server 2022 with the released packages.*
+
 The runs below were made in the `examples` folder of a clone of this repository (a Git work
 tree with the branches `main`, `feature/login`, `fix/typo` and `release/1.4`) against the
 released CLI 0.1.2 by `scripts/test-docs.ps1`, headless and with replayed results
@@ -21,6 +25,10 @@ released CLI 0.1.2 by `scripts/test-docs.ps1`, headless and with replayed result
 ## Step 1: pick a branch
 
 [step1-pick.ps1](https://github.com/nativehtmlkit/nativehtmlkit-cli/blob/main/examples/tutorial-branch-picker/step1-pick.ps1):
+
+![Screenshot: windows-branch-picker-step1](../../_media/nativehtmlkit-cli/docs/images/examples/windows-branch-picker-step1.png)
+
+*Real capture on Windows Server 2022 with the released packages.*
 
 <!-- not-tested: excerpt of examples/tutorial-branch-picker/step1-pick.ps1, run below -->
 ```powershell

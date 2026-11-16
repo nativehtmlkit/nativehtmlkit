@@ -8,6 +8,10 @@ result: closing it exits 0. Script:
 [data/app.log](https://github.com/nativehtmlkit/nativehtmlkit-cli/blob/main/examples/data/app.log) and
 [data/app.ndjson](https://github.com/nativehtmlkit/nativehtmlkit-cli/blob/main/examples/data/app.ndjson).
 
+![Screenshot: linux-view-logs](../../../_media/nativehtmlkit-cli/docs/images/examples/linux-view-logs.png)
+
+*Real capture on KDE Plasma 6.6 Wayland with the released packages.*
+
 The examples run in the `examples` directory of a clone of this repository and were run
 against the released CLI 0.1.2 by `scripts/test-docs.py`
 ([how](../index.md#how-the-examples-are-verified)).

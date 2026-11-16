@@ -5,6 +5,10 @@ Reshape a REST response, pick issues and print their URLs.
 
 *Same example in Linux: [Choose from JSON API output](../../linux/examples/pick-from-api.md)*
 
+![Choose from JSON API output](img/windows-pick-from-api.png)
+
+*Real capture on Windows Server 2022 with the released packages.*
+
 **What it teaches:** flattening nested JSON; records returned unchanged; multi-select.
 
 ## Run it

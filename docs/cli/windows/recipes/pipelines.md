@@ -7,6 +7,10 @@ Cancel or a timeout. In PowerShell it sits between commands as a filter; check
 [examples/search-selected.ps1](https://github.com/nativehtmlkit/nativehtmlkit-cli/blob/main/examples/search-selected.ps1) (the counterpart of
 `grep-selected.sh`).
 
+![Screenshot: windows-search-selected](../../../_media/nativehtmlkit-cli/docs/images/examples/windows-search-selected.png)
+
+*Real capture on Windows Server 2022 with the released packages.*
+
 The examples run in the `examples` folder of a clone of this repository and were run
 against the released CLI 0.1.2 in Windows PowerShell 5.1 and PowerShell 7 by
 `scripts/test-docs.ps1` ([how](../index.md#how-the-examples-are-verified)).

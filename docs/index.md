@@ -6,6 +6,20 @@
 
 <div class="grid cards" markdown>
 
+-   **[UI library](ui/index.md)**
+
+    The quickest way to an app: reactive state and ready-made components (layouts, buttons, inputs,
+    lists, themes). Write a few lines of Python or PowerShell, not HTML.
+
+    [Python](ui/python/index.md) · [PowerShell](ui/powershell/index.md)
+
+-   **[SDK](sdk/index.md)**
+
+    Full control: your own HTML and CSS, events, page updates, native dialogs, clipboard, live
+    bitmaps. The UI library is built on it.
+
+    [Python](sdk/python/index.md) · [PowerShell](sdk/powershell/index.md)
+
 -   **[Command line (CLI)](cli/index.md)**
 
     One executable for shell scripts: pick rows, view text or fill in a form in a native window and
@@ -13,21 +27,9 @@
 
     [Linux](cli/linux/index.md) · [Windows](cli/windows/index.md) · [Reference](cli/reference/index.md)
 
--   **[Python](python/index.md)**
-
-    Python 3.10+ on Linux and Windows.
-
-    [SDK: HTML/CSS + Python](python/sdk/index.md) · [UI library](python/ui/index.md)
-
--   **[PowerShell](powershell/index.md)**
-
-    PowerShell 7 on Linux and Windows, Windows PowerShell 5.1 on Windows.
-
-    [SDK: HTML/CSS + PowerShell](powershell/sdk/index.md) · [UI library](powershell/ui/index.md)
-
 </div>
 
-Each section has the same shape: **getting started**, step-by-step **tutorials**, task **guides**, complete **examples** with screenshots and source, and the full **API reference**. Python and PowerShell mirror each other one to one, so you can switch languages without relearning the structure.
+The UI library and the SDK work the same on Linux and Windows (the few differences are on [Linux and Windows](getting-started/platforms.md)); each has a Python and a PowerShell section with the same shape: **getting started**, step-by-step **tutorials**, task **guides**, complete **examples** with screenshots and source, and the full **API reference**. Python and PowerShell mirror each other one to one. The CLI has separate Linux and Windows sections because shell scripts differ per system.
 
 Not sure which to pick? [Choose an entry point](getting-started/choose.md) · [Platform requirements](getting-started/requirements.md)
 
@@ -39,7 +41,72 @@ Not sure which to pick? [Choose an entry point](getting-started/choose.md) · [P
 
 ## A complete app in a few lines
 
-=== "Python"
+=== "UI · Python"
+
+    ```python
+    from nativehtmlkit import Application
+    from nativehtmlkit_ui import UI, computed, state
+
+
+    def main():
+        with Application.start(name="Hello UI") as app:
+            name = state("world")
+            greeting = computed(lambda: f"Hello, {name.value}!")
+
+            ui = UI(title="Hello UI", width=480, height=320)
+            with ui.column():
+                ui.heading(greeting, level=1)
+                with ui.row():
+                    ui.input(name, label="Your name")
+                    ui.button("Reset", variant="secondary", on_click=lambda _event: name.set("world"))
+            try:
+                ui.mount(app)
+                app.run()
+            finally:
+                ui.dispose()
+
+
+    if __name__ == "__main__":
+        main()
+    ```
+
+    ![Hello UI window (Python)](assets/ui-hello-python-linux.png)
+
+=== "UI · PowerShell"
+
+    ```powershell
+    $ErrorActionPreference = 'Stop'
+    Import-Module NativeHTMLKit.UI
+    $app = Start-NativeHTMLKitScript -Name 'Hello UI'
+
+    $name = New-NHKUiState -Value 'world'
+    $greeting = New-NHKUiComputed -DependsOn @($name) -Data $name -Compute { param($n) "Hello, $($n.Value)!" }
+
+    $ui = New-NHKUi -Title 'Hello UI' -Width 480 -Height 320
+    $null = Add-NHKUiColumn -UI $ui -Content {
+        $null = Add-NHKUiHeading -UI $ui -Bind $greeting -Level 1
+        $null = Add-NHKUiRow -UI $ui -Content {
+            $null = Add-NHKUiInput -UI $ui -Bind $name -Label 'Your name'
+            $null = Add-NHKUiButton -UI $ui -Text 'Reset' -Variant secondary -Data $name -OnClick {
+                param($eventObject, $n)
+                $n.Set('world')
+            }
+        }
+    }
+
+    try {
+        $null = Start-NHKUi -UI $ui -Application $app
+        Wait-NativeHTMLKit -Application $app -UntilShutdown
+    } finally {
+        Stop-NHKUi -UI $ui
+        $greeting.Dispose()
+        Close-NativeHTMLKit -Application $app
+    }
+    ```
+
+    ![Hello UI window (PowerShell)](assets/ui-hello-powershell-linux.png)
+
+=== "SDK · Python"
 
     ```python
     from nativehtmlkit import Application
@@ -50,7 +117,9 @@ Not sure which to pick? [Choose an entry point](getting-started/choose.md) · [P
         app.run()
     ```
 
-=== "PowerShell"
+    ![Hello window (Python SDK)](assets/home-sdk-python.png)
+
+=== "SDK · PowerShell"
 
     ```powershell
     Import-Module NativeHTMLKit
@@ -66,17 +135,25 @@ Not sure which to pick? [Choose an entry point](getting-started/choose.md) · [P
     } finally { Close-NativeHTMLKit -Application $app }
     ```
 
-=== "Linux shell"
+    ![Hello window (PowerShell SDK)](assets/home-sdk-powershell.png)
+
+=== "CLI · Linux"
 
     ```bash
     printf '%s\n' apple banana cherry | nativehtmlkit select --multi --title "Pick fruit"
     ```
 
-=== "Windows PowerShell"
+    ![Pick fruit window on Linux](assets/home-cli-linux.png)
+
+=== "CLI · Windows"
 
     ```powershell
     'apple', 'banana', 'cherry' | nativehtmlkit select --multi --title 'Pick fruit'
     ```
+
+    ![Pick fruit window on Windows](assets/home-cli-windows.png)
+
+The UI tabs are the [Hello UI example](ui/python/examples/hello.md) ([PowerShell](ui/powershell/examples/hello.md)). Screenshots are real captures with the released packages: KDE Plasma 6.6 Wayland, and Windows Server 2022 for the CLI Windows tab.
 
 ## Packages
 

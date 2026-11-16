@@ -5,6 +5,10 @@ Tick files, confirm in a second window, then delete exactly the ticked files.
 
 *Same example in Linux: [Delete files with confirmation](../../linux/examples/delete-files.md)*
 
+![Delete files with confirmation](img/windows-delete-files.png)
+
+*Real capture on Windows Server 2022 with the released packages.*
+
 **What it teaches:** NUL-safe or literal paths; a confirmation select; nothing changes unless submitted.
 
 ## Run it

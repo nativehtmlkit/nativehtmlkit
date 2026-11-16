@@ -5,6 +5,10 @@ Bookmark project directories, pick one to jump to, list and remove them.
 
 *Same example in Linux: [Project picker (tutorial)](../../linux/examples/project-picker.md)*
 
+![Project picker (tutorial)](img/windows-project-picker.png)
+
+*Real capture on Windows Server 2022 with the released packages.*
+
 **What it teaches:** select, form and view in one tool; NDJSON as storage and CLI format; one wrapper for the exit contract; escaped generated forms; --css.
 
 ## Run it

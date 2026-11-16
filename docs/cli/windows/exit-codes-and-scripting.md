@@ -179,6 +179,10 @@ stderr line of a native program into a terminating error. Redirect stderr only w
 [pick-container.ps1](https://github.com/nativehtmlkit/nativehtmlkit-cli/blob/main/examples/pick-container.ps1)
 does around `docker logs 2>&1`.
 
+![Screenshot: windows-pick-container](../../_media/nativehtmlkit-cli/docs/images/examples/windows-pick-container.png)
+
+*Real capture on Windows Server 2022 with the released packages.*
+
 ## Write files only after success
 
 Check the status first, then write. `[IO.File]::WriteAllText` with

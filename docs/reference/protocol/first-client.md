@@ -15,6 +15,10 @@ The code lives in [`examples/wire-v1/`](https://github.com/nativehtmlkit/nativeh
   correlation, host requests, notifications.
 - [`notes_app.py`](https://github.com/nativehtmlkit/nativehtmlkit-core/blob/main/examples/wire-v1/notes_app.py) — a "Quick notes" app built on it.
 
+![Screenshot: prog-wire-v1__notes_app](../../_media/nativehtmlkit-core/docs/images/examples/prog-wire-v1__notes_app.png)
+
+*Real capture on KDE Plasma 6.6 Wayland with the released packages.*
+
 ## 1. Run it
 
 ```bash
@@ -146,6 +150,10 @@ Try these changes, then rerun the self-test (and add a check for each):
 Next: [`live_bitmap.py`](https://github.com/nativehtmlkit/nativehtmlkit-core/blob/main/examples/wire-v1/live_bitmap.py) streams pixels into an `<img>`; the
 [SDK authoring guide](sdk-authoring.md) lists what a production client must add
 (Windows overlapped I/O for concurrent readers, cancellation, backpressure, lifetime binding).
+
+![Screenshot: prog-wire-v1__live_bitmap](../../_media/nativehtmlkit-core/docs/images/examples/prog-wire-v1__live_bitmap.png)
+
+*Real capture on KDE Plasma 6.6 Wayland with the released packages.*
 
 ---
 

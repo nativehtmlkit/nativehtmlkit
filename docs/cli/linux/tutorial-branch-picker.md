@@ -11,6 +11,10 @@ exit statuses and timeouts.
 [examples/tutorial-branch-picker/git-pick.sh](https://github.com/nativehtmlkit/nativehtmlkit-cli/blob/main/examples/tutorial-branch-picker/git-pick.sh). The same tutorial for
 PowerShell: [Windows](../windows/tutorial-branch-picker.md).
 
+![Screenshot: linux-branch-picker](../../_media/nativehtmlkit-cli/docs/images/examples/linux-branch-picker.png)
+
+*Real capture on KDE Plasma 6.6 Wayland with the released packages.*
+
 The runs below were made in the `examples` directory of a clone of this repository (a Git
 work tree with the branches `main`, `feature/login`, `fix/typo` and `release/1.4`) against
 the released CLI 0.1.2 by `scripts/test-docs.py`, headless and with replayed results
@@ -19,6 +23,10 @@ the released CLI 0.1.2 by `scripts/test-docs.py`, headless and with replayed res
 ## Step 1: pick a branch
 
 [step1-pick.sh](https://github.com/nativehtmlkit/nativehtmlkit-cli/blob/main/examples/tutorial-branch-picker/step1-pick.sh):
+
+![Screenshot: linux-branch-picker-step1](../../_media/nativehtmlkit-cli/docs/images/examples/linux-branch-picker-step1.png)
+
+*Real capture on KDE Plasma 6.6 Wayland with the released packages.*
 
 <!-- not-tested: excerpt of examples/tutorial-branch-picker/step1-pick.sh, run below -->
 ```bash

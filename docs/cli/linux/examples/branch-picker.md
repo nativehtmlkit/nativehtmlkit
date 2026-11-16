@@ -5,6 +5,10 @@ Switch to a branch from a table, or delete merged branches ticked in a list.
 
 *Same example in Windows: [git-pick: switch and delete branches (tutorial)](../../windows/examples/branch-picker.md)*
 
+![git-pick: switch and delete branches (tutorial)](img/linux-branch-picker.png)
+
+*Real capture on KDE Plasma 6.6 Wayland with the released packages.*
+
 **What it teaches:** TSV or JSON tables; lines output; --multi; every exit status.
 
 ## Run it

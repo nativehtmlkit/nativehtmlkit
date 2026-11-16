@@ -104,6 +104,10 @@ A deployment form using most of them (the repository's
 [deploy-form.ps1](https://github.com/nativehtmlkit/nativehtmlkit-cli/blob/main/examples/deploy-form.ps1)
 generates this):
 
+![Screenshot: windows-deploy-form](../../_media/nativehtmlkit-cli/docs/images/examples/windows-deploy-form.png)
+
+*Real capture on Windows Server 2022 with the released packages.*
+
 <!-- test: exit=124 calls="124@0x1" -->
 ```powershell
 $html = @'

@@ -5,6 +5,10 @@ Show the end of a text or JSON-lines log (Windows: also the event log).
 
 *Same example in Windows: [View logs](../../windows/examples/view-logs.md)*
 
+![View logs](img/linux-view-logs.png)
+
+*Real capture on KDE Plasma 6.6 Wayland with the released packages.*
+
 **What it teaches:** view for text and NDJSON; staying inside the page limit.
 
 ## Run it

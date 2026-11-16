@@ -222,6 +222,10 @@ Resources load only from three places; everything else, including `http:` and `h
   document). See [`examples/wire-v1/live_bitmap.py`](https://github.com/nativehtmlkit/nativehtmlkit-core/blob/main/examples/wire-v1/live_bitmap.py) and your
   SDK's live-bitmap API.
 
+![Screenshot: prog-wire-v1__live_bitmap](../../_media/nativehtmlkit-core/docs/images/examples/prog-wire-v1__live_bitmap.png)
+
+*Real capture on KDE Plasma 6.6 Wayland with the released packages.*
+
 ## Desktop attributes
 
 | Attribute (alias `data-ui4me-*`) | Effect |

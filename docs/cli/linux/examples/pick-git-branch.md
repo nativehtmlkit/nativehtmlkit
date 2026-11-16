@@ -5,6 +5,10 @@ Switch to a branch chosen from a table of recent branches with their last commit
 
 *Same example in Windows: [Pick a Git branch](../../windows/examples/pick-git-branch.md)*
 
+![Pick a Git branch](img/linux-pick-git-branch.png)
+
+*Real capture on KDE Plasma 6.6 Wayland with the released packages.*
+
 **What it teaches:** JSON rows built from tab-separated tool output; single choice; reading a field of the chosen record.
 
 ## Run it

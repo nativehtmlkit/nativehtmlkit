@@ -4,7 +4,11 @@
 Pick Windows services, then the action to apply to them.
 
 !!! info "Windows only"
-    This example has no counterpart in the other language.
+    This example has no counterpart on Linux.
+
+![Restart, stop or start Windows services](img/windows-pick-service.png)
+
+*Real capture on Windows Server 2022 with the released packages.*
 
 **What it teaches:** Get-Service objects as JSON; an action chosen in a second window; -WhatIf.
 

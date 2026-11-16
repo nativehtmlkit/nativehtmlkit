@@ -5,6 +5,10 @@ Tick files in a window, then search only those for a pattern.
 
 *Same example in Linux: [Search only the files you tick](../../linux/examples/search-selected.md)*
 
+![Search only the files you tick](img/windows-search-selected.png)
+
+*Real capture on Windows Server 2022 with the released packages.*
+
 **What it teaches:** select --multi as a pipeline stage; the CLI's own exit status inside a pipeline.
 
 ## Run it

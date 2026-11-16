@@ -5,6 +5,10 @@ Pick a container, then show its logs, restart, stop it or open a shell.
 
 *Same example in Windows: [Choose a Docker container](../../windows/examples/pick-container.md)*
 
+![Choose a Docker container](img/linux-pick-container.png)
+
+*Real capture on KDE Plasma 6.6 Wayland with the released packages.*
+
 **What it teaches:** NDJSON from docker ps; chained selections; view for logs.
 
 ## Run it

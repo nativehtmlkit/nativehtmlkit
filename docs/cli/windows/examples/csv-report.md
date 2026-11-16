@@ -5,6 +5,10 @@ View a CSV report, or export the rows you tick to a new CSV file.
 
 *Same example in Linux: [Review and export CSV reports](../../linux/examples/csv-report.md)*
 
+![Review and export CSV reports](img/windows-csv-report.png)
+
+*Real capture on Windows Server 2022 with the released packages.*
+
 **What it teaches:** view; CSV in and out; writing output only after Submit.
 
 ## Run it

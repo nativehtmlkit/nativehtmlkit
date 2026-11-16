@@ -5,6 +5,10 @@ Offer the local branches in a list and report the choice and exit status.
 
 *Same example in Linux: [Branch picker, step 1 (tutorial)](../../linux/examples/branch-picker-step1.md)*
 
+![Branch picker, step 1 (tutorial)](img/windows-branch-picker-step1.png)
+
+*Real capture on Windows Server 2022 with the released packages.*
+
 **What it teaches:** lines input; capturing stdout; exit statuses 0, 2, 124.
 
 ## Run it

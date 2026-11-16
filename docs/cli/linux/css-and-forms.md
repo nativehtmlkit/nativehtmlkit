@@ -101,6 +101,10 @@ A deployment form using most of them (the repository's
 [deploy-form.sh](https://github.com/nativehtmlkit/nativehtmlkit-cli/blob/main/examples/deploy-form.sh)
 generates this):
 
+![Screenshot: linux-deploy-form](../../_media/nativehtmlkit-cli/docs/images/examples/linux-deploy-form.png)
+
+*Real capture on KDE Plasma 6.6 Wayland with the released packages.*
+
 <!-- test: exit=124 calls="124@0x1" -->
 ```bash
 cat > deploy.html <<'HTML'

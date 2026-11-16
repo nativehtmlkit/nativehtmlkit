@@ -6,6 +6,10 @@ Pick services in a table, then the action to apply to them. Script:
 Changing services needs an elevated PowerShell. This recipe has no Linux counterpart
 (`systemctl` units would be the equivalent).
 
+![Screenshot: windows-pick-service](../../../_media/nativehtmlkit-cli/docs/images/examples/windows-pick-service.png)
+
+*Real capture on Windows Server 2022 with the released packages.*
+
 The examples run in the `examples` folder of a clone of this repository and were run
 against the released CLI 0.1.2 in Windows PowerShell 5.1 by
 `scripts/test-docs.ps1` ([how](../index.md#how-the-examples-are-verified)).

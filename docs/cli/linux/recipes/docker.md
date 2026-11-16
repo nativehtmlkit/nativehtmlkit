@@ -5,6 +5,10 @@ Pick a container, then an action: show its logs, restart, stop, or open a shell.
 [examples/pick-container.sh](https://github.com/nativehtmlkit/nativehtmlkit-cli/blob/main/examples/pick-container.sh)
 (needs `docker`, `jq`, `perl`).
 
+![Screenshot: linux-pick-container](../../../_media/nativehtmlkit-cli/docs/images/examples/linux-pick-container.png)
+
+*Real capture on KDE Plasma 6.6 Wayland with the released packages.*
+
 The examples run in the `examples` directory of a clone of this repository and were run
 against the released CLI 0.1.2 by `scripts/test-docs.py`
 ([how](../index.md#how-the-examples-are-verified)) with a stand-in `docker` that lists two

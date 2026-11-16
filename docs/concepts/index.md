@@ -1,6 +1,6 @@
 # Concepts
 
-These pages explain *why* NativeHTMLKit behaves the way it does. They contain no step-by-step instructions; for those see the [tutorials](../index.md) and [how-to guides](../python/sdk/guides/events-and-callbacks.md) ([PowerShell](../powershell/sdk/guides/events-and-callbacks.md)).
+These pages explain *why* NativeHTMLKit behaves the way it does. They contain no step-by-step instructions; for those see the [tutorials](../index.md) and [how-to guides](../sdk/python/guides/events-and-callbacks.md) ([PowerShell](../sdk/powershell/guides/events-and-callbacks.md)).
 
 | Page | Read it when you want to understand… |
 |---|---|

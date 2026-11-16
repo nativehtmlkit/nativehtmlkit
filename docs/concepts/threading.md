@@ -20,7 +20,7 @@ flowchart LR
 - **`call_async` futures complete on their own short-lived `nativehtmlkit-completion` thread.** Done-callbacks may call the host synchronously or wait for other futures.
 - **SDK calls are allowed from any thread**, including your own `threading.Thread` workers. Use that for long work: compute in a worker and push results with `doc.set_text(...)` and friends.
 
-**Native dialogs inside an event handler.** `window.open_files()`, `save_file()` and `choose_folder()` wait for the user by default (`wait=True`, no deadline). Called from an event handler, that blocks the event worker — every later click waits until the dialog closes. Pass `wait=False` to get a `Future` and handle the result in `future.add_done_callback(...)`; `future.cancel()` asks the host to close the dialog. See [file dialogs](../python/sdk/guides/file-dialogs.md) ([PowerShell](../powershell/sdk/guides/file-dialogs.md)).
+**Native dialogs inside an event handler.** `window.open_files()`, `save_file()` and `choose_folder()` wait for the user by default (`wait=True`, no deadline). Called from an event handler, that blocks the event worker — every later click waits until the dialog closes. Pass `wait=False` to get a `Future` and handle the result in `future.add_done_callback(...)`; `future.cancel()` asks the host to close the dialog. See [file dialogs](../sdk/python/guides/file-dialogs.md) ([PowerShell](../sdk/powershell/guides/file-dialogs.md)).
 
 The optional `async_adapter()` exposes the same connection to an asyncio loop; it does not change who renders.
 
@@ -47,7 +47,7 @@ A scriptblock written at script level resolves variables when it runs, in the sc
 
 ### Background work
 
-`Start-NativeHTMLKitTask -Application $app -ScriptBlock { ... } -ArgumentList ... -OnCompleted { ... } -OnFailed { ... }` runs work in an **isolated runspace** without your variables or modules. Pass plain data only: SDK objects (application, window, document, bitmap, ...) are refused as arguments. `-OnCompleted` / `-OnFailed` run later **on your runspace**, during the normal pump and never inside another callback, so they may update the document. At most 8 tasks per application (32 per process) run at once; `-TimeoutMilliseconds` and `Stop-NativeHTMLKitTask` only *request* cancellation, and a worker that ignores it keeps its slot until it ends. `Close-NativeHTMLKit` requests stop of unfinished tasks and runs no further callbacks. See [background work](../python/sdk/guides/background-work.md) ([PowerShell](../powershell/sdk/guides/background-work.md)).
+`Start-NativeHTMLKitTask -Application $app -ScriptBlock { ... } -ArgumentList ... -OnCompleted { ... } -OnFailed { ... }` runs work in an **isolated runspace** without your variables or modules. Pass plain data only: SDK objects (application, window, document, bitmap, ...) are refused as arguments. `-OnCompleted` / `-OnFailed` run later **on your runspace**, during the normal pump and never inside another callback, so they may update the document. At most 8 tasks per application (32 per process) run at once; `-TimeoutMilliseconds` and `Stop-NativeHTMLKitTask` only *request* cancellation, and a worker that ignores it keeps its slot until it ends. `Close-NativeHTMLKit` requests stop of unfinished tasks and runs no further callbacks. See [background work](../sdk/python/guides/background-work.md) ([PowerShell](../sdk/powershell/guides/background-work.md)).
 
 ## PowerShell UI library
 

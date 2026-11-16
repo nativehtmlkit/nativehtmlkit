@@ -5,6 +5,10 @@ Reshape a REST response, pick issues and print their URLs.
 
 *Same example in Windows: [Choose from JSON API output](../../windows/examples/pick-from-api.md)*
 
+![Choose from JSON API output](img/linux-pick-from-api.png)
+
+*Real capture on KDE Plasma 6.6 Wayland with the released packages.*
+
 **What it teaches:** flattening nested JSON; records returned unchanged; multi-select.
 
 ## Run it

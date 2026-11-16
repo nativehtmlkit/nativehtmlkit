@@ -186,6 +186,10 @@ Nothing is left behind after Cancel or a timeout (the block ended with 124 and l
 file). [csv-report.sh](https://github.com/nativehtmlkit/nativehtmlkit-cli/blob/main/examples/csv-report.sh)
 does the same with a `trap`.
 
+![Screenshot: linux-csv-report](../../_media/nativehtmlkit-cli/docs/images/examples/linux-csv-report.png)
+
+*Real capture on KDE Plasma 6.6 Wayland with the released packages.*
+
 <a id="timeout-is-for-people"></a>
 
 ## `--timeout` is for people, not for hangs

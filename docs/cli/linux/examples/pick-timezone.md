@@ -5,6 +5,10 @@ Pick one time zone from a long list in a window restyled with --css.
 
 *Same example in Windows: [Choose a time zone in a light theme](../../windows/examples/pick-timezone.md)*
 
+![Choose a time zone in a light theme](img/linux-pick-timezone.png)
+
+*Real capture on KDE Plasma 6.6 Wayland with the released packages.*
+
 **What it teaches:** --css themes via custom properties; a single value from a long list.
 
 ## Run it

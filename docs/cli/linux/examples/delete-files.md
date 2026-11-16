@@ -5,6 +5,10 @@ Tick files, confirm in a second window, then delete exactly the ticked files.
 
 *Same example in Windows: [Delete files with confirmation](../../windows/examples/delete-files.md)*
 
+![Delete files with confirmation](img/linux-delete-files.png)
+
+*Real capture on KDE Plasma 6.6 Wayland with the released packages.*
+
 **What it teaches:** NUL-safe or literal paths; a confirmation select; nothing changes unless submitted.
 
 ## Run it

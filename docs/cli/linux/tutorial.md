@@ -16,6 +16,10 @@ formats, the exit contract, escaping for trusted HTML, and a stylesheet. The fin
 is [examples/tutorial/proj.sh](https://github.com/nativehtmlkit/nativehtmlkit-cli/blob/main/examples/tutorial/proj.sh) (about 100 lines); every step
 below is a part of it.
 
+![Screenshot: linux-project-picker](../../_media/nativehtmlkit-cli/docs/images/examples/linux-project-picker.png)
+
+*Real capture on KDE Plasma 6.6 Wayland with the released packages.*
+
 You need: the CLI release extracted and `nativehtmlkit` on `PATH`
 ([install](index.md#install)), bash 4 or later, and `jq`.
 

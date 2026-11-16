@@ -5,6 +5,10 @@ View a CSV report, or export the rows you tick to a new CSV file.
 
 *Same example in Windows: [Review and export CSV reports](../../windows/examples/csv-report.md)*
 
+![Review and export CSV reports](img/linux-csv-report.png)
+
+*Real capture on KDE Plasma 6.6 Wayland with the released packages.*
+
 **What it teaches:** view; CSV in and out; writing output only after Submit.
 
 ## Run it

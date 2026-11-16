@@ -8,6 +8,10 @@ with the sample response
 [examples/data/issues.json](https://github.com/nativehtmlkit/nativehtmlkit-cli/blob/main/examples/data/issues.json)
 (GitHub's issue list format; needs `jq`).
 
+![Screenshot: linux-pick-from-api](../../../_media/nativehtmlkit-cli/docs/images/examples/linux-pick-from-api.png)
+
+*Real capture on KDE Plasma 6.6 Wayland with the released packages.*
+
 The examples run in the `examples` directory of a clone of this repository and were run
 against the released CLI 0.1.2 by `scripts/test-docs.py`
 ([how](../index.md#how-the-examples-are-verified)).

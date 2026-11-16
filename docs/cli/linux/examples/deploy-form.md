@@ -5,6 +5,10 @@ Collect validated deployment parameters, confirm production, return them typed.
 
 *Same example in Windows: [A deployment form](../../windows/examples/deploy-form.md)*
 
+![A deployment form](img/linux-deploy-form.png)
+
+*Real capture on KDE Plasma 6.6 Wayland with the released packages.*
+
 **What it teaches:** generated and escaped --html; Core form validation; parsing entries; a confirmation step.
 
 ## Run it

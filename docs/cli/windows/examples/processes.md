@@ -5,6 +5,10 @@ Pick processes in a table and stop or signal exactly those.
 
 *Same example in Linux: [Choose processes to stop](../../linux/examples/processes.md)*
 
+![Choose processes to stop](img/windows-processes.png)
+
+*Real capture on Windows Server 2022 with the released packages.*
+
 **What it teaches:** process lists as CSV or JSON; CSV/JSON in, JSON out; a second choice for the action.
 
 ## Run it

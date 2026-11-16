@@ -5,6 +5,10 @@ Switch to a branch chosen from a table of recent branches with their last commit
 
 *Same example in Linux: [Pick a Git branch](../../linux/examples/pick-git-branch.md)*
 
+![Pick a Git branch](img/windows-pick-git-branch.png)
+
+*Real capture on Windows Server 2022 with the released packages.*
+
 **What it teaches:** JSON rows built from tab-separated tool output; single choice; reading a field of the chosen record.
 
 ## Run it

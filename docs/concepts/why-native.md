@@ -12,8 +12,8 @@ NativeHTMLKit targets local tools and small desktop applications where you want 
 
 ## What you give up
 
-- **A subset of the web platform.** The engine implements a large part of HTML and CSS layout, forms, dialogs and popovers, but it is not a complete browser. There are no JavaScript or browser APIs (`fetch`, `canvas`, web components, routing), no video/audio playback, and CSS support is defined by the engine's own profile and compatibility tests. Check the [capability matrix](../capabilities/matrix.md) and [styling guide](../python/sdk/guides/styling-and-layout.md) ([PowerShell](../powershell/sdk/guides/styling-and-layout.md)) instead of assuming Chrome behaviour.
-- **No existing web component ecosystem.** React/Vue widgets, charting libraries in JavaScript and similar packages cannot run. Build charts with [live bitmaps](../python/sdk/guides/live-bitmaps.md) ([PowerShell](../powershell/sdk/guides/live-bitmaps.md)) or server-free HTML/CSS.
+- **A subset of the web platform.** The engine implements a large part of HTML and CSS layout, forms, dialogs and popovers, but it is not a complete browser. There are no JavaScript or browser APIs (`fetch`, `canvas`, web components, routing), no video/audio playback, and CSS support is defined by the engine's own profile and compatibility tests. Check the [capability matrix](../capabilities/matrix.md) and [styling guide](../sdk/python/guides/styling-and-layout.md) ([PowerShell](../sdk/powershell/guides/styling-and-layout.md)) instead of assuming Chrome behaviour.
+- **No existing web component ecosystem.** React/Vue widgets, charting libraries in JavaScript and similar packages cannot run. Build charts with [live bitmaps](../sdk/python/guides/live-bitmaps.md) ([PowerShell](../sdk/powershell/guides/live-bitmaps.md)) or server-free HTML/CSS.
 - **Platform scope.** The current targets are Linux with KDE Plasma on Wayland and Windows (x64). The Linux Python wheel needs glibc 2.39 or newer. See [limitations](../capabilities/limitations.md).
 - **Young UI library.** `nativehtmlkit_ui` / `NativeHTMLKit.UI` 0.1.1 is an early release with a deliberately small component set.
 

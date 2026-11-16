@@ -6,6 +6,10 @@ Show a text log in a scrolling, wrapping pane, or the newest Windows events as a
 [examples/view-logs.ps1](https://github.com/nativehtmlkit/nativehtmlkit-cli/blob/main/examples/view-logs.ps1), samples [data/app.log](https://github.com/nativehtmlkit/nativehtmlkit-cli/blob/main/examples/data/app.log) and
 [data/app.ndjson](https://github.com/nativehtmlkit/nativehtmlkit-cli/blob/main/examples/data/app.ndjson).
 
+![Screenshot: windows-view-logs](../../../_media/nativehtmlkit-cli/docs/images/examples/windows-view-logs.png)
+
+*Real capture on Windows Server 2022 with the released packages.*
+
 The examples run in the `examples` folder of a clone of this repository and were run
 against the released CLI 0.1.2 in Windows PowerShell 5.1 and PowerShell 7 by
 `scripts/test-docs.ps1` ([how](../index.md#how-the-examples-are-verified)).

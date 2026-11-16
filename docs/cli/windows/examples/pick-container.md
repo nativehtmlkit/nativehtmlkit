@@ -5,6 +5,10 @@ Pick a container, then show its logs, restart, stop it or open a shell.
 
 *Same example in Linux: [Choose a Docker container](../../linux/examples/pick-container.md)*
 
+![Choose a Docker container](img/windows-pick-container.png)
+
+*Real capture on Windows Server 2022 with the released packages.*
+
 **What it teaches:** NDJSON from docker ps; chained selections; view for logs.
 
 ## Run it

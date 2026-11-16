@@ -18,6 +18,10 @@ script is
 (about 120 lines, Windows PowerShell 5.1 and PowerShell 7); every step below is a part of
 it. The same tutorial for bash: [Linux](../linux/tutorial.md).
 
+![Screenshot: windows-project-picker](../../_media/nativehtmlkit-cli/docs/images/examples/windows-project-picker.png)
+
+*Real capture on Windows Server 2022 with the released packages.*
+
 You need: the CLI release extracted and on `PATH` ([install](index.md#install)).
 
 ## Step 1: a first picker

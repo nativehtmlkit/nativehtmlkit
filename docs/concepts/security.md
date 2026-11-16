@@ -41,4 +41,4 @@ When you build HTML from data — file names, process names, user input, log lin
 
 NativeHTMLKit runs with the permissions of the user who starts it; it is not a sandbox for untrusted *code*. Your Python or PowerShell program can do anything that user can. Treat example scripts like any other script you run.
 
-**Related:** [Architecture](architecture.md) · [Update the page](../python/sdk/guides/updating-the-page.md) ([PowerShell](../powershell/sdk/guides/updating-the-page.md)) · [Distribute your app](../python/sdk/guides/packaging-and-distribution.md) ([PowerShell](../powershell/sdk/guides/packaging-and-distribution.md))
+**Related:** [Architecture](architecture.md) · [Update the page](../sdk/python/guides/updating-the-page.md) ([PowerShell](../sdk/powershell/guides/updating-the-page.md)) · [Distribute your app](../sdk/python/guides/packaging-and-distribution.md) ([PowerShell](../sdk/powershell/guides/packaging-and-distribution.md))

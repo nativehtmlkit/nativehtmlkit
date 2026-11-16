@@ -5,6 +5,10 @@ Collect validated deployment parameters, confirm production, return them typed.
 
 *Same example in Linux: [A deployment form](../../linux/examples/deploy-form.md)*
 
+![A deployment form](img/windows-deploy-form.png)
+
+*Real capture on Windows Server 2022 with the released packages.*
+
 **What it teaches:** generated and escaped --html; Core form validation; parsing entries; a confirmation step.
 
 ## Run it

@@ -5,6 +5,10 @@ Show the end of a text or JSON-lines log (Windows: also the event log).
 
 *Same example in Linux: [View logs](../../linux/examples/view-logs.md)*
 
+![View logs](img/windows-view-logs.png)
+
+*Real capture on Windows Server 2022 with the released packages.*
+
 **What it teaches:** view for text and NDJSON; staying inside the page limit.
 
 ## Run it

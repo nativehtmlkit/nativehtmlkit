@@ -5,6 +5,10 @@ Tick files in a window, then search only those for a pattern.
 
 *Same example in Windows: [Search only the files you tick](../../windows/examples/search-selected.md)*
 
+![Search only the files you tick](img/linux-search-selected.png)
+
+*Real capture on KDE Plasma 6.6 Wayland with the released packages.*
+
 **What it teaches:** select --multi as a pipeline stage; the CLI's own exit status inside a pipeline.
 
 ## Run it

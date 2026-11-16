@@ -7,6 +7,10 @@ user picks. Script:
 (needs `git` and `jq`). For a step-by-step version with TSV and deleting merged branches,
 see the [branch picker tutorial](../tutorial-branch-picker.md).
 
+![Screenshot: linux-pick-git-branch](../../../_media/nativehtmlkit-cli/docs/images/examples/linux-pick-git-branch.png)
+
+*Real capture on KDE Plasma 6.6 Wayland with the released packages.*
+
 The examples run in the `examples` directory of a clone of this repository (a Git work
 tree) and were run against the released CLI 0.1.2 by `scripts/test-docs.py`
 ([how](../index.md#how-the-examples-are-verified)).

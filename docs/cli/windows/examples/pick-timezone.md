@@ -5,6 +5,10 @@ Pick one time zone from a long list in a window restyled with --css.
 
 *Same example in Linux: [Choose a time zone in a light theme](../../linux/examples/pick-timezone.md)*
 
+![Choose a time zone in a light theme](img/windows-pick-timezone.png)
+
+*Real capture on Windows Server 2022 with the released packages.*
+
 **What it teaches:** --css themes via custom properties; a single value from a long list.
 
 ## Run it

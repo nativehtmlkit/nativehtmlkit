@@ -12,10 +12,10 @@
 
 | Section | Parts |
 |---|---|
+| [**UI library**](https://nativehtmlkit.github.io/ui/) | [Python](https://nativehtmlkit.github.io/ui/python/) · [PowerShell](https://nativehtmlkit.github.io/ui/powershell/) |
+| [**SDK**](https://nativehtmlkit.github.io/sdk/) | [Python](https://nativehtmlkit.github.io/sdk/python/) · [PowerShell](https://nativehtmlkit.github.io/sdk/powershell/) |
 | [**CLI**](https://nativehtmlkit.github.io/cli/) | [Linux](https://nativehtmlkit.github.io/cli/linux/) · [Windows](https://nativehtmlkit.github.io/cli/windows/) · [Reference](https://nativehtmlkit.github.io/cli/reference/) |
-| [**Python**](https://nativehtmlkit.github.io/python/) | [SDK (HTML/CSS + Python)](https://nativehtmlkit.github.io/python/sdk/) · [UI library](https://nativehtmlkit.github.io/python/ui/) |
-| [**PowerShell**](https://nativehtmlkit.github.io/powershell/) | [SDK (HTML/CSS + PowerShell)](https://nativehtmlkit.github.io/powershell/sdk/) · [UI library](https://nativehtmlkit.github.io/powershell/ui/) |
-| Shared | [Getting started](docs/getting-started/index.md) · [Concepts](docs/concepts/index.md) · [Reference](docs/reference/index.md) · [Capability matrix](docs/capabilities/matrix.md) · [Limitations](docs/capabilities/limitations.md) |
+| Shared | [Getting started](docs/getting-started/index.md) · [Linux and Windows](docs/getting-started/platforms.md) · [Concepts](docs/concepts/index.md) · [Reference](docs/reference/index.md) · [Capability matrix](docs/capabilities/matrix.md) · [Limitations](docs/capabilities/limitations.md) |
 
 Python and PowerShell mirror each other one to one (same tutorials, guides and examples). The product pages are written in the repository that owns each API and imported into [`docs/`](docs/index.md) by [`scripts/import-docs.py`](scripts/import-docs.py); every example is run against the released packages by its owning repository's harness ([Examples and verification](docs/reference/examples.md)).
 

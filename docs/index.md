@@ -1,23 +1,55 @@
-# NativeHTMLKit developer documentation
+# NativeHTMLKit
+
+**Native desktop windows from HTML and CSS, driven by Python, PowerShell or a shell script.** No browser engine, no JavaScript, no local web server: a small Rust host renders your page and sends your program the user's events over a private local connection.
 
 ![Illustration (not a screenshot) of native UI controls](assets/demo-placeholder.svg)
 
-*Illustration only. For real screenshots run the demo gallery in a native desktop and capture them.*
+*Illustration only, not a captured screenshot. Real captures will replace it after interactive qualification.*
 
-Build native HTML/CSS desktop interfaces with familiar Python or PowerShell code. There is no browser engine or embedded JS runtime; a Rust host draws the controls and reports events over local authenticated IPC.
+## Start here
 
-## Start by choosing your path
+<div class="grid cards" markdown>
 
-- [Python SDK](getting-started/python.md) — directly manipulate windows and documents.
-- [Python UI](getting-started/python-ui.md) — use reactive state and compact components.
-- [PowerShell SDK](getting-started/powershell.md) — manage windows and document events from scripts.
-- [PowerShell UI](getting-started/powershell-ui.md) — reactive PowerShell components.
-- [CLI](tutorials/cli-selection.md) — native selection, view and form in pipelines.
+- **[Getting started](getting-started/index.md)**: install one package and open your first window in five minutes, in Python, PowerShell or Bash.
+- **[Tutorials](tutorials/index.md)**: build complete apps step by step: a notes app, an expense tracker, a process dashboard, a settings editor, a Git branch picker.
+- **[How-to guides](how-to/index.md)**: recipes for events, forms, dialogs, multiple windows, background work, live charts, styling, distribution and troubleshooting.
+- **[Concepts](concepts/index.md)**: how the host, your script and the page fit together, and why.
+- **[Reference](reference/index.md)**: where each package documents its exact API, plus the capability matrix, limitations, glossary and FAQ.
 
-## Learn by example
+</div>
 
-The [demo gallery](https://github.com/nativehtmlkit/nativehtmlkit/blob/main/examples/README.md) has runnable source files for four entrypoints. Follow the [capture guide](demos/screenshots.md) for screenshots and short clips. Use [capability matrices](capabilities/matrix.md) to check what is exposed and in which release.
+## A complete app in a few lines
 
-## Go deeper
+<!-- include: examples/getting-started/five_lines.py -->
+```python title="examples/getting-started/five_lines.py"
+# The smallest NativeHTMLKit app (home page sample). Run: python five_lines.py
+from nativehtmlkit import Application
 
-[Architecture](concepts/architecture.md) · [Why this is native](concepts/why-native.md) · [Limitations](capabilities/limitations.md) · [Agent skills](https://github.com/nativehtmlkit/nativehtmlkit/blob/main/skills/README.md) · [Repository API references](reference/index.md)
+with Application.start(name="Hello") as app:
+    window = app.open_html('<h1 id="title">Hello</h1><button id="go">Click me</button>')
+    window.document.on("click", lambda e: window.document.set_text("title", "Clicked!"), element="go")
+    app.run()
+```
+<!-- /include -->
+
+The [quick start](getting-started/python.md) explains each line (including why the script runs twice) and the [same app in PowerShell](getting-started/powershell.md) uses `Start-NativeHTMLKitScript`.
+
+## Entry points
+
+| Entry point | Package | For |
+|---|---|---|
+| Python SDK | [`nativehtmlkit`](https://pypi.org/project/nativehtmlkit/) 0.1.2 | Full control of windows, documents, events, dialogs, clipboard and live bitmaps |
+| Python UI | [`nativehtmlkit_ui`](https://pypi.org/project/nativehtmlkit_ui/) 0.1.1 | Reactive state and compact components, built on the Python SDK |
+| PowerShell SDK | [`NativeHTMLKit`](https://www.powershellgallery.com/packages/NativeHTMLKit) 0.1.2 | The same features as cmdlets, plus background tasks |
+| PowerShell UI | [`NativeHTMLKit.UI`](https://www.powershellgallery.com/packages/NativeHTMLKit.UI) 0.1.1 | Reactive components for PowerShell |
+| CLI | [`nativehtmlkit` / `nhk`](https://github.com/nativehtmlkit/nativehtmlkit-cli/releases) 0.1.2 | Select rows, view text or fill a form from any shell |
+
+All of them bundle the native host, Core 1.0.3 (wire protocol v1, stable). Target desktops are KDE Plasma on Wayland (Linux) and Windows; see [platform requirements](getting-started/requirements.md) and the [capability matrix](capabilities/matrix.md).
+
+## Tested examples
+
+Every code sample on this site is a file in [`examples/`](https://github.com/nativehtmlkit/nativehtmlkit/blob/main/examples/README.md), and a committed harness runs each one against the released packages in the host's headless test mode before the documentation is published. See [Examples and verification](reference/examples.md).
+
+## What it is not
+
+NativeHTMLKit is not a web browser, not a web UI framework and not a plugin platform. It runs no JavaScript, loads nothing from the network, and implements a documented CSS profile rather than the whole web platform. If you need arbitrary web content, a browser-based toolkit is the better fit; see [Why native?](concepts/why-native.md).

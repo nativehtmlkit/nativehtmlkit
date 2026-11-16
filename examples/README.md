@@ -1,24 +1,46 @@
-# Run the capability galleries
+# NativeHTMLKit examples
 
-The four scripts in this directory are **real source examples**, not compiled binary distributions. They were statically checked against the 16 November 2026 public SDK/UI source, but the documentation packaging environment did **not** run native GUI tests.
+Runnable source examples for every entry point, used by the documentation at https://nativehtmlkit.github.io/nativehtmlkit/ . Each file starts with a comment that says what it teaches and how to run it.
 
-| Gallery | Command | Shows |
-|---|---|---|
-| Python SDK | `python examples/python-sdk/gallery.py` | Direct DOM, events, HTML dialog, second window, file picker, bitmap |
-| PowerShell SDK | `pwsh -File examples/powershell-sdk/gallery.ps1` | Same host-level patterns through exported cmdlets |
-| Python UI | `python examples/python-ui/gallery.py` | State, computed/text, layout, inputs, select, list, conditional regions |
-| PowerShell UI | `pwsh -File examples/powershell-ui/gallery.ps1` | PowerShell equivalents using `Add-NHKUi*` and state |
+| Folder | What is inside |
+|---|---|
+| [`getting-started/`](getting-started/) | The first window of each entry point (`hello.py`, `hello_ui.py`, `hello.ps1`, `hello-ui.ps1`, `hello-cli.sh`) |
+| [`tutorials/python-notes/`](tutorials/python-notes/) | Python SDK tutorial: notes app with persistence, in four steps |
+| [`tutorials/python-ui-expenses/`](tutorials/python-ui-expenses/) | Python UI tutorial: expense tracker with computed totals, in three steps |
+| [`tutorials/powershell-process-dashboard/`](tutorials/powershell-process-dashboard/) | PowerShell SDK tutorial: live process dashboard, in three steps |
+| [`tutorials/powershell-ui-settings/`](tutorials/powershell-ui-settings/) | PowerShell UI tutorial: settings editor, in two steps |
+| [`tutorials/cli-branch-picker/`](tutorials/cli-branch-picker/) | CLI tutorial: Git branch picker in Bash, in two steps |
+| [`howto/python/`](howto/python/) | Python SDK recipes: events, page updates, forms, windows, dialogs, clipboard, background work, live chart, styling |
+| [`howto/python-ui/`](howto/python-ui/) | Python UI recipes: theming, background progress |
+| [`howto/powershell/`](howto/powershell/) | PowerShell recipes: forms, CSV viewer with a file dialog, background task, live chart |
+| [`python-sdk/gallery.py`](python-sdk/gallery.py), [`python-ui/gallery.py`](python-ui/gallery.py), [`powershell-sdk/gallery.ps1`](powershell-sdk/gallery.ps1), [`powershell-ui/gallery.ps1`](powershell-ui/gallery.ps1) | Capability galleries: one window with a button for each SDK or UI feature, for manual exploration |
 
-## Prerequisites
+## Run an example
 
-Install `nativehtmlkit` from its compatible native wheel. For the UI examples also install the appropriate UI package (`nativehtmlkit_ui` 0.1.1 on PyPI). For PowerShell install the `NativeHTMLKit` module and, for UI, `NativeHTMLKit.UI` from the PowerShell Gallery. Run in an **interactive desktop session** with an OS-native host; a headless SSH session alone will not demonstrate GUI input.
+```bash
+python -m pip install nativehtmlkit nativehtmlkit_ui      # Python SDK 0.1.2 and UI 0.1.1
+python examples/tutorials/python-notes/notes.py
+```
 
-## What a user should test
+```powershell
+Install-Module NativeHTMLKit, NativeHTMLKit.UI -Scope CurrentUser
+pwsh -File examples/tutorials/powershell-process-dashboard/dashboard.ps1
+```
 
-- Buttons update status and state.
-- Text fields, selections and checkboxes affect bound display text.
-- Closing a dialog or a second window does not terminate the parent incorrectly.
-- File picker returns to the app without freezing the event loop.
-- Live bitmap display changes and releases resources correctly.
+```bash
+# CLI 0.1.2 from https://github.com/nativehtmlkit/nativehtmlkit-cli/releases on PATH
+bash examples/tutorials/cli-branch-picker/git-pick.sh
+```
 
-The matrix may include features not worth illustrating visually (transport safety, diagnostic counters, process supervision). Those have linked references and verification runs rather than dummy buttons.
+Examples open real windows, so run them in an interactive desktop session (KDE Plasma on Wayland, or Windows). PowerShell examples also run on Windows PowerShell 5.1 (`powershell.exe -File ...`).
+
+## How the examples are verified
+
+[`scripts/test-examples.py`](../scripts/test-examples.py) runs every example against the released packages with the host in headless test mode: it waits for the app to be ready, types into fields and submits forms through public document commands, reads the page back, requests a clean quit, and checks the exit status, stderr and leftover processes. CLI scripts are run with the headless CLI and `--timeout`. Click-only actions, the clipboard and native file dialogs need a real desktop and are checked interactively. Details: [Examples and verification](../docs/reference/examples.md).
+
+## What to try in the galleries
+
+- Buttons update status and state; text fields, selections and checkboxes change bound text.
+- Closing a dialog or a second window leaves the main window running.
+- The file picker returns to the app without freezing it; cancelling is reported.
+- The live bitmap changes with each frame.

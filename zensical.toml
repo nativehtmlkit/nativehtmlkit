@@ -6,9 +6,70 @@ docs_dir = "docs"
 site_dir = "site"
 strict = true
 repo_url = "https://github.com/nativehtmlkit/nativehtmlkit"
+edit_uri = "edit/main/docs/"
+
+# Diataxis: getting started and tutorials (learning), how-to guides (tasks),
+# concepts (explanation) and reference (lookup).
+nav = [
+  { "Home" = "index.md" },
+  { "Getting started" = [
+    "getting-started/index.md",
+    { "Choose an entry point" = "getting-started/choose.md" },
+    { "Platform requirements" = "getting-started/requirements.md" },
+    { "Python SDK" = "getting-started/python.md" },
+    { "Python UI" = "getting-started/python-ui.md" },
+    { "PowerShell SDK" = "getting-started/powershell.md" },
+    { "PowerShell UI" = "getting-started/powershell-ui.md" },
+    { "CLI" = "getting-started/cli.md" },
+  ] },
+  { "Tutorials" = [
+    "tutorials/index.md",
+    { "Python: notes app" = "tutorials/python-notes.md" },
+    { "Python UI: expense tracker" = "tutorials/python-ui-expenses.md" },
+    { "PowerShell: process dashboard" = "tutorials/powershell-process-dashboard.md" },
+    { "PowerShell UI: settings editor" = "tutorials/powershell-ui-settings.md" },
+    { "CLI: Git branch picker" = "tutorials/cli-branch-picker.md" },
+  ] },
+  { "How-to guides" = [
+    "how-to/index.md",
+    { "Handle events" = "how-to/handle-events.md" },
+    { "Update the page" = "how-to/update-the-page.md" },
+    { "Build and validate forms" = "how-to/forms.md" },
+    { "Use multiple windows" = "how-to/multiple-windows.md" },
+    { "Native file dialogs" = "how-to/file-dialogs.md" },
+    { "HTML dialogs" = "how-to/html-dialogs.md" },
+    { "Clipboard" = "how-to/clipboard.md" },
+    { "Background work" = "how-to/background-work.md" },
+    { "Live bitmap charts" = "how-to/live-bitmap-charts.md" },
+    { "Style with the supported CSS" = "how-to/styling.md" },
+    { "Theme the UI library" = "how-to/theming-ui.md" },
+    { "Distribute your app" = "how-to/distribute.md" },
+    { "Troubleshooting and diagnostics" = "how-to/troubleshooting.md" },
+    { "Accessibility basics" = "how-to/accessibility.md" },
+  ] },
+  { "Concepts" = [
+    "concepts/index.md",
+    { "Architecture" = "concepts/architecture.md" },
+    { "Process and lifecycle" = "concepts/lifecycle.md" },
+    { "Threading and callbacks" = "concepts/threading.md" },
+    { "Documents and stale handles" = "concepts/documents-and-handles.md" },
+    { "Security model" = "concepts/security.md" },
+    { "Why native?" = "concepts/why-native.md" },
+  ] },
+  { "Reference" = [
+    "reference/index.md",
+    { "Capability matrix" = "capabilities/matrix.md" },
+    { "Limitations" = "capabilities/limitations.md" },
+    { "Glossary" = "reference/glossary.md" },
+    { "FAQ" = "reference/faq.md" },
+    { "Examples and verification" = "reference/examples.md" },
+    { "Screenshots and media" = "demos/screenshots.md" },
+  ] },
+]
 
 [project.theme]
-features = ["navigation.instant", "navigation.sections", "navigation.top", "search.suggest"]
+features = ["navigation.instant", "navigation.sections", "navigation.top", "navigation.indexes",
+            "search.suggest", "content.code.copy"]
 
 [project.theme.palette]
 scheme = "slate"

@@ -10,8 +10,8 @@
 | Python SDK | Released wheel: glibc 2.39+; KDE Wayland targeted | Released Windows x64 wheel | Python 3.10+ |
 | PowerShell SDK | PowerShell 7.2+; KDE Wayland targeted | PowerShell 7.2+ and Windows PowerShell 5.1 | Both editions on Windows |
 | Native CLI | Linux x64 GitHub release | Windows x64 GitHub release | Standalone binary |
-| Python UI | GitHub prerelease; requalify current SDK/Core | GitHub prerelease; requalify current SDK/Core | Python 3.10+ |
-| PowerShell UI | GitHub prerelease; PowerShell 7.2+ | GitHub prerelease; PowerShell 7.2+ and 5.1 | Separate UI module |
+| Python UI | PyPI 0.1.1 (early release); same platform floor as the Python SDK | PyPI 0.1.1 (early release) | Python 3.10+ |
+| PowerShell UI | PowerShell Gallery 0.1.1 (early release); PowerShell 7.2+ | PowerShell Gallery 0.1.1 (early release); PowerShell 7.2+ and 5.1 | Separate UI module |
 
 ## Feature exposure
 

@@ -56,14 +56,14 @@
     },
     {
       "entry": "Python UI",
-      "linux": "GitHub prerelease; requalify current SDK/Core",
-      "windows": "GitHub prerelease; requalify current SDK/Core",
+      "linux": "PyPI 0.1.1 (early release); same platform floor as the Python SDK",
+      "windows": "PyPI 0.1.1 (early release)",
       "edition": "Python 3.10+"
     },
     {
       "entry": "PowerShell UI",
-      "linux": "GitHub prerelease; PowerShell 7.2+",
-      "windows": "GitHub prerelease; PowerShell 7.2+ and 5.1",
+      "linux": "PowerShell Gallery 0.1.1 (early release); PowerShell 7.2+",
+      "windows": "PowerShell Gallery 0.1.1 (early release); PowerShell 7.2+ and 5.1",
       "edition": "Separate UI module"
     }
   ],

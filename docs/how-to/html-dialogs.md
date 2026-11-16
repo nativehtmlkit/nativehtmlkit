@@ -104,7 +104,9 @@ if __name__ == "__main__":
 ```
 <!-- /include -->
 
-<!-- screenshot: howto-dialogs -->
+![Screenshot: howto dialogs](../assets/screenshots/howto-dialogs.png)
+
+*Real capture on KDE Plasma 6.6 Wayland with Core 1.0.3 and Python SDK 0.1.2.*
 
 - One `close` handler decides for the confirmation dialog, whichever way it was closed.
 - The rename dialog contains a form; Enter in the field submits it, and `required` stops an empty name.

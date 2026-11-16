@@ -2,7 +2,9 @@
 
 You will write **git-pick**, a Bash script that lists your local Git branches in a native window, switches to the one you pick, and can delete merged branches in a multi-select list. It shows how to use `nativehtmlkit select` safely in scripts: input formats, output, exit statuses and timeouts.
 
-<!-- screenshot: tutorial-cli-branch-picker -->
+![Screenshot: tutorial cli branch picker](../assets/screenshots/tutorial-cli-branch-picker.png)
+
+*Real capture on KDE Plasma 6.6 Wayland with Core 1.0.3 and CLI 0.1.2.*
 
 **Time:** about 20 minutes. **You need:** Bash, Git, and the `nativehtmlkit` command on your `PATH` ([CLI in five minutes](../getting-started/cli.md)). Final code: [`examples/tutorials/cli-branch-picker/git-pick.sh`](https://github.com/nativehtmlkit/nativehtmlkit/blob/main/examples/tutorials/cli-branch-picker/git-pick.sh).
 

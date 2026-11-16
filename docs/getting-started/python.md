@@ -62,7 +62,9 @@ python hello.py
 
 A native window opens. Click the button: the host sends a `click` event to your callback, which replaces the paragraph's text with `set_text()`. Close the window to end the program.
 
-<!-- screenshot: getting-started-hello-python -->
+![Screenshot: getting started hello python](../assets/screenshots/getting-started-hello-python.png)
+
+*Real capture on KDE Plasma 6.6 Wayland with Core 1.0.3 and Python SDK 0.1.2.*
 
 ## What just happened
 

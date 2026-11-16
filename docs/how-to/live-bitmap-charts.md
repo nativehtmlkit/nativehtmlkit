@@ -130,7 +130,9 @@ if __name__ == "__main__":
 ```
 <!-- /include -->
 
-<!-- screenshot: howto-live-chart -->
+![Screenshot: howto live chart](../assets/screenshots/howto-live-chart.png)
+
+*Real capture on KDE Plasma 6.6 Wayland with Core 1.0.3 and Python SDK 0.1.2.*
 
 - The background with grid lines is computed once; each frame copies it and draws the line.
 - Drawing and presenting run on a worker thread, ten frames per second; `stopped` ends the loop when the app shuts down.

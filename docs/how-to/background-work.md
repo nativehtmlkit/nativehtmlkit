@@ -124,7 +124,9 @@ if __name__ == "__main__":
 ```
 <!-- /include -->
 
-<!-- screenshot: howto-prime-counter -->
+![Screenshot: howto prime counter](../assets/screenshots/howto-prime-counter.png)
+
+*Real capture on KDE Plasma 6.6 Wayland with Core 1.0.3 and Python SDK 0.1.2.*
 
 - Throttle progress updates (here at most ten per second); each update is a message to the host.
 - Cancel cooperatively with a `threading.Event` that the work checks regularly.

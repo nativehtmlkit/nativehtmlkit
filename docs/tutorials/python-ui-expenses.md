@@ -2,7 +2,9 @@
 
 You will build **Expenses** with the `nativehtmlkit_ui` component library: a form to add expenses, a list of entries, totals per category that update by themselves, and a JSON file that is saved whenever the data changes. You will not write any HTML.
 
-<!-- screenshot: tutorial-python-ui-expenses -->
+![Screenshot: tutorial python ui expenses](../assets/screenshots/tutorial-python-ui-expenses.png)
+
+*Real capture on KDE Plasma 6.6 Wayland with Core 1.0.3 and Python SDK 0.1.2 + UI 0.1.1.*
 
 **Time:** about 30 minutes. **You need:** `nativehtmlkit_ui` installed and the counter from [Python UI in five minutes](../getting-started/python-ui.md) working. Final code: [`examples/tutorials/python-ui-expenses/expenses.py`](https://github.com/nativehtmlkit/nativehtmlkit/blob/main/examples/tutorials/python-ui-expenses/expenses.py).
 

@@ -2,7 +2,9 @@
 
 You will build **Process Dashboard**: a native window with a table of running processes that refreshes itself in the background, can be filtered and sorted, paused, and copied to the clipboard. It works the same on Linux (PowerShell 7) and Windows (PowerShell 7 or Windows PowerShell 5.1).
 
-<!-- screenshot: tutorial-powershell-process-dashboard -->
+![Screenshot: tutorial powershell process dashboard](../assets/screenshots/tutorial-powershell-process-dashboard.png)
+
+*Real capture on KDE Plasma 6.6 Wayland with Core 1.0.3 and PowerShell SDK 0.1.2 on PowerShell 7.7.*
 
 **Time:** about 30 minutes. **You need:** the `NativeHTMLKit` module and the first window from [PowerShell SDK in five minutes](../getting-started/powershell.md). Final code: [`examples/tutorials/powershell-process-dashboard/dashboard.ps1`](https://github.com/nativehtmlkit/nativehtmlkit/blob/main/examples/tutorials/powershell-process-dashboard/dashboard.ps1).
 

@@ -116,7 +116,9 @@ if __name__ == "__main__":
 ```
 <!-- /include -->
 
-<!-- screenshot: howto-status-board -->
+![Screenshot: howto status board](../assets/screenshots/howto-status-board.png)
+
+*Real capture on KDE Plasma 6.6 Wayland with Core 1.0.3 and Python SDK 0.1.2.*
 
 - `batch()` applies all operations atomically: the user never sees a row with the new class but the old label. An invalid operation rejects the whole batch.
 - The note comes from the user, so it is set with a `set_text` operation; the history entry is built as HTML, so the text is escaped first.

@@ -100,7 +100,9 @@ if __name__ == "__main__":
 ```
 <!-- /include -->
 
-<!-- screenshot: howto-signup-form -->
+![Screenshot: howto signup form](../assets/screenshots/howto-signup-form.png)
+
+*Real capture on KDE Plasma 6.6 Wayland with Core 1.0.3 and Python SDK 0.1.2.*
 
 ## PowerShell example
 

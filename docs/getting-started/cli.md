@@ -45,7 +45,9 @@ bash hello-cli.sh
 bash hello-cli.sh --timeout 10    # give up after ten seconds (exit status 124)
 ```
 
-<!-- screenshot: getting-started-hello-cli -->
+![Screenshot: getting started hello cli](../assets/screenshots/getting-started-hello-cli.png)
+
+*Real capture on KDE Plasma 6.6 Wayland with Core 1.0.3 and CLI 0.1.2.*
 
 ## Exit statuses
 

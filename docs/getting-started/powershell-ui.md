@@ -52,7 +52,9 @@ pwsh -File hello-ui.ps1
 powershell.exe -File .\hello-ui.ps1     # Windows PowerShell 5.1
 ```
 
-<!-- screenshot: getting-started-hello-powershell-ui -->
+![Screenshot: getting started hello powershell ui](../assets/screenshots/getting-started-hello-powershell-ui.png)
+
+*Real capture on KDE Plasma 6.6 Wayland with Core 1.0.3 and PowerShell SDK 0.1.2 + UI 0.1.1 on PowerShell 7.7.*
 
 ## What just happened
 

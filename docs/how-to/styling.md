@@ -69,7 +69,9 @@ if __name__ == "__main__":
 ```
 <!-- /include -->
 
-<!-- screenshot: howto-css-support -->
+![Screenshot: howto css support](../assets/screenshots/howto-css-support.png)
+
+*Real capture on KDE Plasma 6.6 Wayland with Core 1.0.3 and Python SDK 0.1.2.*
 
 In Core 1.0.3 the profile reports, for example, `@page`, `@view-transition`, `@custom-media`, `zoom`, `shape-outside`, `line-clamp` (the `-webkit-line-clamp` form is on) and `initial-letter` as off, `@counter-style` and ruby layout as unavailable, and `::part`, `::slotted` and `:host` as filtered. `doc.command("explain", element=id)` (Python) or `Invoke-NativeHTMLKitDocumentCommand -Operation explain` (PowerShell) helps when a rule does not apply as expected.
 

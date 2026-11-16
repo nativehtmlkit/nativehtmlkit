@@ -2,7 +2,9 @@
 
 You will build **Settings**, a small editor for a JSON settings file with `NativeHTMLKit.UI`: bound inputs, live validation, an "Unsaved changes" badge, Save and Revert buttons, and a theme the app itself uses on the next start.
 
-<!-- screenshot: tutorial-powershell-ui-settings -->
+![Screenshot: tutorial powershell ui settings](../assets/screenshots/tutorial-powershell-ui-settings.png)
+
+*Real capture on KDE Plasma 6.6 Wayland with Core 1.0.3 and PowerShell SDK 0.1.2 + UI 0.1.1 on PowerShell 7.7.*
 
 **Time:** about 25 minutes. **You need:** `NativeHTMLKit.UI` installed and the counter from [PowerShell UI in five minutes](../getting-started/powershell-ui.md) working. Final code: [`examples/tutorials/powershell-ui-settings/settings.ps1`](https://github.com/nativehtmlkit/nativehtmlkit/blob/main/examples/tutorials/powershell-ui-settings/settings.ps1).
 

@@ -2,7 +2,9 @@
 
 You will build **Notes**: a window where you add short notes, mark them done, delete them, filter them, and find them again the next time you start the app. Along the way you learn the core pattern of every NativeHTMLKit SDK app: *keep the data in Python, render it into the page, react to events*.
 
-<!-- screenshot: tutorial-python-notes -->
+![Screenshot: tutorial python notes](../assets/screenshots/tutorial-python-notes.png)
+
+*Real capture on KDE Plasma 6.6 Wayland with Core 1.0.3 and Python SDK 0.1.2.*
 
 **Time:** about 30 minutes. **You need:** the Python SDK installed and a first window working ([Python SDK in five minutes](../getting-started/python.md)). Final code: [`examples/tutorials/python-notes/notes.py`](https://github.com/nativehtmlkit/nativehtmlkit/blob/main/examples/tutorials/python-notes/notes.py).
 

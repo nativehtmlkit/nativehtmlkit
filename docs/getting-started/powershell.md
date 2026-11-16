@@ -62,7 +62,9 @@ powershell.exe -File .\hello.ps1     # Windows PowerShell 5.1
 
 Run it as a script file: `Start-NativeHTMLKitScript` needs a `.ps1` path, because the host starts that file again as its backend.
 
-<!-- screenshot: getting-started-hello-powershell -->
+![Screenshot: getting started hello powershell](../assets/screenshots/getting-started-hello-powershell.png)
+
+*Real capture on KDE Plasma 6.6 Wayland with Core 1.0.3 and PowerShell SDK 0.1.2 on PowerShell 7.7.*
 
 ## What just happened
 

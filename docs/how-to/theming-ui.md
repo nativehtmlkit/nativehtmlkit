@@ -82,7 +82,9 @@ if __name__ == "__main__":
 ```
 <!-- /include -->
 
-<!-- screenshot: howto-theme-preview -->
+![Screenshot: howto theme preview](../assets/screenshots/howto-theme-preview.png)
+
+*Real capture on KDE Plasma 6.6 Wayland with Core 1.0.3 and Python SDK 0.1.2 + UI 0.1.1.*
 
 ```bash
 python theme_preview.py daylight comfortable "#8a2be2"

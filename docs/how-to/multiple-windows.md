@@ -102,7 +102,9 @@ if __name__ == "__main__":
 ```
 <!-- /include -->
 
-<!-- screenshot: howto-log-windows -->
+![Screenshot: howto log windows](../assets/screenshots/howto-log-windows.png)
+
+*Real capture on KDE Plasma 6.6 Wayland with Core 1.0.3 and Python SDK 0.1.2.*
 
 - The viewer's Close button is handled on the **viewer's** document.
 - `window_event` removes a viewer from the list when the user closes it with the window's own close button.

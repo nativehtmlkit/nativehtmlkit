@@ -50,7 +50,9 @@ if __name__ == "__main__":
 python hello_ui.py
 ```
 
-<!-- screenshot: getting-started-hello-python-ui -->
+![Screenshot: getting started hello python ui](../assets/screenshots/getting-started-hello-python-ui.png)
+
+*Real capture on KDE Plasma 6.6 Wayland with Core 1.0.3 and Python SDK 0.1.2 + UI 0.1.1.*
 
 ## What just happened
 

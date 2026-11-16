@@ -118,7 +118,9 @@ if __name__ == "__main__":
 ```
 <!-- /include -->
 
-<!-- screenshot: howto-clipboard-tool -->
+![Screenshot: howto clipboard tool](../assets/screenshots/howto-clipboard-tool.png)
+
+*Real capture on KDE Plasma 6.6 Wayland with Core 1.0.3 and CLI 0.1.2.*
 
 ## PowerShell
 

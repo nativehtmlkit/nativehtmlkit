@@ -114,7 +114,9 @@ if __name__ == "__main__":
 ```
 <!-- /include -->
 
-<!-- screenshot: howto-file-preview -->
+![Screenshot: howto file preview](../assets/screenshots/howto-file-preview.png)
+
+*Real capture on KDE Plasma 6.6 Wayland with Core 1.0.3 and Python SDK 0.1.2.*
 
 ## PowerShell: waiting inside a callback is fine
 

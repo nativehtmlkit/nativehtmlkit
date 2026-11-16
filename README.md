@@ -2,9 +2,9 @@
 
 **Native desktop apps from HTML and CSS — no browser, JavaScript, Electron, or local web server.** Write the logic in Python or PowerShell, or ask the user a question from a shell script; a small Rust host renders the window and sends your program the events.
 
-![Illustration of the NativeHTMLKit demo gallery — replace with an actual application screenshot after interactive validation](assets/demo-placeholder.png)
+![The Python UI component gallery running on KDE Plasma 6.6 Wayland](assets/python-ui-linux.png)
 
-> **Illustrative placeholder, not a captured screenshot.** Real Linux/Windows captures replace it only after interactive validation; see [Screenshots and media](docs/demos/screenshots.md).
+> **Real interactive capture:** the [Python UI gallery](examples/python-ui/gallery.py) on KDE Plasma 6.6 Wayland with Core 1.0.3, Python SDK 0.1.2 and UI 0.1.1. More captures of every example are on the [Screenshots and media](docs/demos/screenshots.md) page.
 
 ## Documentation
 

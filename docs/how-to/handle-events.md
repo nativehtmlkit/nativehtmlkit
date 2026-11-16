@@ -97,7 +97,9 @@ if __name__ == "__main__":
 ```
 <!-- /include -->
 
-<!-- screenshot: howto-event-inspector -->
+![Screenshot: howto event inspector](../assets/screenshots/howto-event-inspector.png)
+
+*Real capture on KDE Plasma 6.6 Wayland with Core 1.0.3 and Python SDK 0.1.2.*
 
 - `doc.on()` returns an unsubscribe function; `stop_keys()` removes the `keydown` handler.
 - `Node.trim_children(50, from_start=False)` keeps the first 50 log entries (newest first) and removes the rest.

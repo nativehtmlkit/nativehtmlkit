@@ -397,11 +397,20 @@ def ui_section(site: Site, lang: str) -> list:
     return nav
 
 
-CLI_ORDER = ["commands", "input-formats.md", "output-formats.md", "exit-codes-and-scripting.md",
-             "environment-and-diagnostics.md", "css-and-forms.md", "recipes", "tutorial.md", "troubleshooting.md"]
+CLI_GUIDES = ["exit-codes-and-scripting.md", "css-and-forms.md", "environment-and-diagnostics.md", "troubleshooting.md"]
+CLI_TUTORIALS = ["tutorial.md", "tutorial-branch-picker.md"]
+CLI_COMMANDS = ["select.md", "view.md", "form.md", "doctor.md"]
+CLI_FORMATS = ["input-formats.md", "output-formats.md"]
+
+
+def cli_title(path: Path) -> str:
+    """Navigation title without the redundant '(Linux)' / '(Windows)' suffix."""
+    return re.sub(r"\s*\((Linux|Windows)\)$", "", title_of(path))
 
 
 def cli_section(site: Site) -> list:
+    """Each system has the same shape as a UI/SDK language section:
+    Getting started (index) | Tutorials | How-to guides | Examples | Command reference."""
     repo = "nativehtmlkit-cli"
     docs = REPOS / repo / "docs"
     nav: list = ["cli/index.md"]
@@ -410,23 +419,60 @@ def cli_section(site: Site) -> list:
         if not src.is_dir():
             continue
         base = f"cli/{os_name}"
+        system = LANG[os_name][0]
         sub: list = []
         if (src / "index.md").exists():
             site.import_page(repo, src / "index.md", f"{base}/index.md", docs, "cli")
             sub.append(f"{base}/index.md")
-        for item in CLI_ORDER + sorted(p.name for p in src.iterdir() if p.name not in CLI_ORDER and p.name != "index.md"):
-            path = src / item
-            if path.is_dir():
-                pages = site.import_tree(repo, path, f"{base}/{item}", ["select.md", "view.md", "form.md", "doctor.md"],
-                                         item.capitalize(), docs, "cli")
-                sub.append({item.capitalize(): pages})
-            elif path.suffix == ".md" and path.exists():
-                site.import_page(repo, path, f"{base}/{item}", docs, "cli")
-                sub.append({title_of(path): f"{base}/{item}"})
+        # Tutorials
+        tut = [src / n for n in CLI_TUTORIALS if (src / n).exists()]
+        if tut:
+            for page in tut:
+                site.import_page(repo, page, f"{base}/{page.name}", docs, "cli")
+            site.write(f"{base}/tutorials/index.md", "\n".join(
+                [f"# Tutorials ({system})", "", "Build a complete shell tool step by step.", ""]
+                + [f"- [{cli_title(p)}](../{p.name})" for p in tut]) + "\n")
+            sub.append({"Tutorials": [f"{base}/tutorials/index.md"] + [{cli_title(p): f"{base}/{p.name}"} for p in tut]})
+        # How-to guides: recipes plus the scripting / styling / diagnostics pages
+        guides: list = []
+        rec = src / "recipes"
+        if (rec / "index.md").exists():
+            site.import_page(repo, rec / "index.md", f"{base}/recipes/index.md", docs, "cli")
+            guides.append(f"{base}/recipes/index.md")
+        for name in CLI_GUIDES:
+            if (src / name).exists():
+                site.import_page(repo, src / name, f"{base}/{name}", docs, "cli")
+                guides.append({cli_title(src / name): f"{base}/{name}"})
+        if rec.is_dir():
+            for page in ordered(rec):
+                site.import_page(repo, page, f"{base}/recipes/{page.name}", docs, "cli")
+                guides.append({cli_title(page): f"{base}/recipes/{page.name}"})
+        if guides:
+            sub.append({"How-to guides": guides})
+        # Examples
         twin = "windows" if os_name == "linux" else "linux"
         sub.append({"Examples": examples_section(site, repo, f"{base}/examples", os_name, os_name, f"run_{os_name}",
                                                  f"cli/{twin}/examples", twin, twin)})
-        nav.append({LANG[os_name][0]: sub})
+        # Command reference: every command and format with examples for this system
+        ref: list = [f"{base}/commands/index.md"]
+        lines = [f"# Command reference ({system})", "",
+                 f"Every command and option with a runnable {('bash' if os_name == 'linux' else 'PowerShell')} example. "
+                 "The exact, system-independent rules are in the [reference for both systems](../../reference/index.md).", "",
+                 "## Commands", ""]
+        for name in CLI_COMMANDS:
+            if (src / "commands" / name).exists():
+                site.import_page(repo, src / "commands" / name, f"{base}/commands/{name}", docs, "cli")
+                ref.append({cli_title(src / "commands" / name): f"{base}/commands/{name}"})
+                lines.append(f"- [{cli_title(src / 'commands' / name)}]({name})")
+        lines += ["", "## Formats", ""]
+        for name in CLI_FORMATS:
+            if (src / name).exists():
+                site.import_page(repo, src / name, f"{base}/{name}", docs, "cli")
+                ref.append({cli_title(src / name): f"{base}/{name}"})
+                lines.append(f"- [{cli_title(src / name)}](../{name})")
+        site.write(f"{base}/commands/index.md", "\n".join(lines) + "\n")
+        sub.append({"Command reference": ref})
+        nav.append({system: sub})
     ref = site.import_tree(repo, docs / "reference", "cli/reference", None, "CLI reference", docs, "cli")
     if (docs / "REFERENCE.md").exists():
         site.import_page(repo, docs / "REFERENCE.md", "cli/reference/index.md", docs, "cli")

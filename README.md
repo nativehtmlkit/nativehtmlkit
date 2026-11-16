@@ -1,44 +1,57 @@
 # NativeHTMLKit
 
-**HTML & CSS. Native by design.**
+**Native desktop apps from HTML and CSS — no browser, JavaScript, Electron, or local web server.** Write application logic in Python or PowerShell, or open native selectors and forms directly from a shell command.
 
-NativeHTMLKit is a Rust-powered toolkit for building desktop user interfaces with
-ordinary HTML and CSS — **without Chromium, WebKit, Electron, a JavaScript runtime,
-or a local web server**.
+![Illustration of the NativeHTMLKit demo gallery — replace with an actual application screenshot after interactive validation](assets/demo-placeholder.png)
 
-Application logic belongs to the tool or language that creates the UI. The native
-host owns desktop windows, layout, rendering, input, and accessibility.
+> **Illustrative placeholder, not a captured screenshot.** A reproducible screenshot workflow is included under `scripts/media/` in the Project workspace. Replace the illustration only with a sanitized real Linux/Windows capture.
 
-> **Status:** New project home. We are migrating the existing engine and developing
-> a first standalone CLI. The repositories below are initially placeholders, not
-> released SDKs.
+## Choose your first step
 
-## Explore the ecosystem
+| I want to… | Start here |
+|---|---|
+| [Install Python SDK on PyPI](https://pypi.org/project/nativehtmlkit/) | [Python in five minutes](docs/getting-started/python.md) |
+| [Install PowerShell SDK from Gallery](https://www.powershellgallery.com/packages/NativeHTMLKit) | [PowerShell in five minutes](docs/getting-started/powershell.md) |
+| Create a **Python** native window | [Python in five minutes](docs/getting-started/python.md) |
+| Build a reactive **Python UI** | [Python UI tutorial](docs/getting-started/python-ui.md) |
+| Create a **PowerShell** native window | [PowerShell in five minutes](docs/getting-started/powershell.md) |
+| Build a reactive **PowerShell UI** | [PowerShell UI tutorial](docs/getting-started/powershell-ui.md) |
+| Open a native selection from Bash | [CLI tutorial](docs/tutorials/cli-selection.md) |
+| Explore every component | [Runnable demo galleries](examples/README.md) |
+| Check language/OS support | [Capability matrix](docs/capabilities/matrix.md) |
+| Give an agent the correct API instructions | [Skills](skills/README.md) |
 
-| Component | Purpose | Repository |
-| --- | --- | --- |
-| **Core** | Native Rust host, HTML/CSS engine, and versioned protocol | [nativehtmlkit-core](https://github.com/nativehtmlkit/nativehtmlkit-core) |
-| **CLI** | Native selection windows, viewers, and forms for shell pipelines | [nativehtmlkit-cli](https://github.com/nativehtmlkit/nativehtmlkit-cli) |
-| **Python SDK** | Use the native UI with plain Python *(planned)* | Coming later |
-| **PowerShell SDK** | Use the native UI with PowerShell *(planned)* | Coming later |
-| **Documentation** | Developer guides and examples *(planned)* | Coming later |
+## The architecture in one picture
 
-### What the CLI will enable
-
-```bash
-# Intended usage — the CLI is not released yet.
-printf 'alpha\nbeta\ngamma\n' | nhk select --multi
+```mermaid
+flowchart LR
+  APPS[Your app] --> UI[Python or PowerShell UI library]
+  APPS --> SDK[Python or PowerShell SDK]
+  UI --> SDK
+  SDK --> CORE[NativeHTMLKit Core — Rust host]
+  CLI[Native CLI] --> CORE
+  CORE --> DESKTOP[Linux KDE Wayland / Windows desktop]
 ```
 
-The CLI will support both `nativehtmlkit` (full executable name) and `nhk`
-(convenient command alias).
+The UI libraries provide convenience controls; the SDKs give direct native windows and document APIs; Core does the rendering. The CLI is independent. The public API is documented where it is implemented, not duplicated here.
 
-## Getting started
+## Source repositories
 
-The ecosystem is being established. For the existing engine implementation and
-its historical releases, see [UI4ME Core](https://github.com/ui4me/ui4me-core).
-New NativeHTMLKit Core artifacts will be documented when their migration and
-platform qualification have completed.
+| Repository | What it owns | Version at documentation baseline |
+|---|---|---|
+| [Core](https://github.com/nativehtmlkit/nativehtmlkit-core) | Native host, renderer, wire protocol | 1.0.3 |
+| [CLI](https://github.com/nativehtmlkit/nativehtmlkit-cli) | Select, view, form commands | 0.1.2 |
+| [Python SDK](https://github.com/nativehtmlkit/nativehtmlkit-python) | Python host/window/document API | 0.1.1 |
+| [PowerShell SDK](https://github.com/nativehtmlkit/nativehtmlkit-powershell) | PowerShell cmdlets and host lifecycle | 0.1.1 |
+| [UI](https://github.com/nativehtmlkit/nativehtmlkit_ui) | Python/PowerShell reactive components | 0.1.0 GitHub prerelease |
 
-**Target platforms:** Linux Wayland desktops and interactive Windows desktops.
-Support beyond those platforms will be documented only after verification.
+**Scope:** Linux KDE Wayland and Windows are the current target desktops. Python 3.10+, PowerShell 7.2+ (Linux/Windows), Windows PowerShell 5.1 (Windows only). The current Linux SDK wheel has a glibc 2.39 floor. See [known limitations](docs/capabilities/limitations.md).
+
+## Learn and contribute
+
+- [Documentation home](docs/index.md) — tutorials, how-to and explanations.
+- [Why native rendering?](docs/concepts/why-native.md) — design goals and tradeoffs.
+- [Interactive capability gallery](examples/README.md) — four source demos to run locally.
+- [Agent skills](skills/README.md) — installable guides for SDK and UI development.
+
+The project is not a web UI framework or a plugin platform. Bug and feature tracking is coordinated privately in the NativeHTMLKit Project repository; released API documentation lives with the owning source repository.

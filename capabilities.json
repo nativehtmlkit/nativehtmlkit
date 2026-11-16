@@ -1,0 +1,215 @@
+{
+  "baseline_date": "2026-11-16",
+  "releases": {
+    "py": "0.1.1",
+    "ps": "0.1.1",
+    "cli": "0.1.2",
+    "pyui": "0.1.0 prerelease",
+    "psui": "0.1.0 prerelease"
+  },
+  "columns": [
+    {
+      "key": "py",
+      "label": "Python SDK"
+    },
+    {
+      "key": "ps",
+      "label": "PowerShell SDK"
+    },
+    {
+      "key": "cli",
+      "label": "CLI"
+    },
+    {
+      "key": "pyui",
+      "label": "Python UI"
+    },
+    {
+      "key": "psui",
+      "label": "PowerShell UI"
+    }
+  ],
+  "status_definitions": {
+    "released": "Implemented in an announced release (independent native qualification still varies)",
+    "preview": "Available as prerelease/preview; extra qualification required",
+    "sdk": "Available via the owning language SDK, not a UI component",
+    "not": "Not part of this entrypoint"
+  },
+  "platforms": [
+    {
+      "entry": "Python SDK",
+      "linux": "Released wheel: glibc 2.39+; KDE Wayland targeted",
+      "windows": "Released Windows x64 wheel",
+      "edition": "Python 3.10+"
+    },
+    {
+      "entry": "PowerShell SDK",
+      "linux": "PowerShell 7.2+; KDE Wayland targeted",
+      "windows": "PowerShell 7.2+ and Windows PowerShell 5.1",
+      "edition": "Both editions on Windows"
+    },
+    {
+      "entry": "Native CLI",
+      "linux": "Linux x64 GitHub release",
+      "windows": "Windows x64 GitHub release",
+      "edition": "Standalone binary"
+    },
+    {
+      "entry": "Python UI",
+      "linux": "GitHub prerelease; requalify current SDK/Core",
+      "windows": "GitHub prerelease; requalify current SDK/Core",
+      "edition": "Python 3.10+"
+    },
+    {
+      "entry": "PowerShell UI",
+      "linux": "GitHub prerelease; PowerShell 7.2+",
+      "windows": "GitHub prerelease; PowerShell 7.2+ and 5.1",
+      "edition": "Separate UI module"
+    }
+  ],
+  "features": [
+    {
+      "name": "Native windows",
+      "cells": {
+        "py": "released",
+        "ps": "released",
+        "cli": "released",
+        "pyui": "preview",
+        "psui": "preview"
+      },
+      "notes": "Core host owns physical windows; CLI windows belong to commands."
+    },
+    {
+      "name": "Document text/attributes",
+      "cells": {
+        "py": "released",
+        "ps": "released",
+        "cli": "not",
+        "pyui": "sdk",
+        "psui": "sdk"
+      },
+      "notes": "SDK document operations; UI does not duplicate Core API."
+    },
+    {
+      "name": "Document input/events",
+      "cells": {
+        "py": "released",
+        "ps": "released",
+        "cli": "released",
+        "pyui": "preview",
+        "psui": "preview"
+      },
+      "notes": "CLI handles select/form interaction, not general event subscription."
+    },
+    {
+      "name": "HTML forms/selection",
+      "cells": {
+        "py": "released",
+        "ps": "released",
+        "cli": "released",
+        "pyui": "preview",
+        "psui": "preview"
+      },
+      "notes": "SDK form API and CLI form; UI has labeled input/select."
+    },
+    {
+      "name": "Native file/folder dialogs",
+      "cells": {
+        "py": "released",
+        "ps": "released",
+        "cli": "not",
+        "pyui": "sdk",
+        "psui": "sdk"
+      },
+      "notes": "Invoke from public language SDK, not a UI component."
+    },
+    {
+      "name": "HTML dialog and popover",
+      "cells": {
+        "py": "released",
+        "ps": "released",
+        "cli": "not",
+        "pyui": "sdk",
+        "psui": "sdk"
+      },
+      "notes": "UI library has no modal abstraction."
+    },
+    {
+      "name": "Multiple windows",
+      "cells": {
+        "py": "released",
+        "ps": "released",
+        "cli": "not",
+        "pyui": "sdk",
+        "psui": "sdk"
+      },
+      "notes": "UI examples mount a window; additional windows use SDK."
+    },
+    {
+      "name": "Clipboard and desktop services",
+      "cells": {
+        "py": "released",
+        "ps": "released",
+        "cli": "not",
+        "pyui": "sdk",
+        "psui": "sdk"
+      },
+      "notes": "OS services are exposed through SDKs."
+    },
+    {
+      "name": "Live bitmap RGBA8",
+      "cells": {
+        "py": "released",
+        "ps": "released",
+        "cli": "not",
+        "pyui": "sdk",
+        "psui": "sdk"
+      },
+      "notes": "Public bounded bitmap APIs, not video playback."
+    },
+    {
+      "name": "Reactive state/computed",
+      "cells": {
+        "py": "not",
+        "ps": "not",
+        "cli": "not",
+        "pyui": "preview",
+        "psui": "preview"
+      },
+      "notes": "Python computed-state concurrency issue; see limitations."
+    },
+    {
+      "name": "Layout and compact components",
+      "cells": {
+        "py": "not",
+        "ps": "not",
+        "cli": "not",
+        "pyui": "preview",
+        "psui": "preview"
+      },
+      "notes": "A deliberate small UI library, not a full browser widget set."
+    },
+    {
+      "name": "Diagnostics and doctor",
+      "cells": {
+        "py": "released",
+        "ps": "released",
+        "cli": "released",
+        "pyui": "preview",
+        "psui": "preview"
+      },
+      "notes": "Different scope/format across products."
+    },
+    {
+      "name": "Audio/video media player",
+      "cells": {
+        "py": "not",
+        "ps": "not",
+        "cli": "not",
+        "pyui": "not",
+        "psui": "not"
+      },
+      "notes": "Not implemented in current library scope."
+    }
+  ]
+}

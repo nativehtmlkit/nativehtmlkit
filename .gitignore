@@ -1,2 +1,8 @@
+# Documentation source checkout: generated site is deployed from a separate branch.
 .DS_Store
 *~
+site/
+.zensical/
+.cache/
+__pycache__/
+*.pyc

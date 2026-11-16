@@ -1,6 +1,6 @@
 # PowerShell UI — state and layout
 
-The optional `NativeHTMLKit.UI` module provides state, computed values, layout and controls using only public NativeHTMLKit SDK cmdlets. The 0.1.0 UI build is a GitHub prerelease: verify Gallery availability and install from the appropriate release package if necessary.
+The optional `NativeHTMLKit.UI` module provides state, computed values, layout and controls using only public NativeHTMLKit SDK cmdlets. UI 0.1.1 is an early (pre-1.0) release: `Install-Module NativeHTMLKit.UI -Scope CurrentUser` (installs the `NativeHTMLKit` SDK as a dependency).
 
 ```powershell
 Import-Module NativeHTMLKit.UI -ErrorAction Stop

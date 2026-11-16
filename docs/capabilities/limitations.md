@@ -1,6 +1,6 @@
 # Limitations and qualifications
 
-- **UI version:** NativeHTMLKit UI 0.1.0 is a GitHub prerelease; its qualification occurred principally against earlier SDK and Core versions. Revalidate against the exact released current stack before claiming full production support.
+- **UI version:** NativeHTMLKit UI 0.1.1 is an early (pre-1.0) release. Its 0.1.1 packages passed the real-input GUI suite at 100% scaling against Python SDK 0.1.2 / PowerShell SDK 0.1.2 / Core 1.0.3 on KDE Plasma Wayland (Python, PowerShell 7) and Windows Server 2022 (Python, PowerShell 7, Windows PowerShell 5.1). IME, 125/150% scaling and screen-reader checks were last run against UI 0.1.0 with SDK 0.1.0 / Core 1.0.2.
 - **Python SDK Linux:** the currently released x64 wheel uses a **manylinux_2_39_x86_64** tag. Earlier glibc versions do not meet that wheel's compatibility floor.
 - **PowerShell 5.1:** Windows only. Linux uses PowerShell 7.2+.
 - **Accessibility:** Core 1.0.3 has a reported Linux Orca collapsed-select announcement issue (NHK-CROSS-0010). UI-specific screen-reader coverage remains incomplete.

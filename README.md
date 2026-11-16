@@ -41,9 +41,9 @@ The UI libraries provide convenience controls; the SDKs give direct native windo
 |---|---|---|
 | [Core](https://github.com/nativehtmlkit/nativehtmlkit-core) | Native host, renderer, wire protocol | 1.0.3 |
 | [CLI](https://github.com/nativehtmlkit/nativehtmlkit-cli) | Select, view, form commands | 0.1.2 |
-| [Python SDK](https://github.com/nativehtmlkit/nativehtmlkit-python) | Python host/window/document API | 0.1.1 |
-| [PowerShell SDK](https://github.com/nativehtmlkit/nativehtmlkit-powershell) | PowerShell cmdlets and host lifecycle | 0.1.1 |
-| [UI](https://github.com/nativehtmlkit/nativehtmlkit_ui) | Python/PowerShell reactive components | 0.1.0 GitHub prerelease |
+| [Python SDK](https://github.com/nativehtmlkit/nativehtmlkit-python) | Python host/window/document API | 0.1.2 |
+| [PowerShell SDK](https://github.com/nativehtmlkit/nativehtmlkit-powershell) | PowerShell cmdlets and host lifecycle | 0.1.2 |
+| [UI](https://github.com/nativehtmlkit/nativehtmlkit_ui) | Python/PowerShell reactive components | 0.1.1 (early release) |
 
 **Scope:** Linux KDE Wayland and Windows are the current target desktops. Python 3.10+, PowerShell 7.2+ (Linux/Windows), Windows PowerShell 5.1 (Windows only). The current Linux SDK wheel has a glibc 2.39 floor. See [known limitations](docs/capabilities/limitations.md).
 

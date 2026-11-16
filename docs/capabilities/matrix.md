@@ -40,11 +40,11 @@
 
 ## Released package baseline
 
-- **Python SDK:** 0.1.1
-- **PowerShell SDK:** 0.1.1
+- **Python SDK:** 0.1.2
+- **PowerShell SDK:** 0.1.2
 - **CLI:** 0.1.2
-- **Python UI:** 0.1.0 prerelease
-- **PowerShell UI:** 0.1.0 prerelease
+- **Python UI:** 0.1.1 (early release)
+- **PowerShell UI:** 0.1.1 (early release)
 
 **Evidence:** [Core](https://github.com/nativehtmlkit/nativehtmlkit-core), [CLI](https://github.com/nativehtmlkit/nativehtmlkit-cli), [Python](https://github.com/nativehtmlkit/nativehtmlkit-python), [PowerShell](https://github.com/nativehtmlkit/nativehtmlkit-powershell), [UI](https://github.com/nativehtmlkit/nativehtmlkit_ui).
 

@@ -11,7 +11,7 @@ The four scripts in this directory are **real source examples**, not compiled bi
 
 ## Prerequisites
 
-Install `nativehtmlkit` from its compatible native wheel. For the UI examples also install the appropriate UI package from a qualified release (the UI v0.1.0 is currently a GitHub prerelease). For PowerShell install the `NativeHTMLKit` module and, for UI, `NativeHTMLKit.UI` from an available release. Run in an **interactive desktop session** with an OS-native host; a headless SSH session alone will not demonstrate GUI input.
+Install `nativehtmlkit` from its compatible native wheel. For the UI examples also install the appropriate UI package (`nativehtmlkit_ui` 0.1.1 on PyPI). For PowerShell install the `NativeHTMLKit` module and, for UI, `NativeHTMLKit.UI` from the PowerShell Gallery. Run in an **interactive desktop session** with an OS-native host; a headless SSH session alone will not demonstrate GUI input.
 
 ## What a user should test
 

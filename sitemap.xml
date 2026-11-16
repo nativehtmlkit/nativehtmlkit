@@ -10,7 +10,22 @@
         <loc>https://nativehtmlkit.github.io/nativehtmlkit/capabilities/matrix/</loc>
       </url>
       <url>
+        <loc>https://nativehtmlkit.github.io/nativehtmlkit/concepts/</loc>
+      </url>
+      <url>
         <loc>https://nativehtmlkit.github.io/nativehtmlkit/concepts/architecture/</loc>
+      </url>
+      <url>
+        <loc>https://nativehtmlkit.github.io/nativehtmlkit/concepts/documents-and-handles/</loc>
+      </url>
+      <url>
+        <loc>https://nativehtmlkit.github.io/nativehtmlkit/concepts/lifecycle/</loc>
+      </url>
+      <url>
+        <loc>https://nativehtmlkit.github.io/nativehtmlkit/concepts/security/</loc>
+      </url>
+      <url>
+        <loc>https://nativehtmlkit.github.io/nativehtmlkit/concepts/threading/</loc>
       </url>
       <url>
         <loc>https://nativehtmlkit.github.io/nativehtmlkit/concepts/why-native/</loc>
@@ -19,7 +34,13 @@
         <loc>https://nativehtmlkit.github.io/nativehtmlkit/demos/screenshots/</loc>
       </url>
       <url>
+        <loc>https://nativehtmlkit.github.io/nativehtmlkit/getting-started/</loc>
+      </url>
+      <url>
         <loc>https://nativehtmlkit.github.io/nativehtmlkit/getting-started/choose/</loc>
+      </url>
+      <url>
+        <loc>https://nativehtmlkit.github.io/nativehtmlkit/getting-started/cli/</loc>
       </url>
       <url>
         <loc>https://nativehtmlkit.github.io/nativehtmlkit/getting-started/powershell-ui/</loc>
@@ -34,9 +55,84 @@
         <loc>https://nativehtmlkit.github.io/nativehtmlkit/getting-started/python/</loc>
       </url>
       <url>
+        <loc>https://nativehtmlkit.github.io/nativehtmlkit/getting-started/requirements/</loc>
+      </url>
+      <url>
+        <loc>https://nativehtmlkit.github.io/nativehtmlkit/how-to/</loc>
+      </url>
+      <url>
+        <loc>https://nativehtmlkit.github.io/nativehtmlkit/how-to/accessibility/</loc>
+      </url>
+      <url>
+        <loc>https://nativehtmlkit.github.io/nativehtmlkit/how-to/background-work/</loc>
+      </url>
+      <url>
+        <loc>https://nativehtmlkit.github.io/nativehtmlkit/how-to/clipboard/</loc>
+      </url>
+      <url>
+        <loc>https://nativehtmlkit.github.io/nativehtmlkit/how-to/distribute/</loc>
+      </url>
+      <url>
+        <loc>https://nativehtmlkit.github.io/nativehtmlkit/how-to/file-dialogs/</loc>
+      </url>
+      <url>
+        <loc>https://nativehtmlkit.github.io/nativehtmlkit/how-to/forms/</loc>
+      </url>
+      <url>
+        <loc>https://nativehtmlkit.github.io/nativehtmlkit/how-to/handle-events/</loc>
+      </url>
+      <url>
+        <loc>https://nativehtmlkit.github.io/nativehtmlkit/how-to/html-dialogs/</loc>
+      </url>
+      <url>
+        <loc>https://nativehtmlkit.github.io/nativehtmlkit/how-to/live-bitmap-charts/</loc>
+      </url>
+      <url>
+        <loc>https://nativehtmlkit.github.io/nativehtmlkit/how-to/multiple-windows/</loc>
+      </url>
+      <url>
+        <loc>https://nativehtmlkit.github.io/nativehtmlkit/how-to/styling/</loc>
+      </url>
+      <url>
+        <loc>https://nativehtmlkit.github.io/nativehtmlkit/how-to/theming-ui/</loc>
+      </url>
+      <url>
+        <loc>https://nativehtmlkit.github.io/nativehtmlkit/how-to/troubleshooting/</loc>
+      </url>
+      <url>
+        <loc>https://nativehtmlkit.github.io/nativehtmlkit/how-to/update-the-page/</loc>
+      </url>
+      <url>
         <loc>https://nativehtmlkit.github.io/nativehtmlkit/reference/</loc>
       </url>
       <url>
+        <loc>https://nativehtmlkit.github.io/nativehtmlkit/reference/examples/</loc>
+      </url>
+      <url>
+        <loc>https://nativehtmlkit.github.io/nativehtmlkit/reference/faq/</loc>
+      </url>
+      <url>
+        <loc>https://nativehtmlkit.github.io/nativehtmlkit/reference/glossary/</loc>
+      </url>
+      <url>
+        <loc>https://nativehtmlkit.github.io/nativehtmlkit/tutorials/</loc>
+      </url>
+      <url>
+        <loc>https://nativehtmlkit.github.io/nativehtmlkit/tutorials/cli-branch-picker/</loc>
+      </url>
+      <url>
         <loc>https://nativehtmlkit.github.io/nativehtmlkit/tutorials/cli-selection/</loc>
+      </url>
+      <url>
+        <loc>https://nativehtmlkit.github.io/nativehtmlkit/tutorials/powershell-process-dashboard/</loc>
+      </url>
+      <url>
+        <loc>https://nativehtmlkit.github.io/nativehtmlkit/tutorials/powershell-ui-settings/</loc>
+      </url>
+      <url>
+        <loc>https://nativehtmlkit.github.io/nativehtmlkit/tutorials/python-notes/</loc>
+      </url>
+      <url>
+        <loc>https://nativehtmlkit.github.io/nativehtmlkit/tutorials/python-ui-expenses/</loc>
       </url>
 </urlset>

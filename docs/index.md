@@ -1,3 +1,9 @@
+---
+hide:
+  - navigation
+  - toc
+---
+
 # NativeHTMLKit
 
 **Native desktop windows from HTML and CSS, driven by a shell script, Python or PowerShell.** No browser engine, no JavaScript, no local web server: a small Rust host renders your page and sends your program the user's events over a private local connection.

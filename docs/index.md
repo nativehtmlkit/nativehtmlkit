@@ -192,7 +192,7 @@ The UI tabs are the [Hello UI example](ui/python/examples/hello.md) ([PowerShell
 | Python UI | [`nativehtmlkit_ui`](https://pypi.org/project/nativehtmlkit_ui/) 0.1.1 (`uv add nativehtmlkit_ui`) | Reactive state and compact components on the Python SDK |
 | PowerShell SDK | [`NativeHTMLKit`](https://www.powershellgallery.com/packages/NativeHTMLKit) 0.1.2 | The same features as cmdlets, plus background tasks |
 | PowerShell UI | [`NativeHTMLKit.UI`](https://www.powershellgallery.com/packages/NativeHTMLKit.UI) 0.1.1 | Reactive components on the PowerShell SDK |
-| Demo | [`nativehtmlkit-demo`](https://pypi.org/project/nativehtmlkit-demo/) / [`NativeHTMLKit.Demo`](https://www.powershellgallery.com/packages/NativeHTMLKit.Demo) 0.1.0 | Browse and run every example ([Try the demo](getting-started/demo.md)) |
+| Demo | [`nativehtmlkit-demo`](https://pypi.org/project/nativehtmlkit-demo/) / [`NativeHTMLKit.Demo`](https://www.powershellgallery.com/packages/NativeHTMLKit.Demo) 0.1.1 | Browse and run every example ([Try the demo](getting-started/demo.md)) |
 
 All of them bundle the native host, Core 1.0.3 (wire protocol v1, stable). Target desktops are KDE Plasma on Wayland (Linux) and Windows; see the [capability matrix](capabilities/matrix.md) and [limitations](capabilities/limitations.md). Every example on this site is run against the released packages before it is published.
 

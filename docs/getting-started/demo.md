@@ -6,7 +6,7 @@ starts with one click as its own native window.
 
 ![The NativeHTMLKit Demo on KDE Plasma Wayland, with the Counter example started from it](../assets/demo-counter-linux.png)
 
-*Real capture: NativeHTMLKit Demo 0.1.0 installed from PyPI, KDE Plasma 6.6 Wayland. The Counter
+*Real capture: NativeHTMLKit Demo 0.1.1, KDE Plasma 6.6 Wayland. The Counter
 example was started with **Run Python** and clicked three times.*
 
 ## Install and start
@@ -41,11 +41,15 @@ is missing, the button for that language says what to install.
 
 ## Using the window
 
-1. **Pick an example** on the left. The *SDK examples* use your own HTML and CSS with events and
-   page updates. The *NativeHTMLKit UI examples* use the reactive component library. Type in
-   **Filter examples** to search titles, summaries and topics.
-2. **Read the source** in the tabs:
-    - **Python** and **PowerShell**: the example files exactly as they ship.
+1. **Pick an example** on the left; each shows a one-line summary. The *SDK examples* use your own
+   HTML and CSS with events and page updates. The *NativeHTMLKit UI examples* use the reactive
+   component library.
+    - **All / SDK / UI** narrows the list to one kind and shows how many examples match.
+    - **Filter examples** searches titles, summaries and topics; the **×** button or **Esc** clears it.
+    - **Up** and **Down** move through the list, also while you type in the filter box.
+2. **Read the source** in the tabs (the source panel is always dark):
+    - **Python** and **PowerShell**: the code only. The page HTML and the stylesheet are replaced by a
+      one-line pointer to their tabs. **Full script** shows the single file exactly as it ships.
     - **HTML** and **CSS**: the page. For SDK examples this is the page embedded in the code or loaded
       from `index.html`. For UI examples it is the HTML the library generates for the first render.
 3. **Run Python** or **Run PowerShell** starts the example in a separate process, as a normal window

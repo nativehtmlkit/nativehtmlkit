@@ -19,7 +19,9 @@ PAGE = """<!doctype html>
   label { display: block; margin-top: 10px; }
   input, select, textarea { width: 100%; box-sizing: border-box; margin-top: 4px; padding: 6px;
                             background: #10141b; color: #e3e8f0; border: 1px solid #3b475c; }
-  button { margin-top: 10px; padding: 6px 12px; }
+  input[type=checkbox] { width: auto; margin: 0 6px 0 0; padding: 0; vertical-align: middle; }
+  button { margin-top: 10px; padding: 6px 12px; background: #2f3a4d; color: #e3e8f0;
+           border: 1px solid #4a5870; border-radius: 4px; }
   ol { margin: 0; padding-left: 20px; font: 12px monospace; }
   li { padding: 2px 0; border-bottom: 1px solid #262e3c; }
 </style></head>

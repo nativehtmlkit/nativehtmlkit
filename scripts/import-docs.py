@@ -656,10 +656,10 @@ def build(out: Path) -> str:
     site.finalize()
     old_site_redirects(site)
     nav = [
-        {"Home": "index.md"},
-        {"Get started": ["getting-started/index.md", {"Choose an entry point": "getting-started/choose.md"},
-                         {"Platform requirements": "getting-started/requirements.md"},
-                         {"Linux and Windows": "getting-started/platforms.md"}]},
+        {"Home": ["index.md", {"Install and first steps": "getting-started/index.md"},
+                  {"Choose an entry point": "getting-started/choose.md"},
+                  {"Platform requirements": "getting-started/requirements.md"},
+                  {"Linux and Windows": "getting-started/platforms.md"}]},
         {"UI": ["ui/index.md", {"Python": py_ui}, {"PowerShell": ps_ui}]},
         {"SDK": ["sdk/index.md", {"Python": py_sdk}, {"PowerShell": ps_sdk}]},
         {"CLI": cli},

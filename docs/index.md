@@ -37,7 +37,7 @@ hide:
 
 The UI library and the SDK work the same on Linux and Windows (the few differences are on [Linux and Windows](getting-started/platforms.md)); each has a Python and a PowerShell section with the same shape: **getting started**, step-by-step **tutorials**, task **guides**, complete **examples** with screenshots and source, and the full **API reference**. Python and PowerShell mirror each other one to one. The CLI has separate Linux and Windows sections because shell scripts differ per system.
 
-Not sure which to pick? [Choose an entry point](getting-started/choose.md) · [Platform requirements](getting-started/requirements.md)
+**Start here:** [Install and first steps](getting-started/index.md) · [Choose an entry point](getting-started/choose.md) · [Platform requirements](getting-started/requirements.md) · [Linux and Windows](getting-started/platforms.md)
 
 ## What it looks like
 

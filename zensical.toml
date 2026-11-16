@@ -14,9 +14,9 @@ edit_uri = "edit/main/docs/"
 # concepts (explanation) and reference (lookup).
 # BEGIN GENERATED NAV
 nav = [
-  { "Home" = "index.md" },
-  { "Get started" = [
-    "getting-started/index.md",
+  { "Home" = [
+    "index.md",
+    { "Install and first steps" = "getting-started/index.md" },
     { "Choose an entry point" = "getting-started/choose.md" },
     { "Platform requirements" = "getting-started/requirements.md" },
     { "Linux and Windows" = "getting-started/platforms.md" },

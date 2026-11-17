@@ -29,8 +29,9 @@ Python and PowerShell mirror each other one to one (same tutorials, guides and e
 | PowerShell UI | `Install-Module NativeHTMLKit.UI` ([Gallery](https://www.powershellgallery.com/packages/NativeHTMLKit.UI)) | 0.1.1 (early release) |
 | CLI | archive from [GitHub releases](https://github.com/nativehtmlkit/nativehtmlkit-cli/releases) | 0.1.2 |
 | Demo (every example, one window) | `uvx nativehtmlkit-demo` ([PyPI](https://pypi.org/project/nativehtmlkit-demo/)) or `Install-Module NativeHTMLKit.Demo` ([Gallery](https://www.powershellgallery.com/packages/NativeHTMLKit.Demo)) then `Start-NativeHTMLKitDemo` | 0.1.1 |
+| AppShell (desktop shell with extensions) | `uv tool install nativehtmlkit-appshell` ([PyPI](https://pypi.org/project/nativehtmlkit-appshell/)) or `Install-PSResource NativeHTMLKit.AppShell` ([Gallery](https://www.powershellgallery.com/packages/NativeHTMLKit.AppShell)) then `Start-AppShell` | 0.1.0 |
 
-All of them bundle the native host, Core 1.0.3 (wire protocol v1, stable).
+The SDKs bundle the native host, Core 1.0.3, and every other package uses it through them (wire protocol v1, stable).
 
 **Scope:** Linux KDE Plasma on Wayland and Windows are the target desktops. Python 3.10+ (the Linux wheel needs glibc 2.39+), PowerShell 7.2+ on Linux and Windows, Windows PowerShell 5.1 on Windows. See [known limitations](docs/capabilities/limitations.md).
 
@@ -55,13 +56,16 @@ The UI libraries provide convenience components; the SDKs give direct access to 
 | [Python SDK](https://github.com/nativehtmlkit/nativehtmlkit-python) | Python application/window/document API | 0.1.2 |
 | [PowerShell SDK](https://github.com/nativehtmlkit/nativehtmlkit-powershell) | PowerShell commands and host lifecycle | 0.1.2 |
 | [UI](https://github.com/nativehtmlkit/nativehtmlkit_ui) | Python/PowerShell reactive components | 0.1.1 (early release) |
+| [Demo](https://github.com/nativehtmlkit/nativehtmlkit-demo) | Example browser that runs every published example | 0.1.1 |
+| [AppShell](https://github.com/nativehtmlkit/nativehtmlkit-appshell) | Desktop app shell with same-language extensions, over the SDK and UI | 0.1.0 |
 
 ## This repository
 
 - `docs/` — the documentation site source ([Zensical](https://zensical.org), configured in `zensical.toml`).
 - `examples/` — the tested examples and the four capability galleries.
 - `capabilities.json` — the source of the generated [capability matrix](docs/capabilities/matrix.md) (`scripts/generate-capabilities.py`).
-- `scripts/test-examples.py` — runs every example headlessly against the released packages; `scripts/sync-snippets.py` copies the examples into the pages (`--check` verifies).
+- `scripts/import-docs.py` — imports the product pages and example catalogues from the owning repositories (`--check` verifies they are current).
+- `scripts/test-examples.py` — runs the four capability galleries headlessly against the released packages; every other example is run by its owning repository's harness.
 - `skills/` — [agent skills](skills/README.md) for SDK and UI development, mirrored from the owning repositories.
 
 NativeHTMLKit is not a web UI framework or a plugin platform. Bug and feature tracking for the ecosystem is coordinated centrally; released API documentation lives with the owning source repository.

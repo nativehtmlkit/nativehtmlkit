@@ -193,8 +193,9 @@ The UI tabs are the [Hello UI example](ui/python/examples/hello.md) ([PowerShell
 | PowerShell SDK | [`NativeHTMLKit`](https://www.powershellgallery.com/packages/NativeHTMLKit) 0.1.2 | The same features as cmdlets, plus background tasks |
 | PowerShell UI | [`NativeHTMLKit.UI`](https://www.powershellgallery.com/packages/NativeHTMLKit.UI) 0.1.1 | Reactive components on the PowerShell SDK |
 | Demo | [`nativehtmlkit-demo`](https://pypi.org/project/nativehtmlkit-demo/) / [`NativeHTMLKit.Demo`](https://www.powershellgallery.com/packages/NativeHTMLKit.Demo) 0.1.1 | Browse and run every example ([Try the demo](getting-started/demo.md)) |
+| AppShell | [`nativehtmlkit-appshell`](https://pypi.org/project/nativehtmlkit-appshell/) / [`NativeHTMLKit.AppShell`](https://www.powershellgallery.com/packages/NativeHTMLKit.AppShell) 0.1.0 | A desktop shell you extend with Python or PowerShell modules ([repository](https://github.com/nativehtmlkit/nativehtmlkit-appshell)) |
 
-All of them bundle the native host, Core 1.0.3 (wire protocol v1, stable). Target desktops are KDE Plasma on Wayland (Linux) and Windows; see the [capability matrix](capabilities/matrix.md) and [limitations](capabilities/limitations.md). Every example on this site is run against the released packages before it is published.
+The SDKs bundle the native host, Core 1.0.3, and the other packages use it through them (wire protocol v1, stable). Target desktops are KDE Plasma on Wayland (Linux) and Windows; see the [capability matrix](capabilities/matrix.md) and [limitations](capabilities/limitations.md). Every example on this site is run against the released packages before it is published.
 
 ## What it is not
 

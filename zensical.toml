@@ -407,6 +407,7 @@ nav = [
       { "Document commands" = "reference/protocol/document-commands.md" },
       { "Compatibility" = "reference/protocol/compatibility.md" },
     ] },
+    { "Examples and verification" = "reference/examples.md" },
     { "Glossary" = "reference/glossary.md" },
     { "FAQ" = "reference/faq.md" },
     { "Screenshots" = "demos/screenshots.md" },

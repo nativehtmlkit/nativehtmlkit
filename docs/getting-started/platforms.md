@@ -14,7 +14,7 @@ shell scripts are written differently per system, so it has separate Linux and W
 | PowerShell SDK and UI | PowerShell 7.2+ | PowerShell 7.2+ **and** Windows PowerShell 5.1 |
 | Native host | bundled in the package (`nativehtmlkit-host`) | bundled in the package (`nativehtmlkit-host.exe`) |
 
-If `pip` finds no wheel on Linux, the distribution's glibc is older than 2.39; the source
+If uv finds no wheel on Linux, the distribution's glibc is older than 2.39; the source
 distribution contains no host and cannot open windows. See [Platform requirements](requirements.md).
 
 ## What looks or behaves differently

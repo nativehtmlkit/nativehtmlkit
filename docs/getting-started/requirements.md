@@ -22,7 +22,7 @@ A window needs an interactive desktop session. A plain SSH session, a service ac
 | PowerShell UI `NativeHTMLKit.UI` | PowerShell 7.2+ | PowerShell 7.2+ and Windows PowerShell 5.1 |
 | CLI `nativehtmlkit` / `nhk` | x64 release archive | x64 release archive |
 
-If `pip` cannot find a compatible wheel on Linux, your distribution's glibc is probably older than 2.39. Do not fall back to the source distribution and expect a window: it contains no native host.
+If uv cannot find a compatible wheel on Linux, your distribution's glibc is probably older than 2.39. Do not fall back to the source distribution and expect a window: it contains no native host.
 
 ## Check an installation
 

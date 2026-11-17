@@ -38,4 +38,4 @@ JavaScript and browser APIs, network resource loading, an HTTP server, a general
 
 ## Screenshots
 
-The initial visual in this documentation is a **placeholder illustration**; do not treat it as a native test capture. Real screenshots require interactive native qualification and sanitization.
+Screenshots on this site are real captures on the named desktop (KDE Plasma 6.6 Wayland or Windows Server 2022). Rendering on other desktops, themes or scaling factors can differ.

@@ -67,7 +67,7 @@ shows six cards that reflow as you resize.
 
 *Real capture on KDE Plasma 6.6 Wayland with the released packages.*
 
-## Fields directly in a column (known defect B-0014)
+## Fields directly in a column (known defect)
 
 The 0.1.1 stylesheet applies the row rule `flex: 1 1 200px` to fields placed directly in a
 column too, where the 200 px basis becomes the field's **height**: a labelled input followed by

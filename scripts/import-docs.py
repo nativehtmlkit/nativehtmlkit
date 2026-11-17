@@ -678,6 +678,7 @@ def build(out: Path) -> str:
                       {"Why native?": "concepts/why-native.md"}]},
         {"Reference": ["reference/index.md", {"Capability matrix": "capabilities/matrix.md"},
                        {"Limitations": "capabilities/limitations.md"}, *core,
+                       {"Examples and verification": "reference/examples.md"},
                        {"Glossary": "reference/glossary.md"}, {"FAQ": "reference/faq.md"},
                        {"Screenshots": "demos/screenshots.md"}]},
     ]
